@@ -8,14 +8,17 @@ Not a commentator bot — a friend who watches alongside you, reacting and chatt
 ## Architecture
 
 ```
-F1 SignalR WebSocket → f1live daemon → stdout events → Monitor → Claude → user
-                                     → file dumps (f1-live.md/json) → Read on demand
+Live:   F1 SignalR WebSocket → f1live.main   → stdout events → Monitor → Claude → user
+Replay: F1 static archive   → f1live.replay → stdout events → Monitor → Claude → user
+                                             → file dumps (f1-live.md/json) → Read on demand
 ```
 
 - **signalr.py**: WebSocket connection to livetiming.formula1.com/signalr
 - **state.py**: Delta merge engine (F1 sends changes only, we maintain full state)
 - **events.py**: State diff → event detection + batching (5s window, 5s cooldown)
-- **main.py**: Daemon entry point (Monitor-compatible: stdout=events, stderr=logs)
+- **main.py**: Live daemon entry point (Monitor-compatible: stdout=events, stderr=logs)
+- **replay.py**: Archive replay engine (same output as main.py, reads jsonStream files)
+- **download.py**: Archive downloader (fetches session data from F1's static servers)
 
 ## Seasonal Updates
 
@@ -47,14 +50,20 @@ uv run dev/replay.py dev/data/new-race/ --speed 50 --events-only
 # Install dependencies
 uv sync
 
-# Download archive data for testing
+# Download archive data for testing (dev → saves to dev/data/)
 uv run dev/download-archive.py --path "2026/2026-03-29_Japanese_Grand_Prix/2026-03-29_Race" -o dev/data/suzuka-race --skip-telemetry
 
-# Replay at 100x speed (events only)
+# Replay at 100x speed — dev mode (timestamp prefixes, events only)
 uv run dev/replay.py dev/data/suzuka-race/ --speed 100 --events-only
 
 # Replay with markdown state dumps
 uv run dev/replay.py dev/data/suzuka-race/ --speed 50 --dump-md
+
+# Replay — production mode (same output as live daemon, with file dumps)
+uv run -m f1live.replay dev/data/suzuka-race/ --speed 20
+
+# Download archive — production mode (saves to $TMPDIR/f1-replay/)
+uv run -m f1live.download --path "2026/2026-03-29_Japanese_Grand_Prix/2026-03-29_Race" --skip-telemetry
 
 # Test plugin locally
 claude --plugin-dir .
@@ -79,5 +88,11 @@ skills/start-f1/SKILL.md    ← Main skill (how Claude should behave)
 skills/start-f1/references/  ← Season data, personas (loaded on demand)
 bin/                         ← Executables (added to PATH)
 f1live/                      ← Python daemon package
+data/                        ← Live season data (WebFetched by plugin)
 dev/                         ← Development tools (not needed by end users)
 ```
+
+## Live Season Data (`data/`)
+
+Files in `data/` are fetched via WebFetch during race sessions and updated throughout
+the season. See [`data/README.md`](data/README.md) for update rules and data sources.
