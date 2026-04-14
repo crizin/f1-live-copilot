@@ -1,5 +1,7 @@
 # 🏎️ F1 Live Copilot
 
+> [한국어 README](README.ko.md)
+
 **Watch Formula 1 races with AI — not as a commentator, but as a friend on the couch.**
 
 F1 Live Copilot connects directly to F1's official live timing data and turns your Claude Code session into a real-time race companion. It reacts to overtakes, pit strategies, safety cars, and all the drama — with genuine excitement, frustration, and analysis.
@@ -127,42 +129,3 @@ Similar to projects like [openf1.org](https://openf1.org) and [Fast-F1](https://
 ## License
 
 MIT
-
----
-
-# 🏎️ F1 Live Copilot (한국어)
-
-**AI와 함께 F1 경기를 실시간으로 관람하세요 — 해설자가 아닌, 같이 보는 친구로.**
-
-혼자 스포츠 보면 재미없잖아요. 같이 추월에 환호하고, 세이프티카에 전략 분석하고,
-페널티에 같이 분노할 수 있는 동료가 있다면?
-
-F1 Live Copilot은 F1 공식 라이브 타이밍 데이터에 직접 연결하여,
-Claude Code 세션에서 실시간으로 경기를 함께 봅니다.
-
-### 설치
-
-```bash
-/plugin marketplace add crizin/f1-live-copilot
-/plugin install f1-live-copilot
-```
-
-### 사용
-
-```bash
-# F1 세션 중에 실행
-/f1-live-copilot:start-f1
-```
-
-### 요구사항
-
-- Python 3.10+
-- [uv](https://docs.astral.sh/uv/) 패키지 매니저
-- Claude Code
-
-### 특징
-
-- 서버 없음 — 모든 것이 로컬에서 실행
-- API 키 불필요 — F1 공식 공개 엔드포인트 사용
-- 실시간 이벤트 감지 — 추월, 피트, SC, DNF, 페널티 등
-- 데이터 재배포 없음 — 각 사용자가 직접 연결
