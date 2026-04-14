@@ -1,0 +1,12 @@
+{
+  "name": "f1-live-copilot",
+  "description": "Watch Formula 1 races with AI — real-time commentary powered by official F1 live timing data",
+  "version": "0.1.0",
+  "author": {
+    "name": "crizin",
+    "url": "https://github.com/crizin"
+  },
+  "repository": "https://github.com/crizin/f1-live-copilot",
+  "license": "MIT",
+  "keywords": ["f1", "formula1", "racing", "live-timing", "commentary"]
+}

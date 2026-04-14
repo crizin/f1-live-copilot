@@ -1,0 +1,15 @@
+# Dev data (downloaded archives, large files)
+.idea/
+dev/data/*
+!dev/data/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
+
+# Temp files
+*.tmp
