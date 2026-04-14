@@ -1,0 +1,168 @@
+# 🏎️ F1 Live Copilot
+
+**Watch Formula 1 races with AI — not as a commentator, but as a friend on the couch.**
+
+F1 Live Copilot connects directly to F1's official live timing data and turns your Claude Code session into a real-time race companion. It reacts to overtakes, pit strategies, safety cars, and all the drama — with genuine excitement, frustration, and analysis.
+
+> ⚠️ **Early Development** — This plugin is under active development. First public release planned mid-2026 season.
+
+## Why?
+
+Watching sports alone is boring. You want someone to yell at the screen with, someone who notices the undercut working perfectly, someone who groans when your driver gets a 5-second penalty.
+
+F1 Live Copilot is that someone.
+
+**What it's NOT:**
+- A stats dashboard (use F1's official app for that)
+- A robotic feed that recites every position change
+- A replacement for TV commentary
+
+**What it IS:**
+- A friend who watches the race with you and actually *gets it*
+- Someone who spots strategic moves and shares their take
+- A companion who matches your energy — hyped when you're hyped, analytical when you want depth
+
+## How It Works
+
+```
+You: /f1-live-copilot:start-f1
+
+Copilot: Connecting to F1 Live Timing... Miami GP Race, Lap 1/57. Let's go! 🏁
+
+  [15 laps later]
+
+Copilot: Oh SC is out!! And look — NOR just pitted 2 laps ago on fresh mediums.
+         That's insane luck. Everyone ahead still needs to stop...
+         This could be a free jump to P3 if McLaren plays it right.
+
+You: Hamilton's had a rough day huh
+
+Copilot: Yeah the undercut completely didn't work — LEC pitted one lap earlier
+         and came out right in front. Sector 2 times are decent though,
+         it's more the strategy call than pace. Ferrari might split strategies
+         for the second stint to cover both options.
+```
+
+## Architecture
+
+```
+No server. Everything runs locally.
+
+/start-f1
+  → Local daemon connects to F1's official SignalR WebSocket
+  → Maintains full race state from delta messages
+  → Detects events (overtakes, pits, flags, fastest laps)
+  → Events → Claude Code Monitor → AI reacts naturally
+  → Full state snapshot available on demand (f1-live.md)
+```
+
+- **Zero API keys** — F1's live timing is a public endpoint
+- **Zero server costs** — runs entirely on your machine
+- **Zero data redistribution** — you connect directly, like opening F1's timing page
+
+## Installation
+
+```bash
+# Add the plugin
+/plugin marketplace add crizin/f1-live-copilot
+
+# Install
+/plugin install f1-live-copilot
+```
+
+**Requirements:** Python 3.10+, [uv](https://docs.astral.sh/uv/)
+
+## Usage
+
+```bash
+# Start during a live F1 session
+/f1-live-copilot:start-f1
+
+# (Future) With persona
+/f1-live-copilot:start-f1 expert     # Deep tactical analysis
+/f1-live-copilot:start-f1 casual     # Just the highlights
+```
+
+## Event Detection
+
+The daemon detects and pushes these events:
+
+| Event | What it catches |
+|-------|----------------|
+| Overtakes | Real on-track passes (filters out pit-cycle position changes) |
+| Pit In/Out | Who pitted, what tire they took, stint number |
+| Safety Car / VSC | Immediate alert + strategic implications |
+| Fastest Lap | New overall fastest, who beat whom |
+| DNF / Retirement | Driver out of the race |
+| Race Control | Penalties, investigations, track limits, flags |
+| Track Status | Yellow, SC deployed, red flag, all clear |
+
+Events are batched (5-second window) so Claude isn't overwhelmed during busy moments like SC restarts.
+
+## Development
+
+```bash
+git clone https://github.com/crizin/f1-live-copilot
+cd f1-live-copilot
+uv sync
+
+# Download past race data for testing
+uv run dev/download-archive.py \
+  --path "2026/2026-03-29_Japanese_Grand_Prix/2026-03-29_Race" \
+  -o dev/data/suzuka --skip-telemetry
+
+# Replay at 50x speed
+uv run dev/replay.py dev/data/suzuka/ --speed 50 --events-only
+
+# Test plugin locally
+claude --plugin-dir .
+```
+
+## Legal
+
+This plugin connects to F1's publicly available live timing endpoint — the same data source
+that powers the official F1 timing page. No data is redistributed; each user connects directly.
+Similar to projects like [openf1.org](https://openf1.org) and [Fast-F1](https://github.com/theOehrly/Fast-F1).
+
+## License
+
+MIT
+
+---
+
+# 🏎️ F1 Live Copilot (한국어)
+
+**AI와 함께 F1 경기를 실시간으로 관람하세요 — 해설자가 아닌, 같이 보는 친구로.**
+
+혼자 스포츠 보면 재미없잖아요. 같이 추월에 환호하고, 세이프티카에 전략 분석하고,
+페널티에 같이 분노할 수 있는 동료가 있다면?
+
+F1 Live Copilot은 F1 공식 라이브 타이밍 데이터에 직접 연결하여,
+Claude Code 세션에서 실시간으로 경기를 함께 봅니다.
+
+### 설치
+
+```bash
+/plugin marketplace add crizin/f1-live-copilot
+/plugin install f1-live-copilot
+```
+
+### 사용
+
+```bash
+# F1 세션 중에 실행
+/f1-live-copilot:start-f1
+```
+
+### 요구사항
+
+- Python 3.10+
+- [uv](https://docs.astral.sh/uv/) 패키지 매니저
+- Claude Code
+
+### 특징
+
+- 서버 없음 — 모든 것이 로컬에서 실행
+- API 키 불필요 — F1 공식 공개 엔드포인트 사용
+- 실시간 이벤트 감지 — 추월, 피트, SC, DNF, 페널티 등
+- 데이터 재배포 없음 — 각 사용자가 직접 연결
