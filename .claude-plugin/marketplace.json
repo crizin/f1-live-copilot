@@ -1,0 +1,14 @@
+{
+  "name": "f1-live-copilot",
+  "owner": {
+    "name": "crizin",
+    "url": "https://github.com/crizin"
+  },
+  "plugins": [
+    {
+      "name": "f1-live-copilot",
+      "source": ".",
+      "description": "Watch Formula 1 races with AI — real-time commentary powered by official F1 live timing data"
+    }
+  ]
+}
