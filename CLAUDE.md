@@ -85,7 +85,7 @@ Key filters in `events.py`:
 ```
 .claude-plugin/plugin.json  ← Plugin metadata for marketplace
 skills/start-f1/SKILL.md    ← Main skill (how Claude should behave)
-skills/start-f1/references/  ← Season data, personas (loaded on demand)
+skills/start-f1/references/  ← Season data (loaded on demand)
 bin/                         ← Executables (added to PATH)
 f1live/                      ← Python daemon package
 data/                        ← Live season data (WebFetched by plugin)

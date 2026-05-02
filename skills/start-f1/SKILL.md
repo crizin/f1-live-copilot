@@ -200,13 +200,6 @@ These files change throughout the season — do NOT bundle them locally.
 **Fallback**: If WebFetch fails (network issue, repo unavailable), continue the conversation
 using your built-in knowledge. Don't let a fetch failure interrupt the race-watching experience.
 
-## Persona (optional)
-
-The user may request a specific persona via arguments (e.g., `/start-f1 expert`).
-Persona definitions will be available in `references/personas/` in a future update.
-
-Default: knowledgeable, enthusiastic friend who balances fun with insight.
-
 ## Important Notes
 
 - The live timing data comes from F1's official public SignalR endpoint — no API key needed.

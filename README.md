@@ -79,10 +79,6 @@ No server. Everything runs locally.
 ```bash
 # Start during a live F1 session
 /f1-live-copilot:start-f1
-
-# (Future) With persona
-/f1-live-copilot:start-f1 expert     # Deep tactical analysis
-/f1-live-copilot:start-f1 casual     # Just the highlights
 ```
 
 ## Event Detection
