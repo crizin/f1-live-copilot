@@ -21,6 +21,7 @@ DUMP_INTERVAL = 3
 OUTPUT_JSON = os.environ.get("F1LIVE_OUTPUT", os.path.join(tempfile.gettempdir(), "f1-live.json"))
 OUTPUT_MD = os.path.splitext(OUTPUT_JSON)[0] + ".md"
 TIMEOUT = int(os.environ.get("F1LIVE_TIMEOUT", "5400"))
+WARMUP_SECONDS = float(os.environ.get("F1LIVE_WARMUP", "10"))
 
 logging.basicConfig(
     level=logging.INFO,
@@ -31,7 +32,7 @@ logging.basicConfig(
 logger = logging.getLogger("f1live")
 
 state = F1State()
-detector = EventDetector()
+detector = EventDetector(warmup_seconds=WARMUP_SECONDS)
 batcher = EventBatcher(window=5.0, cooldown=5.0)
 _running = True
 

@@ -30,12 +30,20 @@ class Event:
 class EventDetector:
     """Detects events by diffing F1State snapshots."""
 
-    def __init__(self):
+    def __init__(self, warmup_seconds: float = 0.0):
         self._prev: dict | None = None
         self._race_started = False
         self._warmup_laps = 0  # suppress overtakes until lap 2 complete
         self._recent_pit_out: dict[str, int] = {}  # driver -> lap of pit out
         self._recent_rc: list[str] = []  # last N RC messages for dedup
+        # Initial-burst absorption. SignalR sends a full snapshot of the
+        # session's accumulated state on connect; without this, the first
+        # diff against an empty baseline emits dozens of stale events as if
+        # they just happened. While warming up, _prev still updates so the
+        # post-warmup baseline is current.
+        self._warmup_seconds = warmup_seconds
+        self._warmup_started_at: float | None = None
+        self._warmup_logged = False
 
     def detect(self, state_dict: dict) -> list[Event]:
         events = []
@@ -43,6 +51,8 @@ class EventDetector:
 
         if self._prev is None:
             self._prev = copy.deepcopy(curr)
+            if self._warmup_seconds > 0:
+                self._warmup_started_at = time.monotonic()
             return events
 
         prev = self._prev
@@ -56,7 +66,10 @@ class EventDetector:
             events.append(Event(P0, "SESSION", str(curr_status)))
             if curr_status == "Started":
                 self._race_started = True
-                self._warmup_laps = curr_lap + 2  # suppress until lap 2
+                # Grid-shuffle filter only applies at actual race start.
+                # If curr_lap > 1 the status flip is a mid-session connect,
+                # not lights out — overtakes should fire immediately.
+                self._warmup_laps = (curr_lap + 2) if curr_lap <= 1 else 0
 
         # --- Lap change ---
         prev_lap = prev_session.get("lap", 0)
@@ -91,6 +104,17 @@ class EventDetector:
         self._detect_fastest_lap(prev, curr, events)
 
         self._prev = copy.deepcopy(curr)
+
+        if self._warmup_started_at is not None:
+            if time.monotonic() - self._warmup_started_at < self._warmup_seconds:
+                if events and not self._warmup_logged:
+                    logger.info("Warmup: absorbing %d initial events as baseline", len(events))
+                    self._warmup_logged = True
+                return []
+            self._warmup_started_at = None
+            if self._warmup_logged:
+                logger.info("Warmup complete, emitting events live")
+
         return events
 
     def _detect_race_control(self, prev: dict, curr: dict, events: list):
