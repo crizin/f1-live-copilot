@@ -1,0 +1,40 @@
+name: Claude PR mention
+
+# Lets repo members write "@claude <instruction>" in a PR comment to have
+# Claude Code apply the fix and push it back to the PR branch.
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+concurrency:
+  # Sequence multiple @claude mentions on the same PR; never cancel in-flight.
+  group: claude-mention-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  fix:
+    # Gate:
+    #   1. Comment is on a PR (not a plain issue).
+    #   2. Comment body contains @claude.
+    #   3. Author has write access (blocks drive-by triggers from external visitors).
+    if: |
+      github.event.issue.pull_request != null &&
+      contains(github.event.comment.body, '@claude') &&
+      (github.event.comment.author_association == 'OWNER' ||
+       github.event.comment.author_association == 'MEMBER' ||
+       github.event.comment.author_association == 'COLLABORATOR')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: anthropics/claude-code-action@64b15918b6adcacf73f6934948f1951ead020cbf # v1.0.111
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          trigger_phrase: "@claude"
+          claude_args: '--model opus --max-turns 30'
