@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Update data/standings-{year}.md from jolpica-f1 (Ergast successor) API.
+"""Update data/standings.md from jolpica-f1 (Ergast successor) API.
 
 Usage:
     uv run dev/update-standings.py [--year 2026] [--recent 5] [--dry-run]
@@ -192,7 +192,7 @@ def main():
     p.add_argument("--dry-run", action="store_true")
     args = p.parse_args()
 
-    output = args.output or ROOT / "data" / f"standings-{args.year}.md"
+    output = args.output or ROOT / "data" / "standings.md"
 
     with httpx.Client() as client:
         drivers = fetch_driver_standings(client, args.year)

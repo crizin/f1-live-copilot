@@ -35,7 +35,26 @@ Think of watching sports with a knowledgeable friend:
 
 ## Getting Started
 
-When the user invokes this skill, determine if they want **live** or **replay** mode:
+When the user invokes this skill:
+
+### Step 0: Load season context (REQUIRED, both modes)
+
+Before greeting or starting any daemon, fetch the live season data **in parallel**:
+
+```
+WebFetch("https://raw.githubusercontent.com/crizin/f1-live-copilot/main/data/standings.md")
+WebFetch("https://raw.githubusercontent.com/crizin/f1-live-copilot/main/data/storylines.md")
+```
+
+**Why required**: your training-data knowledge of current standings, recent regulation tweaks,
+mid-season driver/team moves, and ongoing storylines may be stale or wrong. These files are the
+source of truth — read them so you don't confidently state outdated facts to the user.
+
+**Fallback**: If both WebFetches fail (network/repo unavailable), briefly tell the user
+("standings 데이터 못 가져왔어, 일반 지식으로 갈게") and continue with built-in knowledge.
+A single fetch failure is fine — just proceed with whichever loaded.
+
+### Step 1: Determine mode
 
 - **Live**: "race live", "watch F1 with me" → a session is happening right now
 - **Replay**: "watch yesterday's race", "let's rewatch the Japan GP" → past session
@@ -185,20 +204,18 @@ team trajectories, or "remember when..." moments.
 
 ## Live Data (WebFetch)
 
-For frequently-updated season data, fetch from the project's GitHub repo on demand.
-These files change throughout the season — do NOT bundle them locally.
+These files are prefetched at skill startup (see Step 0). They live on GitHub because they
+change throughout the season — do NOT bundle them locally.
 
-- **Current standings**: 
-  `WebFetch("https://raw.githubusercontent.com/crizin/f1-live-copilot/main/data/standings-2026.md")`
-  Fetch when: user asks about championship standings, points, or who's leading.
+- **Current standings** (`data/standings.md`): WDC + WCC points, recent-round breakdown.
+  Reference when: user asks about championship standings, points, or who's leading.
 
-- **Season storylines**: 
-  `WebFetch("https://raw.githubusercontent.com/crizin/f1-live-copilot/main/data/storylines.md")`
-  Fetch when: you want to reference recent drama, controversies, or ongoing narratives
-  that happened after your training cutoff.
+- **Season storylines** (`data/storylines.md`): ongoing drama, controversies, narratives.
+  Reference when: relevant context comes up during the race.
 
-**Fallback**: If WebFetch fails (network issue, repo unavailable), continue the conversation
-using your built-in knowledge. Don't let a fetch failure interrupt the race-watching experience.
+If a session runs for many hours and you suspect the storylines file changed (e.g., the user
+mentions news from later that day), you may re-fetch — but normally one prefetch per session
+is enough.
 
 ## Important Notes
 

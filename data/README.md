@@ -7,12 +7,12 @@ They contain frequently-updated information that changes throughout the season.
 
 | File | Purpose | Update frequency |
 |------|---------|-----------------|
-| `standings-2026.md` | Championship standings (WDC + WCC) | After each race weekend |
+| `standings.md` | Championship standings (WDC + WCC) | After each race weekend |
 | `storylines.md` | Season narratives, drama, memes | After notable events |
 
 ## Update Rules
 
-### standings-2026.md
+### standings.md
 
 **Trigger**: After every race weekend.
 
