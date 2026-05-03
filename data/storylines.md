@@ -18,10 +18,9 @@ others are struggling. The early picture:
   EV expertise.
 - **McLaren**: Still fast but no longer untouchable. Norris took the Miami sprint —
   McLaren's first win of 2026 and the first non-Mercedes win of the year.
-- **Red Bull-Ford**: New in-house PU is a work in progress and the RB22 is overweight
-  with too much drag baked into the concept. Sixth in constructors, behind Haas and
-  Alpine. Verstappen still extracting miracles, but he was a Q2 exit at Suzuka and
-  qualified P8 in China. Reportedly might not be fully fixed until 2027.
+- **Red Bull-Ford**: New in-house PU is a work in progress. Sixth in constructors,
+  behind Haas and Alpine. Verstappen still extracting miracles, but he was a Q2 exit
+  at Suzuka.
 - **Audi**: First season with own PU — reliability still bites. Hulkenberg's Audi
   caught fire on the reconnaissance lap to the Miami sprint grid; Allan McNish admitted
   the team thought they'd fixed it in the garage and clearly hadn't.
@@ -48,8 +47,8 @@ meeting on April 20 that produced mid-season "refinements" landing at Miami:
 - New "low-power start" detection: auto MGU-K kicks in if a car has a weak getaway
   (anti-pile-up measure)
 - Higher tyre-blanket temps for inters to fix wet-grip complaints
-The 50/50 ideal is effectively abandoned. Verstappen called the changes "a tickle";
-others say it's a step but nowhere near enough.
+Verstappen called the changes "a tickle"; others say it's a step but nowhere near
+enough.
 
 ### Antonelli's Breakout — Now The Real Deal
 Kimi Antonelli is the youngest-ever driver to lead the F1 World Championship at 19.
@@ -61,28 +60,22 @@ champion?" to "how is anyone going to beat him this year?"
 
 ### Verstappen's Future in Doubt
 Max told the BBC after Suzuka he's considering retiring at the end of 2026 because
-he's "not enjoying" the cars. He has a Le Mans entry on his bucket list (and Spa) and
-his contract reportedly contains a regulation-related exit clause specifically for
-this scenario. Red Bull are openly war-gaming replacements. Some of the paddock thinks
-it's leverage to push the FIA harder on rule tweaks; some take it at face value.
-Either way: four-time world champion, stuck in a Q2-exit car, deeply unhappy with
-the regulations, with another big-money endurance career waiting on the side. Watch
-this space all season.
+he's "not enjoying" the cars. Red Bull are openly war-gaming replacements. Some of
+the paddock thinks it's leverage to push the FIA harder on rule tweaks; some take
+it at face value. Either way: four-time world champion, stuck in a Q2-exit car,
+deeply unhappy with the regulations. Watch this space all season.
 
 ### Bahrain & Saudi Arabia Called Off
 Both Middle Eastern rounds were cancelled — a first for the modern calendar.
-Geopolitical tensions forced the FIA's hand. The 2026 calendar is now 22 races.
-The five-week gap between Suzuka and Miami did at least give Red Bull, Audi, and
-Cadillac development breathing room — and gave the FIA space to push through the
-April rule tweaks.
+Geopolitical tensions forced the FIA's hand. The schedule left a five-week gap
+between Suzuka and Miami.
 
 ### Hamilton's Ferrari Struggles (Year 2)
 Year two at Maranello has been bumpy. Career-best fourth in Melbourne, podium in
 China, then a "pretty terrible" weekend at Suzuka where he reportedly lost six to
 eight tenths of straight-line speed and dropped from a podium-running third to sixth,
 passed late on by Leclerc. Hamilton has since said Ferrari fixed the "bizarre" Suzuka
-issue ahead of Miami. Eddie Irvine is already calling Hamilton's early-2026 form a
-temporary blip. Pressure remains high.
+issue ahead of Miami. Pressure remains high.
 
 ### Active Aero Era Begins
 The new active aerodynamics rules have added a fascinating strategic layer. Teams can
@@ -95,24 +88,20 @@ Some drivers have adapted faster than others.
 ## Rivalries to Watch
 
 - **Antonelli vs Russell** (Mercedes): The student is now beating the master in qualifying
-  AND in the championship. Both Mercedes poles so far have been Antonelli's. Wolff has
-  publicly acknowledged a possible title fight between them, and Russell told CNN he
-  hopes 2026 isn't his "one and only shot."
+  AND in the championship. Wolff has publicly acknowledged a possible title fight
+  between them.
 - **Norris vs Piastri** (McLaren): Reigning champion vs the Australian who almost took
   the title in 2025. Piastri currently has the edge on average — about 0.14 s faster
   in qualifying and 0.24 s in race trim across 2026 so far — but Norris struck back
-  with the Miami sprint pole and win. Both have reportedly buried the 2025 hatchet.
+  with the Miami sprint pole and win.
 - **Norris vs Verstappen**: 2025 title rivals, now in different tiers of machinery.
   Can Verstappen do it with an inferior car like 2024? Increasingly looking like no.
-- **Hamilton vs Leclerc** (Ferrari): The GOAT and the heir. Second season together,
-  Leclerc is winning the head-to-head and Hamilton is on the back foot.
+- **Hamilton vs Leclerc** (Ferrari): The GOAT and the heir. Second season together.
 
 ---
 
 ## Memes & Fan Culture
 
-- "Talibantonelli" / "Osama Bill Russell" — the Mercedes pair's goofy meme-name combo
-  has been everywhere on F1 TikTok and Instagram. Mostly affectionate.
 - Russell remains a meme magnet. His expressive radio reactions and PowerPoint-era
   greatest hits are still circulating, now joined by his "watching my teammate take
   my pole" face from Suzuka.
