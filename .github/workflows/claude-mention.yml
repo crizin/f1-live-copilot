@@ -69,6 +69,9 @@ jobs:
                                     says, or remove the item if not salvageable
 
             2. Edit ONLY data/storylines.md. Do NOT touch any other file.
+               Be efficient: read the file once, plan all edits up front,
+               then apply them in as few Edit calls as possible. Don't
+               re-read between every edit.
 
             3. Do NOT add new claims, new sections, or new source URLs.
                You may only edit or remove existing entries based on the
@@ -83,4 +86,4 @@ jobs:
             (e.g. "@claude only fix the contradicted one, leave the
             partials alone"), follow that instead — their explicit ask
             overrides these defaults.
-          claude_args: '--model opus --max-turns 30'
+          claude_args: '--model opus --max-turns 60'
