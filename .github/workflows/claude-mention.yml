@@ -2,6 +2,9 @@ name: Claude PR mention
 
 # Lets repo members write "@claude <instruction>" in a PR comment to have
 # Claude Code apply the fix and push it back to the PR branch.
+#
+# When the instruction is vague ("@claude fix it"), Claude defaults to
+# applying the latest Codex cross-check verdicts as a checklist.
 
 on:
   issue_comment:
@@ -31,10 +34,53 @@ jobs:
        github.event.comment.author_association == 'COLLABORATOR')
     runs-on: ubuntu-latest
     steps:
+      - name: Resolve PR head ref
+        id: prhead
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          head=$(gh pr view ${{ github.event.issue.number }} --json headRefName --jq '.headRefName')
+          echo "ref=$head" >> "$GITHUB_OUTPUT"
+
       - uses: actions/checkout@v6
+        with:
+          ref: ${{ steps.prhead.outputs.ref }}
 
       - uses: anthropics/claude-code-action@64b15918b6adcacf73f6934948f1951ead020cbf # v1.0.111
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           trigger_phrase: "@claude"
+          prompt: |
+            You're responding to an "@claude" comment on a PR that
+            auto-updates data/storylines.md (F1 2026 narrative content).
+
+            DEFAULT BEHAVIOR when the user's comment is vague — e.g.
+            "@claude fix it", "@claude apply review", "@claude do it":
+
+            1. Read the most recent "## 🤖 Codex cross-check (GPT-5)" comment
+               in this PR's thread. Treat it as the authoritative checklist.
+               Each row classifies a claim as:
+                 - VERIFIED       → keep as-is
+                 - PARTIAL        → tighten wording to the verifiable subset;
+                                    drop the speculative parts the source
+                                    doesn't actually support
+                 - UNSUPPORTED    → remove the item entirely (no source backing)
+                 - CONTRADICTED   → rewrite to match what the source actually
+                                    says, or remove the item if not salvageable
+
+            2. Edit ONLY data/storylines.md. Do NOT touch any other file.
+
+            3. Do NOT add new claims, new sections, or new source URLs.
+               You may only edit or remove existing entries based on the
+               Codex verdicts.
+
+            4. After editing, post a short reply comment summarizing what
+               changed in this format:
+                 "Applied Codex review: removed N unsupported, fixed K
+                  contradicted, tightened M partials, kept V verified."
+
+            If the user's comment contains more specific instructions
+            (e.g. "@claude only fix the contradicted one, leave the
+            partials alone"), follow that instead — their explicit ask
+            overrides these defaults.
           claude_args: '--model opus --max-turns 30'
