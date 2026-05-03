@@ -117,6 +117,25 @@ def render_qualifying(results) -> str:
     return render_table(headers, rows)
 
 
+def detect_qualifying_anomaly(results) -> str | None:
+    # Ergast/jolpica's qualifying schema has no DSQ field, so post-quali
+    # penalties surface as duplicate position numbers (the API promotes the
+    # next driver but doesn't demote the penalised one). Flag these so Claude
+    # knows to caveat instead of stating the grid as fact.
+    seen: dict[str, list[str]] = {}
+    for r in results:
+        seen.setdefault(r["position"], []).append(driver_code(r["Driver"]))
+    dups = {p: codes for p, codes in seen.items() if len(codes) > 1}
+    if not dups:
+        return None
+    parts = [f"P{p} ({', '.join(codes)})" for p, codes in sorted(dups.items(), key=lambda x: int(x[0]))]
+    return (
+        "> ⚠ Duplicate qualifying position(s): " + "; ".join(parts) + ". "
+        "Likely a post-quali grid penalty or DSQ that the API didn't reconcile — "
+        "verify via race control messages or news before discussing the grid."
+    )
+
+
 def render_sprint(results) -> str:
     headers = ["P", "Driver", "Team", "Time/Gap", "Laps"]
     rows = [
@@ -185,7 +204,11 @@ def main():
     if sprint_results:
         parts += ["## Sprint", "", render_sprint(sprint_results), ""]
 
-    parts += ["## Qualifying", "", render_qualifying(latest["QualifyingResults"]), ""]
+    parts += ["## Qualifying", ""]
+    quali_warning = detect_qualifying_anomaly(latest["QualifyingResults"])
+    if quali_warning:
+        parts += [quali_warning, ""]
+    parts += [render_qualifying(latest["QualifyingResults"]), ""]
 
     sys.stdout.write("\n".join(parts))
 
