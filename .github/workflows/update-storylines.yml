@@ -87,6 +87,7 @@ jobs:
           } >> "$GITHUB_OUTPUT"
 
       - uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        id: cpr
         with:
           branch: storylines/auto-update
           delete-branch: true
@@ -96,3 +97,80 @@ jobs:
           labels: |
             ai-generated
             data-update
+
+      # ── Codex cross-check ──────────────────────────────────────────────
+      # GPT-5 fact-checks Claude's claims against the URLs in the PR body.
+      # Different model family → independent failure modes vs same-model self-review.
+
+      - name: Prepare Codex inputs
+        if: steps.cpr.outputs.pull-request-number != ''
+        env:
+          PR_NUMBER: ${{ steps.cpr.outputs.pull-request-number }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr view "$PR_NUMBER" --json body --jq '.body' > /tmp/pr-body.md
+          gh pr diff "$PR_NUMBER" -- data/storylines.md > /tmp/storylines.diff
+          echo "PR #$PR_NUMBER inputs prepared ($(wc -l < /tmp/storylines.diff) diff lines)"
+
+      - name: Codex fact-check
+        if: steps.cpr.outputs.pull-request-number != ''
+        uses: openai/codex-action@e469131063221562acfb9ea6bbc9fd7f27226ffb # v1.8
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          allow-bots: "true"
+          model: gpt-5
+          effort: high
+          sandbox: workspace-write
+          codex-args: "--search"
+          output-file: codex-review.md
+          prompt: |
+            You are fact-checking an auto-generated PR that adds entries to
+            data/storylines.md (F1 2026 narrative content).
+
+            Inputs on disk:
+            - /tmp/storylines.diff — the PR's diff for that file
+            - /tmp/pr-body.md     — the PR description, which lists the URLs
+                                    the generator claims to have used as sources
+
+            For each substantive new or materially changed claim in the diff:
+            1. State the claim in one line of plain English.
+            2. Find its source URLs in the PR body.
+            3. Fetch each URL and read it.
+            4. Classify alignment:
+               - VERIFIED     — source clearly states the claim
+               - PARTIAL      — source touches the topic but the exact detail
+                                or wording differs
+               - UNSUPPORTED  — no source given, or source unrelated
+               - CONTRADICTED — source actively says something different
+
+            Output STRICTLY in this markdown format. No preamble, no extra prose:
+
+            | Status | Claim | Source check |
+            |---|---|---|
+            | VERIFIED | <one-line claim> | <brief note> |
+            | PARTIAL | <one-line claim> | <which detail differs> |
+            | UNSUPPORTED | <one-line claim> | (no source / unrelated) |
+            | CONTRADICTED | <one-line claim> | <what the source actually says> |
+
+            End with one summary line:
+            **Summary:** Verified A · Partial B · Unsupported C · Contradicted D
+
+            Rules:
+            - Be conservative — if unsure, mark PARTIAL.
+            - Do NOT judge writing style; only facts.
+            - Do NOT search for new sources beyond what the PR body lists.
+            - Skip cosmetic edits (whitespace, the "Last update" line, etc.).
+
+      - name: Post Codex review as PR comment
+        if: steps.cpr.outputs.pull-request-number != '' && hashFiles('codex-review.md') != ''
+        env:
+          PR_NUMBER: ${{ steps.cpr.outputs.pull-request-number }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          {
+            echo "## 🤖 Codex cross-check (GPT-5)"
+            echo
+            echo "Independent verification of the storylines diff against the URLs in the PR body."
+            echo
+            cat codex-review.md
+          } | gh pr comment "$PR_NUMBER" --body-file -
