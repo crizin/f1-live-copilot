@@ -109,7 +109,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh pr view "$PR_NUMBER" --json body --jq '.body' > /tmp/pr-body.md
-          gh pr diff "$PR_NUMBER" -- data/storylines.md > /tmp/storylines.diff
+          gh pr diff "$PR_NUMBER" > /tmp/storylines.diff
           echo "PR #$PR_NUMBER inputs prepared ($(wc -l < /tmp/storylines.diff) diff lines)"
 
       - name: Codex fact-check
