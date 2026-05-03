@@ -41,11 +41,50 @@ jobs:
                  not a news article.
             4. If nothing significant happened since the last update, leave the
                file unchanged. Empty diff is a valid outcome.
-            5. Do NOT fabricate events. If a search returns nothing concrete,
-               skip that item. Cite no sources you did not actually fetch.
-            6. Do NOT run git commit or git push. Just edit the file in place;
-               a later step opens the PR.
-          claude_args: '--model opus --max-turns 25 --allowed-tools "Read,Edit,WebSearch,WebFetch"'
+            5. Do NOT fabricate events. If you cannot find a concrete primary
+               source for a claim, drop the claim entirely — do NOT write it
+               with a "no source found" disclaimer, just omit it.
+
+            6. SOURCES (mandatory):
+               For every item you ADD or MATERIALLY CHANGE, append an entry to
+               /tmp/storylines-sources.md in this exact format:
+
+                   ### <one-line summary of the item>
+                   - https://url.you.actually.fetched.example.com
+                   - https://second.source.example.com (optional but better)
+
+               - Use only URLs you actually opened with WebFetch or WebSearch
+                 returned as a result. Never invent URLs.
+               - One ### block per item. Multiple bullet URLs allowed.
+               - If you couldn't find a source for a candidate item, you must
+                 not have added that item to the file (see step 5).
+               - If the run results in zero changes to storylines.md, do not
+                 create the sources file at all.
+
+            7. Do NOT run git commit or git push. Just edit data/storylines.md
+               in place; a later step opens the PR.
+          claude_args: '--model opus --max-turns 25 --allowed-tools "Read,Edit,WebSearch,WebFetch,Write"'
+
+      - name: Compose PR body with sources
+        id: pr_body
+        run: |
+          SOURCES=/tmp/storylines-sources.md
+          DELIM="PR_BODY_EOF_$(date +%s%N)"
+          {
+            echo "body<<${DELIM}"
+            echo "Auto-generated update by Claude Code Action."
+            echo
+            echo "⚠️ AI-curated content can hallucinate. The URLs below are what Claude *says* it consulted — verify each item against them before merging."
+            echo
+            if [ -s "$SOURCES" ]; then
+              echo "## Sources Claude reports having used"
+              echo
+              cat "$SOURCES"
+            else
+              echo "_Claude did not produce a sources file for this run._"
+            fi
+            echo "${DELIM}"
+          } >> "$GITHUB_OUTPUT"
 
       - uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
@@ -53,11 +92,7 @@ jobs:
           delete-branch: true
           commit-message: "chore(data): auto-update storylines"
           title: "chore(data): auto-update storylines"
-          body: |
-            Auto-generated update by Claude Code Action.
-
-            ⚠️ AI-curated content can hallucinate or surface unreliable sources.
-            Verify each new item before merging.
+          body: ${{ steps.pr_body.outputs.body }}
           labels: |
             ai-generated
             data-update
