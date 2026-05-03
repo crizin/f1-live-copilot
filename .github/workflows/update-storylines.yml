@@ -121,7 +121,7 @@ jobs:
           model: gpt-5
           effort: high
           sandbox: workspace-write
-          codex-args: "--search"
+          codex-args: '--config web_search="live" --config sandbox_workspace_write.network_access=true'
           output-file: codex-review.md
           prompt: |
             You are fact-checking an auto-generated PR that adds entries to
