@@ -14,18 +14,22 @@ They contain frequently-updated information that changes throughout the season.
 
 ### standings-2026.md
 
-**Trigger**: "update standings" or "update standings after [GP name]"
+**Trigger**: After every race weekend.
 
-**Sources**:
-1. https://www.formula1.com/en/results/2026/drivers — Official WDC standings
-2. https://www.formula1.com/en/results/2026/team — Official WCC standings
+**Update method**: Run the auto-update script — do NOT hand-edit.
 
-**Steps**:
-1. WebFetch both URLs above
-2. Replace Drivers' Championship table (keep per-race result columns, add new round)
-3. Replace Constructors' Championship table
-4. Update "Last update" line at the top
-5. Update "Season Notes" (next race, notable changes)
+```bash
+uv run --extra dev dev/update-standings.py
+```
+
+This pulls live data from the jolpica-f1 API (Ergast successor) and rewrites
+the file in place. Default columns: most recent 5 rounds + total points.
+Override with `--recent 10`, `--year 2027`, or `--dry-run` to preview.
+
+**Source**: `https://api.jolpi.ca/ergast/f1/{year}/` (no API key required)
+
+**Why a script**: Hand-curated standings drift fast and silently — the previous
+version of this file was a placeholder for a month before being noticed.
 
 ### storylines.md
 
