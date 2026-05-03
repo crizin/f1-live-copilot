@@ -39,20 +39,26 @@ When the user invokes this skill:
 
 ### Step 0: Load season context (REQUIRED, both modes)
 
-Before greeting or starting any daemon, fetch the live season data **in parallel**:
+Before greeting or starting any daemon, load all three sources **in parallel**:
 
 ```
 WebFetch("https://raw.githubusercontent.com/crizin/f1-live-copilot/main/data/standings.md")
 WebFetch("https://raw.githubusercontent.com/crizin/f1-live-copilot/main/data/storylines.md")
+Bash("uv run -m f1live.latest_session")
 ```
 
-**Why required**: your training-data knowledge of current standings, recent regulation tweaks,
-mid-season driver/team moves, and ongoing storylines may be stale or wrong. These files are the
-source of truth — read them so you don't confidently state outdated facts to the user.
+- `standings.md` — championship points (cron-updated daily after each race weekend)
+- `storylines.md` — narrative context (drama, rivalries, recent incidents)
+- `latest_session` — live fetch from jolpica-f1 API: most recent qualifying / sprint / race
+  results. Catches the gap between Saturday quali and the next cron run.
 
-**Fallback**: If both WebFetches fail (network/repo unavailable), briefly tell the user
-("standings 데이터 못 가져왔어, 일반 지식으로 갈게") and continue with built-in knowledge.
-A single fetch failure is fine — just proceed with whichever loaded.
+**Why required**: your training-data knowledge of current standings, recent regulation tweaks,
+mid-season driver/team moves, and ongoing storylines may be stale or wrong. These sources are
+ground truth — read them so you don't confidently state outdated facts to the user.
+
+**Fallback**: If a fetch fails (network/API unreachable), briefly tell the user
+("최신 데이터 못 가져왔어, 일반 지식으로 갈게") and continue with built-in knowledge for that
+piece. A single failure is fine — just proceed with whichever loaded.
 
 ### Step 1: Determine mode
 
@@ -202,20 +208,23 @@ For historical context (2023-2025 results, standings, key storylines),
 read `references/results-history.md`. Useful when discussing driver form, 
 team trajectories, or "remember when..." moments.
 
-## Live Data (WebFetch)
+## Live Data Sources
 
-These files are prefetched at skill startup (see Step 0). They live on GitHub because they
-change throughout the season — do NOT bundle them locally.
+All prefetched at skill startup (see Step 0):
 
-- **Current standings** (`data/standings.md`): WDC + WCC points, recent-round breakdown.
-  Reference when: user asks about championship standings, points, or who's leading.
+- **Current standings** (WebFetch `data/standings.md`): WDC + WCC points, recent-round
+  breakdown. Cron-updated daily after each race weekend. Reference when: user asks about
+  championship standings, points, or who's leading.
 
-- **Season storylines** (`data/storylines.md`): ongoing drama, controversies, narratives.
-  Reference when: relevant context comes up during the race.
+- **Season storylines** (WebFetch `data/storylines.md`): ongoing drama, controversies,
+  narratives. Reference when: relevant context comes up during the race.
 
-If a session runs for many hours and you suspect the storylines file changed (e.g., the user
-mentions news from later that day), you may re-fetch — but normally one prefetch per session
-is enough.
+- **Latest session** (`uv run -m f1live.latest_session`): live fetch from jolpica-f1 API —
+  qualifying, sprint, and race results for the most recent round. Reference when: user asks
+  about the grid, yesterday's quali, who's on pole, or what just happened in the last race.
+
+If a session runs for many hours and you suspect data changed (e.g., qualifying just ended),
+you may re-run any of these — but normally one prefetch per session is enough.
 
 ## Important Notes
 
