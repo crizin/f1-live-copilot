@@ -47,34 +47,36 @@
   - Ferrari customer engine
   - Bottas + Perez driver lineup
 
-## 2026 Calendar (24 rounds)
+## 2026 Calendar (22 rounds — Bahrain & Saudi Arabia called off)
+
+Originally 24 rounds. Bahrain (Apr 10-12) and Saudi Arabia (Apr 17-19) were cancelled
+due to geopolitical tensions; F1 dropped them from the calendar and re-numbered
+subsequent rounds. Miami became Round 4.
 
 | R | GP | Date | Circuit |
 |---|-----|------|---------|
 | 1 | Australia | Mar 6-8 | Melbourne |
 | 2 | China | Mar 13-15 | Shanghai |
 | 3 | Japan | Mar 27-29 | Suzuka |
-| 4 | ~~Bahrain~~ | ~~Apr 10-12~~ | Called Off |
-| 5 | ~~Saudi Arabia~~ | ~~Apr 17-19~~ | Called Off |
-| 6 | Miami | May 1-3 | Miami |
-| 7 | Canada | May 22-24 | Montreal |
-| 8 | Monaco | Jun 5-7 | Monte Carlo |
-| 9 | Spain | Jun 12-14 | Barcelona |
-| 10 | Austria | Jun 26-28 | Red Bull Ring |
-| 11 | Great Britain | Jul 3-5 | Silverstone |
-| 12 | Belgium | Jul 17-19 | Spa |
-| 13 | Hungary | Jul 24-26 | Hungaroring |
-| 14 | Netherlands | Aug 21-23 | Zandvoort |
-| 15 | Italy | Sep 4-6 | Monza |
-| 16 | Spain 2 | Sep 11-13 | Madrid |
-| 17 | Azerbaijan | Sep 24-26 | Baku |
-| 18 | Singapore | Oct 9-11 | Marina Bay |
-| 19 | USA | Oct 23-25 | Austin (COTA) |
-| 20 | Mexico | Oct 30-Nov 1 | Mexico City |
-| 21 | Brazil | Nov 6-8 | Interlagos |
-| 22 | Las Vegas | Nov 19-21 | Las Vegas |
-| 23 | Qatar | Nov 27-29 | Lusail |
-| 24 | Abu Dhabi | Dec 4-6 | Yas Marina |
+| 4 | Miami | May 1-3 | Miami |
+| 5 | Canada | May 22-24 | Montreal |
+| 6 | Monaco | Jun 5-7 | Monte Carlo |
+| 7 | Spain | Jun 12-14 | Barcelona |
+| 8 | Austria | Jun 26-28 | Red Bull Ring |
+| 9 | Great Britain | Jul 3-5 | Silverstone |
+| 10 | Belgium | Jul 17-19 | Spa |
+| 11 | Hungary | Jul 24-26 | Hungaroring |
+| 12 | Netherlands | Aug 21-23 | Zandvoort |
+| 13 | Italy | Sep 4-6 | Monza |
+| 14 | Spain 2 | Sep 11-13 | Madrid |
+| 15 | Azerbaijan | Sep 24-26 | Baku |
+| 16 | Singapore | Oct 9-11 | Marina Bay |
+| 17 | USA | Oct 23-25 | Austin (COTA) |
+| 18 | Mexico | Oct 30-Nov 1 | Mexico City |
+| 19 | Brazil | Nov 6-8 | Interlagos |
+| 20 | Las Vegas | Nov 19-21 | Las Vegas |
+| 21 | Qatar | Nov 27-29 | Lusail |
+| 22 | Abu Dhabi | Dec 4-6 | Yas Marina |
 
 ## Points System
 

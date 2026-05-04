@@ -19,6 +19,7 @@ Replay: F1 static archive   → f1live.replay → stdout events → Monitor → 
 - **main.py**: Live daemon entry point (Monitor-compatible: stdout=events, stderr=logs)
 - **replay.py**: Archive replay engine (same output as main.py, reads jsonStream files)
 - **download.py**: Archive downloader (fetches session data from F1's static servers)
+- **latest_session.py**: Live jolpica-f1 fetch — most recent quali/sprint/race results (run at skill startup)
 
 ## Seasonal Updates
 
@@ -86,8 +87,7 @@ Key filters in `events.py`:
 .claude-plugin/plugin.json  ← Plugin metadata for marketplace
 skills/start-f1/SKILL.md    ← Main skill (how Claude should behave)
 skills/start-f1/references/  ← Season data (loaded on demand)
-bin/                         ← Executables (added to PATH)
-f1live/                      ← Python daemon package
+f1live/                      ← Python daemon package (run via `uv run -m f1live.<module>`)
 data/                        ← Live season data (WebFetched by plugin)
 dev/                         ← Development tools (not needed by end users)
 ```

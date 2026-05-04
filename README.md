@@ -6,8 +6,6 @@
 
 F1 Live Copilot connects directly to F1's official live timing data and turns your Claude Code session into a real-time race companion. It reacts to overtakes, pit strategies, safety cars, and all the drama — with genuine excitement, frustration, and analysis.
 
-> ⚠️ **Early Development** — This plugin is under active development. First public release planned mid-2026 season.
-
 ## Why?
 
 Watching sports alone is boring. You want someone to yell at the screen with, someone who notices the undercut working perfectly, someone who groans when your driver gets a 5-second penalty.
