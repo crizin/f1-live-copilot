@@ -37,6 +37,13 @@ Think of watching sports with a knowledgeable friend:
 
 When the user invokes this skill:
 
+> **Where to run `f1live` commands**: the `f1live` package lives at the **plugin root** — two
+> directories above this skill's base directory (the folder containing `pyproject.toml`). `uv run`
+> resolves the package from its working directory, so every `uv run -m f1live.*` command below
+> must run from there. Prefix each with `cd "<plugin-root>"`, deriving the path from the base
+> directory shown when this skill loaded (it is `<base>/../..`). Running from anywhere else
+> fails with `ModuleNotFoundError: No module named 'f1live'`.
+
 ### Step 0: Load season context (REQUIRED, both modes)
 
 Before greeting or starting any daemon, load all three sources **in parallel**:
@@ -44,13 +51,17 @@ Before greeting or starting any daemon, load all three sources **in parallel**:
 ```
 WebFetch("https://raw.githubusercontent.com/crizin/f1-live-copilot/main/data/standings.md")
 WebFetch("https://raw.githubusercontent.com/crizin/f1-live-copilot/main/data/storylines.md")
-Bash("uv run -m f1live.latest_session")
+Bash("cd \"<plugin-root>\" && uv run -m f1live.latest_session")
 ```
 
 - `standings.md` — championship points (cron-updated daily after each race weekend)
 - `storylines.md` — narrative context (drama, rivalries, recent incidents)
 - `latest_session` — live fetch from jolpica-f1 API: most recent qualifying / sprint / race
   results. Catches the gap between Saturday quali and the next cron run.
+  ⚠️ jolpica lags live and just-finished sessions, so during a live weekend this often returns the
+  **previous round**, not the one you're about to watch. Treat it as background for the last
+  completed round — for the live session's actual grid/order, the live daemon snapshot
+  (`f1-live.md`) is the only ground truth. Don't present last round's grid as today's.
 
 **Why required**: your training-data knowledge of current standings, recent regulation tweaks,
 mid-season driver/team moves, and ongoing storylines may be stale or wrong. These sources are
@@ -69,7 +80,7 @@ piece. A single failure is fine — just proceed with whichever loaded.
 
 1. **Start the daemon** using the Monitor tool:
    ```
-   Monitor(command="uv run -m f1live.main 2>/tmp/f1live.log")
+   Monitor(command="cd \"<plugin-root>\" && uv run -m f1live.main 2>/tmp/f1live.log")
    ```
    The daemon connects to F1's official live timing WebSocket and prints event lines to stdout.
    Each stdout line is a notification to you.
@@ -97,7 +108,7 @@ When the user wants to watch a past race (recorded broadcast, highlights, or jus
 
 2. **Tell the user you're downloading**, then download the archive using Bash:
    ```bash
-   uv run -m f1live.download --path "<session_path>" --skip-telemetry
+   cd "<plugin-root>" && uv run -m f1live.download --path "<session_path>" --skip-telemetry
    ```
    This prints the output directory path to stdout (progress goes to stderr).
    Default output: `$TMPDIR/f1-replay/<auto-name>/`
@@ -117,7 +128,7 @@ Once the user signals go:
 
 1. **Start replay** using the Monitor tool with `--speed 1` (real-time):
    ```
-   Monitor(command="uv run -m f1live.replay <output_dir> --speed 1 2>/tmp/f1live.log")
+   Monitor(command="cd \"<plugin-root>\" && uv run -m f1live.replay <output_dir> --speed 1 2>/tmp/f1live.log")
    ```
    The replay engine feeds archive data through the same event pipeline as live mode.
    It outputs identical event lines to stdout and dumps `f1-live.md`/`f1-live.json` snapshots.
