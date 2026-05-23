@@ -7,7 +7,10 @@
   "plugins": [
     {
       "name": "f1-live-copilot",
-      "source": ".",
+      "source": {
+        "source": "github",
+        "repo": "crizin/f1-live-copilot"
+      },
       "description": "Watch F1 races with an AI friend — real-time race companion powered by official F1 live timing data"
     }
   ]
