@@ -10,18 +10,18 @@
 
 | P | Driver | Team | Pts | AUS | CHN | JPN | MIA |
 |---|---|---|---|---|---|---|---|
-| 1 | ANT | Mercedes | 100 | P2 | P1 | P1 | P1 |
-| 2 | RUS | Mercedes | 80 | P1 | P2 | P4 | P4 |
-| 3 | LEC | Ferrari | 59 | P3 | P4 | P3 | P8 |
-| 4 | NOR | McLaren | 51 | P5 | P20 | P5 | P2 |
-| 5 | HAM | Ferrari | 51 | P4 | P3 | P6 | P6 |
-| 6 | PIA | McLaren | 43 | P21 | P19 | P2 | P3 |
-| 7 | VER | Red Bull | 26 | P6 | P16 | P8 | P5 |
+| 1 | ANT | Mercedes | 106 | P2 | P1 | P1 | P1 |
+| 2 | RUS | Mercedes | 88 | P1 | P2 | P4 | P4 |
+| 3 | LEC | Ferrari | 63 | P3 | P4 | P3 | P8 |
+| 4 | NOR | McLaren | 58 | P5 | P20 | P5 | P2 |
+| 5 | HAM | Ferrari | 54 | P4 | P3 | P6 | P6 |
+| 6 | PIA | McLaren | 48 | P21 | P19 | P2 | P3 |
+| 7 | VER | Red Bull | 28 | P6 | P16 | P8 | P5 |
 | 8 | BEA | Haas | 17 | P7 | P5 | P22 | P11 |
 | 9 | GAS | Alpine | 16 | P10 | P6 | P7 | P21 |
 | 10 | LAW | Racing Bulls | 10 | P13 | P7 | P9 | P20 |
 | 11 | COL | Alpine | 7 | P14 | P10 | P16 | P7 |
-| 12 | LIN | Racing Bulls | 4 | P8 | P12 | P14 | P14 |
+| 12 | LIN | Racing Bulls | 5 | P8 | P12 | P14 | P14 |
 | 13 | HAD | Red Bull | 4 | P20 | P8 | P12 | P22 |
 | 14 | SAI | Williams | 4 | P15 | P9 | P15 | P9 |
 | 15 | BOR | Audi | 2 | P9 | P21 | P13 | P12 |
@@ -39,13 +39,13 @@
 
 | P | Team | Pts |
 |---|---|---|
-| 1 | Mercedes | 180 |
-| 2 | Ferrari | 110 |
-| 3 | McLaren | 94 |
-| 4 | Red Bull | 30 |
+| 1 | Mercedes | 194 |
+| 2 | Ferrari | 117 |
+| 3 | McLaren | 106 |
+| 4 | Red Bull | 32 |
 | 5 | Alpine | 23 |
 | 6 | Haas | 18 |
-| 7 | Racing Bulls | 14 |
+| 7 | Racing Bulls | 15 |
 | 8 | Williams | 5 |
 | 9 | Audi | 2 |
 | 10 | Cadillac | 0 |
