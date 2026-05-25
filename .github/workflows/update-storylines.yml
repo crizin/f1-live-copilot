@@ -21,6 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      # ── 1. Claude drafts the update ─────────────────────────────────────
       - uses: anthropics/claude-code-action@fefa07e9c665b7320f08c3b525980457f22f58aa # v1.0.111
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
@@ -62,59 +63,31 @@ jobs:
                  create the sources file at all.
 
             7. Do NOT run git commit or git push. Just edit data/storylines.md
-               in place; a later step opens the PR.
+               in place; later steps fact-check it and open the PR.
           claude_args: '--model opus --max-turns 25 --allowed-tools "Read,Edit,WebSearch,WebFetch,Write"'
 
-      - name: Compose PR body with sources
-        id: pr_body
+      - name: Detect changes
+        id: changes
         run: |
-          SOURCES=/tmp/storylines-sources.md
-          DELIM="PR_BODY_EOF_$(date +%s%N)"
-          {
-            echo "body<<${DELIM}"
-            echo "Auto-generated update by Claude Code Action."
-            echo
-            echo "⚠️ AI-curated content can hallucinate. The URLs below are what Claude *says* it consulted — verify each item against them before merging."
-            echo
-            if [ -s "$SOURCES" ]; then
-              echo "## Sources Claude reports having used"
-              echo
-              cat "$SOURCES"
-            else
-              echo "_Claude did not produce a sources file for this run._"
-            fi
-            echo "${DELIM}"
-          } >> "$GITHUB_OUTPUT"
+          if git diff --quiet -- data/storylines.md; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No storylines changes this run — skipping fact-check and PR."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
 
-      - uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
-        id: cpr
-        with:
-          branch: storylines/auto-update
-          delete-branch: true
-          commit-message: "chore(data): auto-update storylines"
-          title: "chore(data): auto-update storylines"
-          body: ${{ steps.pr_body.outputs.body }}
-          assignees: crizin
-          labels: |
-            ai-generated
-            data-update
-
-      # ── Codex cross-check ──────────────────────────────────────────────
-      # GPT-5 fact-checks Claude's claims against the URLs in the PR body.
+      # ── 2. Codex fact-checks the draft (working-tree diff) ──────────────
+      # GPT-5 verifies Claude's claims against the URLs it reported using.
       # Different model family → independent failure modes vs same-model self-review.
-
       - name: Prepare Codex inputs
-        if: steps.cpr.outputs.pull-request-number != ''
-        env:
-          PR_NUMBER: ${{ steps.cpr.outputs.pull-request-number }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: steps.changes.outputs.changed == 'true'
         run: |
-          gh pr view "$PR_NUMBER" --json body --jq '.body' > /tmp/pr-body.md
-          gh pr diff "$PR_NUMBER" > /tmp/storylines.diff
-          echo "PR #$PR_NUMBER inputs prepared ($(wc -l < /tmp/storylines.diff) diff lines)"
+          git diff -- data/storylines.md > /tmp/storylines.diff
+          touch /tmp/storylines-sources.md
+          echo "Draft prepared ($(wc -l < /tmp/storylines.diff) diff lines)"
 
       - name: Codex fact-check
-        if: steps.cpr.outputs.pull-request-number != ''
+        if: steps.changes.outputs.changed == 'true'
         uses: openai/codex-action@e0fdf01220eb9a88167c4898839d273e3f2609d1 # v1.8
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
@@ -125,17 +98,17 @@ jobs:
           codex-args: '--config web_search="live" --config sandbox_workspace_write.network_access=true'
           output-file: codex-review.md
           prompt: |
-            You are fact-checking an auto-generated PR that adds entries to
-            data/storylines.md (F1 2026 narrative content).
+            You are fact-checking a draft update to data/storylines.md
+            (F1 2026 narrative content) before it becomes a PR.
 
             Inputs on disk:
-            - /tmp/storylines.diff — the PR's diff for that file
-            - /tmp/pr-body.md     — the PR description, which lists the URLs
-                                    the generator claims to have used as sources
+            - /tmp/storylines.diff          — the draft's diff for that file
+            - /tmp/storylines-sources.md    — the sources the generator claims
+                                              to have used (### blocks with URLs)
 
             For each substantive new or materially changed claim in the diff:
             1. State the claim in one line of plain English.
-            2. Find its source URLs in the PR body.
+            2. Find its source URLs in the sources file.
             3. Fetch each URL and read it.
             4. Classify alignment:
                - VERIFIED     — source clearly states the claim
@@ -159,19 +132,81 @@ jobs:
             Rules:
             - Be conservative — if unsure, mark PARTIAL.
             - Do NOT judge writing style; only facts.
-            - Do NOT search for new sources beyond what the PR body lists.
+            - Do NOT search for new sources beyond what the sources file lists.
             - Skip cosmetic edits (whitespace, the "Last update" line, etc.).
 
-      - name: Post Codex review as PR comment
-        if: steps.cpr.outputs.pull-request-number != '' && hashFiles('codex-review.md') != ''
-        env:
-          PR_NUMBER: ${{ steps.cpr.outputs.pull-request-number }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # ── 3. Claude revises the draft per Codex's findings ────────────────
+      - uses: anthropics/claude-code-action@fefa07e9c665b7320f08c3b525980457f22f58aa # v1.0.111
+        if: steps.changes.outputs.changed == 'true'
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            Codex (GPT-5) has fact-checked the current draft of
+            data/storylines.md. Its review is in the file `codex-review.md` at
+            the repo root — a markdown table classifying each claim as
+            VERIFIED / PARTIAL / UNSUPPORTED / CONTRADICTED.
+
+            Read codex-review.md, then revise data/storylines.md accordingly:
+            - CONTRADICTED — remove the claim entirely.
+            - UNSUPPORTED  — try to find a concrete primary source with
+                             WebSearch/WebFetch. If you find one, keep the claim
+                             and record its URL. If not, remove the claim.
+            - PARTIAL      — correct the wording/detail so it matches what the
+                             source actually says.
+            - VERIFIED     — leave as-is.
+
+            Then rewrite /tmp/storylines-sources.md so it reflects the FINAL
+            state of the file: one ### block per surviving item, with the URLs
+            you actually opened. Keep the same format the draft step used.
+
+            Do NOT fabricate sources or events. Do NOT touch any file other than
+            data/storylines.md. Do NOT run git commit or git push.
+          claude_args: '--model opus --max-turns 20 --allowed-tools "Read,Edit,WebSearch,WebFetch,Write"'
+
+      # ── 4. Open the PR with the reviewed, revised content ───────────────
+      - name: Compose PR body
+        id: pr_body
+        if: steps.changes.outputs.changed == 'true'
         run: |
+          SOURCES=/tmp/storylines-sources.md
+          REVIEW=codex-review.md
+          DELIM="PR_BODY_EOF_$(date +%s%N)"
           {
-            echo "## 🤖 Codex cross-check (GPT-5)"
+            echo "body<<${DELIM}"
+            echo "Auto-generated by Claude Code, fact-checked by Codex (GPT-5), then revised by Claude."
             echo
-            echo "Independent verification of the storylines diff against the URLs in the PR body."
+            echo "⚠️ AI content can still slip through. The URLs below are what Claude *says* it used — spot-check before merging."
             echo
-            cat codex-review.md
-          } | gh pr comment "$PR_NUMBER" --body-file -
+            if [ -s "$SOURCES" ]; then
+              echo "## Sources Claude reports having used"
+              echo
+              cat "$SOURCES"
+              echo
+            else
+              echo "_No sources file produced for this run._"
+              echo
+            fi
+            if [ -s "$REVIEW" ]; then
+              echo "## 🤖 Codex cross-check (GPT-5) — on the first draft"
+              echo
+              echo "_Codex reviewed Claude's initial draft; Claude then revised the file per these findings, so some entries below may no longer match the final diff._"
+              echo
+              cat "$REVIEW"
+            fi
+            echo "${DELIM}"
+          } >> "$GITHUB_OUTPUT"
+
+      - uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        id: cpr
+        if: steps.changes.outputs.changed == 'true'
+        with:
+          branch: storylines/auto-update
+          delete-branch: true
+          add-paths: data/storylines.md
+          commit-message: "chore(data): auto-update storylines"
+          title: "chore(data): auto-update storylines"
+          body: ${{ steps.pr_body.outputs.body }}
+          assignees: crizin
+          labels: |
+            ai-generated
+            data-update
