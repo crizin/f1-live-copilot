@@ -3,7 +3,7 @@
 > Things Claude might not know from training data — recent drama, memes, narratives.
 > Updated throughout the season as stories develop.
 
-Last update: 2026-05-18, post-Miami / Canadian GP build-up
+Last update: 2026-05-25, post-Canadian GP
 
 ---
 
@@ -13,9 +13,11 @@ Last update: 2026-05-18, post-Miami / Canadian GP build-up
 The 2026 power unit overhaul has completely reshuffled the grid. Electric power tripled,
 MGU-H gone, 100% sustainable fuel — teams that nailed the new formula are thriving,
 others are struggling. The early picture:
-- **Mercedes**: Got it right. Three wins from three to start the season — Russell in
-  Australia, Antonelli in China and Japan. The new PU architecture plays to their
-  EV expertise.
+- **Mercedes**: Got it right. Five wins from five to start the season — Russell in
+  Australia, Antonelli in China, Japan, Miami and now Canada. The new PU architecture
+  plays to their EV expertise. Constructors lead is now 72 points (219 to Ferrari's
+  147). Reliability finally bit them in Montreal though — Russell's PU let go on
+  lap 30 while he was leading.
 - **McLaren**: Still fast but no longer untouchable. Norris took the Miami sprint —
   McLaren's first win of 2026 and the first non-Mercedes win of the year — then
   P2/P3 in the Miami race itself.
@@ -57,12 +59,13 @@ enough.
 
 ### Antonelli's Breakout — Now The Real Deal
 Kimi Antonelli is the youngest-ever driver to lead the F1 World Championship at 19.
-After Miami he's now THREE wins from four (China, Japan, Miami) and the first driver
-in F1 history to convert his first three career poles into his first three career
-wins. He leads Russell by 20 points (100 to 80), with Leclerc third on 59. The Miami
-win was on merit, not luck — pole, an aggressive undercut on Norris, and a 3.264s
-victory after managing the final stint. The paddock has gone from "is this the next
-great champion?" to "how is anyone going to beat him this year?"
+After Canada he's now FOUR straight wins (China, Japan, Miami, Canada) and leads
+Russell by 43 points (131 to 88), with Leclerc third on 75, Hamilton fourth on 72,
+Norris fifth on 58. The Canada win wasn't even his cleanest weekend — Russell beat
+him to pole by 0.068s on Saturday afternoon and won Saturday's sprint after the pair
+clashed — but Russell's lap-30 PU failure handed Antonelli a free run to a 10.7s
+victory. The paddock conversation has fully shifted from "is this the next great
+champion?" to "how is anyone going to beat him this year?"
 
 ### Verstappen's Future in Doubt
 Max told the BBC after Suzuka he's considering retiring at the end of 2026 because
@@ -82,14 +85,16 @@ Geopolitical tensions forced the FIA's hand. The schedule left a five-week gap
 between Suzuka and Miami.
 
 ### Hamilton's Ferrari Struggles (Year 2)
-Year two at Maranello has been bumpy. Career-best fourth in Melbourne, podium in
-China, then a "pretty terrible" weekend at Suzuka where he reportedly lost six to
-eight tenths of straight-line speed and dropped from a podium-running third to sixth,
-passed late on by Leclerc. Hamilton has since said Ferrari fixed the "bizarre" Suzuka
-issue ahead of Miami — but Miami didn't help: he picked up lap-one damage, spent the
-race lift-and-coasting to manage overheating, and finished P6. Vasseur called the
-weekend "mega tough on both sides of the garage." Leclerc's late spin and 20s
-penalty dropped him to P8. Ferrari's now 69 points off Mercedes in the constructors'.
+Year two at Maranello has been bumpy — but Montreal finally clicked. Career-best
+fourth in Melbourne, podium in China, then a "pretty terrible" weekend at Suzuka
+where he reportedly lost six to eight tenths of straight-line speed and dropped from
+a podium-running third to sixth, passed late on by Leclerc. Miami didn't help either:
+lap-one damage, race spent lift-and-coasting for overheating, P6. Then Canada — pole
+lap pace was there but a mistake on his second Q3 run left him P5, and he then
+produced one of his sharpest Ferrari drives, including a clean sweep around
+Verstappen for P2 (with a bit of help from the Mercedes drama). His best Ferrari
+finish, and a much-needed weekend after the run of bad ones. Leclerc P4. Ferrari
+still 72 off Mercedes in the constructors'.
 
 ### Active Aero Era Begins
 The new active aerodynamics rules have added a fascinating strategic layer. Teams can
@@ -101,9 +106,14 @@ Some drivers have adapted faster than others.
 
 ## Rivalries to Watch
 
-- **Antonelli vs Russell** (Mercedes): The student is now beating the master in qualifying
-  AND in the championship. Wolff has publicly acknowledged a possible title fight
-  between them. After Miami the gap is 20 points and Kimi keeps converting poles.
+- **Antonelli vs Russell** (Mercedes): No longer a friendly intra-team thing. The
+  gap is now 43 points after Canada, and the Saturday sprint there was the first
+  real flashpoint of the year — they touched at Turn 2 on lap 5, Antonelli ran off,
+  came on the radio demanding a penalty for Russell, and Wolff cut him off live:
+  "Concentrate on the driving please, and not on the radio moaning." Wolff followed
+  up: "Kimi this is the fourth time — we talk about it internally and not over the
+  radio, OK." Russell won the sprint; the team-mate management is now an actual
+  storyline, not a future one.
 - **Norris vs Piastri** (McLaren): Reigning champion vs the Australian who almost took
   the title in 2025. Piastri currently has the edge on average — about 0.14 s faster
   in qualifying and 0.24 s in race trim across 2026 so far — but Norris struck back
@@ -130,6 +140,10 @@ Some drivers have adapted faster than others.
 - **"All on me"** — Leclerc's radio after binning his Miami podium on the final
   lap is the new Ferrari radio meme of the year, in the same lineage as the classic
   "Inters?" and "It's like driving on ice."
+- **"Concentrate on the driving, not on the radio moaning"** — Wolff to Antonelli
+  mid-sprint at Montreal after Kimi went on the radio demanding a penalty for
+  Russell. Instant T-shirt material; clips of Wolff's deadpan delivery have been
+  re-cut over every petty workplace complaint on F1 TikTok all week.
 
 ---
 
@@ -170,3 +184,17 @@ Some drivers have adapted faster than others.
   Operations" provision — limited PU upgrades for struggling manufacturers — kicks
   in from the Canadian GP onwards. Honda is the most likely beneficiary, with Audi
   and Ferrari potentially qualifying too.
+- **Canadian GP — Mercedes sprint clash and a Russell heartbreak** (Round 5,
+  May 22-24): Russell took Saturday pole by 0.068s, then won the sprint after a
+  lap-5 wheel-bang with Antonelli at Turn 2 that pushed Kimi off and triggered
+  the Wolff "radio moaning" intervention. In the race the pair swapped the lead
+  multiple times in an obviously dicey intra-team fight, until Russell's PU let
+  go on lap 30 while he was leading — he reportedly slammed his fists on the car
+  on the way back in. Antonelli cruised to a 10.7s win. Hamilton P2 (his best
+  Ferrari result) after a clean late-race pass on Verstappen, who took P3 — his
+  first podium of 2026. Leclerc P4. McLaren's day was a disaster: both cars
+  started on inters with no rain ever materialising, pitted early for slicks,
+  Norris later retired with a gearbox, Piastri tangled with Albon on lap 13
+  (10s penalty) and finished 11th, lapped twice. Other DNFs: Alonso, Perez,
+  Albon. Lindblad (Racing Bulls, F1's only 2026 rookie at 18) DNS with a
+  clutch problem on the grid.
