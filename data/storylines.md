@@ -148,6 +148,12 @@ Some drivers have adapted faster than others.
 
 ## Recent Incidents & Controversies
 
+- **Russell's Canada meltdown** (Round 5, May 24): Leading from pole when his power
+  unit died on lap 30 — a battery failure, "the car was literally going dark" per
+  Wolff. He sat stunned in the cockpit, smacked the car as he climbed out, then
+  hurled his headrest onto the track — which earned him a post-race FIA "unsafe act"
+  investigation. "It feels like somebody doesn't want me to fight for this
+  championship," he said afterward. The DNF dropped him to 43 points behind Antonelli.
 - **Bearman's 50G Suzuka crash** (Round 3, Japan): see Big Stories above. Frightening
   but he walked away — and it became the trigger for the mid-season rule refinements.
 - **Hulkenberg's Audi fire** (Miami sprint, May 2): Power unit caught fire on the
