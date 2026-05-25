@@ -13,11 +13,10 @@ Last update: 2026-05-25, post-Canadian GP
 The 2026 power unit overhaul has completely reshuffled the grid. Electric power tripled,
 MGU-H gone, 100% sustainable fuel — teams that nailed the new formula are thriving,
 others are struggling. The early picture:
-- **Mercedes**: Got it right. Five wins from five to start the season — Russell in
-  Australia, Antonelli in China, Japan, Miami and now Canada. The new PU architecture
-  plays to their EV expertise. Constructors lead is now 72 points (219 to Ferrari's
-  147). Reliability finally bit them in Montreal though — Russell's PU let go on
-  lap 30 while he was leading.
+- **Mercedes**: Got it right. Antonelli is on a four-race winning streak after
+  Canada, and the new PU architecture plays to their EV expertise. Constructors
+  lead is now 72 points (219 to Ferrari's 147). Reliability finally bit them in
+  Montreal though — Russell's PU let go on lap 30 while he was leading.
 - **McLaren**: Still fast but no longer untouchable. Norris took the Miami sprint —
   McLaren's first win of 2026 and the first non-Mercedes win of the year — then
   P2/P3 in the Miami race itself.
@@ -59,8 +58,8 @@ enough.
 
 ### Antonelli's Breakout — Now The Real Deal
 Kimi Antonelli is the youngest-ever driver to lead the F1 World Championship at 19.
-After Canada he's now FOUR straight wins (China, Japan, Miami, Canada) and leads
-Russell by 43 points (131 to 88), with Leclerc third on 75, Hamilton fourth on 72,
+After Canada he's now on FOUR straight wins and leads Russell by 43 points (131
+to 88), with Leclerc third on 75, Hamilton fourth on 72,
 Norris fifth on 58. The Canada win wasn't even his cleanest weekend — Russell beat
 him to pole by 0.068s on Saturday afternoon and won Saturday's sprint after the pair
 clashed — but Russell's lap-30 PU failure handed Antonelli a free run to a 10.7s
@@ -189,12 +188,11 @@ Some drivers have adapted faster than others.
   lap-5 wheel-bang with Antonelli at Turn 2 that pushed Kimi off and triggered
   the Wolff "radio moaning" intervention. In the race the pair swapped the lead
   multiple times in an obviously dicey intra-team fight, until Russell's PU let
-  go on lap 30 while he was leading — he reportedly slammed his fists on the car
-  on the way back in. Antonelli cruised to a 10.7s win. Hamilton P2 (his best
-  Ferrari result) after a clean late-race pass on Verstappen, who took P3 — his
-  first podium of 2026. Leclerc P4. McLaren's day was a disaster: both cars
-  started on inters with no rain ever materialising, pitted early for slicks,
-  Norris later retired with a gearbox, Piastri tangled with Albon on lap 13
-  (10s penalty) and finished 11th, lapped twice. Other DNFs: Alonso, Perez,
+  go on lap 30 while he was leading. Antonelli cruised to a 10.7s win. Hamilton
+  P2 (his best Ferrari result) after a clean late-race pass on Verstappen, who
+  took P3 — his first podium of 2026. Leclerc P4. McLaren's day was a disaster:
+  both cars started on inters, pitted early for slicks once conditions stayed
+  dry, Norris later retired with a gearbox, Piastri tangled with Albon on lap 13
+  (time penalty) and finished 11th, lapped twice. Other DNFs: Alonso, Perez,
   Albon. Lindblad (Racing Bulls, F1's only 2026 rookie at 18) DNS with a
   clutch problem on the grid.
