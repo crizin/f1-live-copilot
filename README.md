@@ -1,5 +1,10 @@
 # 🏎️ F1 Live Copilot
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-E10600.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10+-E10600.svg)](https://www.python.org)
+[![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-Plugin-E10600.svg)](https://docs.claude.com/en/docs/claude-code)
+[![Built with uv](https://img.shields.io/badge/Built%20with-uv-E10600.svg)](https://docs.astral.sh/uv/)
+
 > [한국어 README](README.ko.md)
 
 **Watch Formula 1 races with AI — not as a commentator, but as a friend on the couch.**

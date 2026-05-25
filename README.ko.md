@@ -1,5 +1,10 @@
 # 🏎️ F1 Live Copilot
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-E10600.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10+-E10600.svg)](https://www.python.org)
+[![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-Plugin-E10600.svg)](https://docs.claude.com/en/docs/claude-code)
+[![Built with uv](https://img.shields.io/badge/Built%20with-uv-E10600.svg)](https://docs.astral.sh/uv/)
+
 > [English README](README.md)
 
 **AI와 함께 F1 경기를 실시간으로 관람하세요 — 해설자가 아닌, 같이 보는 친구로.**
