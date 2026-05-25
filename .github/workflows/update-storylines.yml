@@ -94,6 +94,7 @@ jobs:
           commit-message: "chore(data): auto-update storylines"
           title: "chore(data): auto-update storylines"
           body: ${{ steps.pr_body.outputs.body }}
+          assignees: crizin
           labels: |
             ai-generated
             data-update
