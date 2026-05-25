@@ -114,7 +114,7 @@ jobs:
 
       - name: Codex fact-check
         if: steps.cpr.outputs.pull-request-number != ''
-        uses: openai/codex-action@e469131063221562acfb9ea6bbc9fd7f27226ffb # v1.8
+        uses: openai/codex-action@e0fdf01220eb9a88167c4898839d273e3f2609d1 # v1.8
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           allow-bots: "true"
