@@ -9,3 +9,5 @@ updates:
       prefix: "chore(ci)"
     labels:
       - "dependencies"
+    assignees:
+      - "crizin"
