@@ -3,7 +3,7 @@
 > Things Claude might not know from training data — recent drama, memes, narratives.
 > Updated throughout the season as stories develop.
 
-Last update: 2026-05-25, post-Canadian GP
+Last update: 2026-06-01, Monaco GP week
 
 ---
 
@@ -16,7 +16,13 @@ others are struggling. The early picture:
 - **Mercedes**: Got it right. Antonelli is on a four-race winning streak after
   Canada, and the new PU architecture plays to their EV expertise. Constructors
   lead is now 72 points (219 to Ferrari's 147). Reliability finally bit them in
-  Montreal though — Russell's PU let go on lap 30 while he was leading.
+  Montreal though — Russell's PU let go on lap 30 while he was leading. James
+  Allison later confirmed it was a "catastrophic" battery failure that triggered
+  an "engine kill" — and Mercedes can't physically inspect the unit for several
+  months because the damaged hybrid components have to go through strict safety
+  / transport procedures before they ship back to the UK. Until then it's a
+  telemetry-only diagnosis. The paddock subtext: did Mercedes' aggressive design
+  push the electrical systems too close to the edge?
 - **McLaren**: Still fast but no longer untouchable. Norris took the Miami sprint —
   McLaren's first win of 2026 and the first non-Mercedes win of the year — then
   P2/P3 in the Miami race itself.
@@ -54,7 +60,12 @@ meeting on April 20 that produced mid-season "refinements" landing at Miami:
   (anti-pile-up measure)
 - Higher tyre-blanket temps for inters to fix wet-grip complaints
 Verstappen called the changes "a tickle"; others say it's a step but nowhere near
-enough.
+enough. Then, for Monaco specifically, the FIA went further: a one-off mandatory
+"Rev1" engine map and a total ban on active-aero "straight mode" for the whole
+weekend. Rev1 starts tapering MGU-K deployment at 200 km/h (vs ~290 km/h on the
+normal map) and cuts deployment to zero at 300 km/h; even with overtake mode
+you get just 150 kW at 300 and zero by 310. Bearman, of all people, said it
+should make the cars "more like last year — we can just drive how we want."
 
 ### Antonelli's Breakout — Now The Real Deal
 Kimi Antonelli is the youngest-ever driver to lead the F1 World Championship at 19.
@@ -76,7 +87,12 @@ ejected a British journalist from a media session over a 2025-vintage question,
 went home to Monaco and skipped the Pirelli test at Suzuka. Reports say his
 exit clause is tied to being top-two in the championship by midseason; he's
 nowhere near that, and managers are openly shopping clients into the hypothetical
-seat. Watch this space all season.
+seat. Update post-Canada: Max told De Telegraaf he WILL stay in F1 in 2027 and
+has explicitly ruled out a sabbatical ("No, not a sabbatical. If I stop, I'll
+stop completely") — but he's pointedly NOT committing to Red Bull beyond this
+year, saying he'd "prefer to stay connected to Red Bull for the rest of my life"
+but "that decision doesn't have to be today or tomorrow." His exit window opens
+in August. Watch this space all season.
 
 ### Bahrain & Saudi Arabia Called Off
 Both Middle Eastern rounds were cancelled — a first for the modern calendar.
@@ -183,6 +199,12 @@ Some drivers have adapted faster than others.
   Operations" provision — limited PU upgrades for struggling manufacturers — kicks
   in from the Canadian GP onwards. Honda is the most likely beneficiary, with Audi
   and Ferrari potentially qualifying too.
+- **Monaco gets its own engine map**: For the first time at any race, the FIA has
+  mandated a circuit-specific PU mode — "Rev1" — for the Monaco weekend, plus a
+  total ban on active-aero "straight mode" for the whole lap. The point is to
+  peg back top-speed potential and stop the cars hitting walls at super-clip
+  delta speeds. Drivers seem mostly OK with it: Bearman (yes, that Bearman) said
+  it should let them "just drive how we want," more like last year.
 - **Canadian GP — Mercedes sprint clash and a Russell heartbreak** (Round 5,
   May 22-24): Russell took Saturday pole by 0.068s, then won the sprint after a
   lap-5 wheel-bang with Antonelli at Turn 2 that pushed Kimi off and triggered
@@ -199,4 +221,8 @@ Some drivers have adapted faster than others.
   stunned in the cockpit, smacked the car as he climbed out, then hurled his
   headrest onto the track — drawing a post-race FIA "unsafe act" investigation.
   "It feels like somebody doesn't want me to fight for this championship," he
-  said; the DNF left him 43 points behind Antonelli.
+  said; the DNF left him 43 points behind Antonelli. The stewards came back
+  with a €5,000 fine, suspended for 12 months — so nothing paid unless he does
+  it again within the year. Russell took it on the chin, called himself
+  "embarrassed" by the headrest moment, and publicly apologised to the marshals
+  and the FIA for "making their job harder than it needed to be."
