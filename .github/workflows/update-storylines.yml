@@ -196,6 +196,7 @@ jobs:
               echo "_Codex reviewed Claude's initial draft; Claude then revised the file per these findings, so some entries below may no longer match the final diff._"
               echo
               cat "$REVIEW"
+              echo
             fi
             echo "${DELIM}"
           } >> "$GITHUB_OUTPUT"
