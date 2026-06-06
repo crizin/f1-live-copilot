@@ -69,7 +69,7 @@ jobs:
             echo "_(no Codex cross-check comment found yet — proceed using only the user's instruction)_" > /tmp/cc/codex-review.md
           fi
 
-      - uses: anthropics/claude-code-action@36a69b6a90b850823f86de06fdfd56264772ad98 # v1.0.134
+      - uses: anthropics/claude-code-action@64de744025ca9e24df2b88204b4f1e968f39f009 # v1.0.139
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: |
