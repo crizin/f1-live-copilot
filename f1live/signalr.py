@@ -1,20 +1,27 @@
-"""Minimal SignalR client for F1 Live Timing."""
+"""SignalR Core client for F1 Live Timing.
+
+F1 serves live timing over ASP.NET Core SignalR at /signalrcore. The feed is open:
+negotiate over HTTP, upgrade to WebSocket, send the SignalR Core handshake, then
+invoke Subscribe with the topics of interest.
+"""
 
 import asyncio
 import json
 import logging
-from urllib.parse import urlencode, urlparse, urlunparse
 
 import requests
 import websockets
 
 logger = logging.getLogger("f1live.signalr")
 
-SIGNALR_URL = "https://livetiming.formula1.com/signalr"
+SIGNALR_URL = "https://livetiming.formula1.com/signalrcore"
+WS_URL = "wss://livetiming.formula1.com/signalrcore"
+RS = "\x1e"  # SignalR Core record separator (0x1e)
+
 HEADERS = {
-    "User-agent": "BestHTTP",
+    "User-Agent": "Mozilla/5.0",
+    "Origin": "https://www.formula1.com",
     "Accept-Encoding": "gzip, identity",
-    "Connection": "keep-alive, Upgrade",
 }
 
 TOPICS_TIMING = [
@@ -28,14 +35,11 @@ TOPICS_TIMING = [
     "SessionData",
     "TrackStatus",
     "RaceControlMessages",
-    "RcmSeries",
     "TeamRadio",
     "WeatherData",
     "ExtrapolatedClock",
     "TopThree",
     "Heartbeat",
-    "AudioStreams",
-    "ContentStreams",
 ]
 
 TOPICS_TELEMETRY = [
@@ -46,43 +50,34 @@ TOPICS_TELEMETRY = [
 TOPICS = TOPICS_TIMING
 
 
-def _negotiate(session: requests.Session) -> tuple[dict, dict]:
-    conn_data = json.dumps([{"name": "Streaming"}])
-    query = urlencode({
-        "connectionData": conn_data,
-        "clientProtocol": "1.5",
-    })
-    url = f"{SIGNALR_URL}/negotiate?{query}"
-    resp = session.get(url)
+def _negotiate(session: requests.Session) -> str:
+    url = f"{SIGNALR_URL}/negotiate?negotiateVersion=1"
+    resp = session.post(url, timeout=15)
     resp.raise_for_status()
-    return resp.json(), resp.cookies
-
-
-def _build_ws_url(token: str) -> str:
-    conn_data = json.dumps([{"name": "Streaming"}])
-    parsed = urlparse(SIGNALR_URL)
-    ws_scheme = "wss" if parsed.scheme == "https" else "ws"
-    ws_url = urlunparse((ws_scheme, parsed.netloc, parsed.path, "", "", ""))
-    query = urlencode({
-        "transport": "webSockets",
-        "connectionToken": token,
-        "connectionData": conn_data,
-        "clientProtocol": "1.5",
-    })
-    return f"{ws_url}/connect?{query}"
+    return resp.json()["connectionToken"]
 
 
 def _build_subscribe_message(topics: list[str]) -> str:
     return json.dumps({
-        "H": "Streaming",
-        "M": "Subscribe",
-        "A": [topics],
-        "I": 0,
-    })
+        "type": 1,
+        "invocationId": "0",
+        "target": "Subscribe",
+        "arguments": [topics],
+    }) + RS
+
+
+async def _keepalive(ws):
+    """Send SignalR Core ping frames so the server doesn't drop us."""
+    try:
+        while True:
+            await asyncio.sleep(10)
+            await ws.send(json.dumps({"type": 6}) + RS)
+    except Exception:
+        pass
 
 
 async def connect_and_stream(callback, topics: list[str] | None = None, timeout: int = 300):
-    """Connect to F1 SignalR and stream messages to callback.
+    """Connect to F1 SignalR Core and stream messages to callback.
 
     callback: async function(topic: str, data: dict, timestamp: str | None)
     timeout: seconds without data before disconnecting
@@ -95,60 +90,75 @@ async def connect_and_stream(callback, topics: list[str] | None = None, timeout:
 
     while True:
         try:
-            logger.info("Negotiating connection...")
-            config, cookies = _negotiate(session)
-            ws_url = _build_ws_url(config["ConnectionToken"])
-
-            cookie_str = "; ".join(f"{k}={v}" for k, v in cookies.items())
-            extra_headers = {**HEADERS, "Cookie": cookie_str}
+            logger.info("Negotiating connection (SignalR Core)...")
+            conn_token = _negotiate(session)
+            cookie_str = "; ".join(f"{k}={v}" for k, v in session.cookies.items())
+            extra_headers = {"Origin": HEADERS["Origin"], "Cookie": cookie_str}
+            ws_url = f"{WS_URL}?id={conn_token}"
 
             logger.info("Connecting to WebSocket...")
             async with websockets.connect(
                 ws_url,
                 additional_headers=extra_headers,
+                user_agent_header=HEADERS["User-Agent"],
                 ping_interval=20,
-                ping_timeout=15,
+                ping_timeout=20,
+                max_size=None,
             ) as ws:
+                # SignalR Core handshake
+                await ws.send('{"protocol":"json","version":1}' + RS)
+                await asyncio.wait_for(ws.recv(), timeout=15)
+
                 logger.info("Connected! Subscribing to topics...")
                 await ws.send(_build_subscribe_message(topics))
 
+                ping_task = asyncio.create_task(_keepalive(ws))
                 last_data_time = asyncio.get_event_loop().time()
 
-                async for raw_msg in ws:
-                    if not raw_msg:
-                        continue
+                try:
+                    async for raw_msg in ws:
+                        if not raw_msg:
+                            continue
+                        for frame in raw_msg.split(RS):
+                            if not frame.strip():
+                                continue
+                            try:
+                                data = json.loads(frame)
+                            except json.JSONDecodeError:
+                                continue
 
-                    data = json.loads(raw_msg)
+                            mtype = data.get("type")
 
-                    messages = data.get("M", [])
-                    if messages:
-                        last_data_time = asyncio.get_event_loop().time()
-                        for msg in messages:
-                            if msg.get("M") == "feed":
-                                args = msg.get("A", [])
+                            # Streaming feed update
+                            if mtype == 1 and data.get("target") == "feed":
+                                args = data.get("arguments", [])
                                 if len(args) >= 2:
                                     topic = args[0]
                                     content = args[1]
-                                    timestamp = args[2] if len(args) > 2 else None
+                                    ts = args[2] if len(args) > 2 else None
+                                    last_data_time = asyncio.get_event_loop().time()
                                     try:
-                                        await callback(topic, content, timestamp)
+                                        await callback(topic, content, ts)
                                     except Exception:
                                         logger.exception(f"Error in callback for {topic}")
 
-                    if "R" in data and isinstance(data["R"], dict):
-                        last_data_time = asyncio.get_event_loop().time()
-                        for topic, content in data["R"].items():
-                            if topic in topics:
-                                try:
-                                    await callback(topic, content, None)
-                                except Exception:
-                                    logger.exception(f"Error in callback for initial {topic}")
+                            # Initial snapshot (completion of Subscribe invocation)
+                            elif mtype == 3 and isinstance(data.get("result"), dict):
+                                last_data_time = asyncio.get_event_loop().time()
+                                for topic, content in data["result"].items():
+                                    if topic in topics:
+                                        try:
+                                            await callback(topic, content, None)
+                                        except Exception:
+                                            logger.exception(f"Error in callback for initial {topic}")
 
-                    if asyncio.get_event_loop().time() - last_data_time > timeout:
-                        logger.warning(f"No data for {timeout}s, disconnecting.")
-                        return
+                        if asyncio.get_event_loop().time() - last_data_time > timeout:
+                            logger.warning(f"No data for {timeout}s, disconnecting.")
+                            return
+                finally:
+                    ping_task.cancel()
 
-        except (websockets.exceptions.ConnectionClosed, ConnectionRefusedError) as e:
+        except (websockets.ConnectionClosed, ConnectionRefusedError) as e:
             logger.warning(f"Connection lost: {e}. Reconnecting in 5s...")
             await asyncio.sleep(5)
         except Exception:
