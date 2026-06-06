@@ -13,6 +13,7 @@ import signal
 import sys
 import tempfile
 
+from f1live import radio_stt
 from f1live.events import EventBatcher, EventDetector
 from f1live.signalr import connect_and_stream
 from f1live.state import F1State
@@ -36,9 +37,37 @@ detector = EventDetector(warmup_seconds=WARMUP_SECONDS)
 batcher = EventBatcher(window=5.0, cooldown=5.0)
 _running = True
 
+# Team-radio STT (only active when OPENAI_API_KEY is set; see radio_stt).
+_seen_radio: set[str] = set()
+_radio_initialized = False
+
 
 async def on_message(topic: str, content, timestamp: str | None):
     state.process_message(topic, content, timestamp)
+
+
+async def _transcribe_and_emit(abbr: str, url: str):
+    text = await radio_stt.transcribe(url)
+    if text:
+        print(f"[RADIO] {abbr}: {text}", flush=True)  # stdout → Monitor (context)
+
+
+def _schedule_radio(state_dict: dict):
+    """Transcribe new team-radio clips in the background. No-op without a key."""
+    global _radio_initialized
+    if not radio_stt.enabled():
+        return
+    clips = [(tr.get("abbreviation", "?"), tr.get("url"))
+             for tr in state_dict.get("team_radio", []) if tr.get("url")]
+    if not _radio_initialized:
+        # Seed baseline so the connect-time backlog isn't transcribed in a burst.
+        _seen_radio.update(url for _, url in clips)
+        _radio_initialized = True
+        return
+    for abbr, url in clips:
+        if url not in _seen_radio:
+            _seen_radio.add(url)
+            asyncio.create_task(_transcribe_and_emit(abbr, url))
 
 
 async def dump_and_detect_loop():
@@ -61,6 +90,9 @@ async def dump_and_detect_loop():
             # Detect events
             events = detector.detect(state_dict)
             batcher.add(events)
+
+            # Team-radio transcription (background; no-op without OPENAI_API_KEY)
+            _schedule_radio(state_dict)
 
             # Try flushing
             line = batcher.flush()
