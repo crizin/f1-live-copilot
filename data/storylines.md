@@ -3,7 +3,7 @@
 > Things Claude might not know from training data — recent drama, memes, narratives.
 > Updated throughout the season as stories develop.
 
-Last update: 2026-06-01, Monaco GP week
+Last update: 2026-06-08, post-Monaco GP (next round: Barcelona-Catalunya, June 12-14)
 
 ---
 
@@ -13,9 +13,11 @@ Last update: 2026-06-01, Monaco GP week
 The 2026 power unit overhaul has completely reshuffled the grid. Electric power tripled,
 MGU-H gone, 100% sustainable fuel — teams that nailed the new formula are thriving,
 others are struggling. The early picture:
-- **Mercedes**: Got it right. Antonelli is on a four-race winning streak after
-  Canada, and the new PU architecture plays to their EV expertise. Constructors
-  lead is now 72 points (219 to Ferrari's 147). Reliability finally bit them in
+- **Mercedes**: Got it right. Antonelli is on a five-win-in-six streak after
+  Monaco, and the new PU architecture plays to their EV expertise. Constructors
+  lead is now a yawning 79 points (244 to Ferrari's 165) — even after a self-
+  inflicted Monaco pit blunder that cost Russell a likely top-five finish (he
+  reckoned a podium had been on). Reliability finally bit them in
   Montreal though — Russell's PU let go on lap 30 while he was leading. James
   Allison later confirmed it was a "catastrophic" battery failure that triggered
   an "engine kill" — and Mercedes can't physically inspect the unit for several
@@ -38,15 +40,23 @@ others are struggling. The early picture:
   showing yet: Perez beat Albon's Williams and Stroll's Aston in the sprint, both
   cars finished the race (16th/18th, still no points but three race-finishes in a
   row in a season where reliability is no given). Team principal Lowdon: "a positive
-  step forward."
+  step forward." Monaco was a gut-punch though: Perez crossed the line in the points-
+  scoring zone — which would have been Cadillac's maiden F1 point — only to cop a
+  10-second post-race penalty for being out of position at the restart, dropping him
+  to last. Bottas also retired. So close, then nothing.
 
 ### "Super Clipping" — The Buzzword of 2026
 With the new ~50/50 ICE/electric split, cars are running out of battery before the end
 of long straights and visibly slowing — sometimes by 50 km/h — while drivers are still
 flat on the throttle. They call it super clipping. Norris said the cars are "probably
 the worst ever made." Hamilton called it "the least enjoyable part" of the new rules.
-Suzuka's 130R was reportedly the worst spot for it. The drivers have been very loud
-about this in public, which leads to…
+Suzuka's 130R was reportedly the worst spot for it. The complaints didn't stop with
+the rule tweaks: at Monaco — a track with barely any energy-saving pressure — Alonso
+went nuclear, calling these "probably the worst generation of cars I ever drove" and
+flatly stating "hybrid cars should not be racing. It's as simple as that." His gripe
+there was the unpredictable engine braking: with a full battery the car gives no
+engine braking, only forward push, forcing drivers to manage downshifts manually with
+throttle blips. The drivers have been very loud about this in public, which leads to…
 
 ### Bearman's 50G Crash and the Mid-Season Rule Tweaks
 Ollie Bearman crashed at Suzuka's Spoon at 191 mph after closing on Colapinto's Alpine
@@ -68,14 +78,15 @@ you get just 150 kW at 300 and zero by 310. Bearman, of all people, said it
 should make the cars "more like last year — we can just drive how we want."
 
 ### Antonelli's Breakout — Now The Real Deal
-Kimi Antonelli is the youngest-ever driver to lead the F1 World Championship at 19.
-After Canada he's now on FOUR straight wins and leads Russell by 43 points (131
-to 88), with Leclerc third on 75, Hamilton fourth on 72,
-Norris fifth on 58. The Canada win wasn't even his cleanest weekend — Russell beat
-him to pole by 0.068s on Saturday afternoon and won Saturday's sprint after the pair
-clashed — but Russell's lap-30 PU failure handed Antonelli a free run to a 10.7s
-victory. The paddock conversation has fully shifted from "is this the next great
-champion?" to "how is anyone going to beat him this year?"
+Kimi Antonelli is the youngest-ever driver to lead the F1 World Championship at 19,
+and Monaco turned the lead into a chasm. He's now won FIVE of the last six races
+and leads by 66 points (156 to Hamilton's 90), with Russell third on 88, Leclerc
+fourth on 75, Piastri fifth on 60, Norris sixth on 58. Monaco was a clean lights-to-
+flag win from pole — "one of those days where we had incredible pace and it was just
+coming all so naturally," he said — while a string of his rivals either crashed,
+broke or penalised themselves out of contention. The paddock conversation isn't even
+"how does anyone beat him this year" anymore; it's "is there a championship fight at
+all?"
 
 ### Verstappen's Future in Doubt
 Max told the BBC after Suzuka he's considering retiring at the end of 2026 because
@@ -108,8 +119,13 @@ lap-one damage, race spent lift-and-coasting for overheating, P6. Then Canada �
 lap pace was there but a mistake on his second Q3 run left him P5, and he then
 produced one of his sharpest Ferrari drives, including a clean sweep around
 Verstappen for P2 (with a bit of help from the Mercedes drama). His best Ferrari
-finish, and a much-needed weekend after the run of bad ones. Leclerc P4. Ferrari
-still 72 off Mercedes in the constructors'.
+finish — until Monaco. There he qualified and raced beautifully on a weekend where
+Ferrari looked the team to beat in practice, kept Antonelli honest early (cutting
+his lead to under 3s) and took a clean P2 that, combined
+with Russell's penalty meltdown, vaulted him to SECOND in the drivers' championship
+(90 points). Two strong weekends in a row have flipped the narrative on his Ferrari
+move. Leclerc, meanwhile, crashed out of his home race. Ferrari now 79 off Mercedes
+in the constructors'.
 
 ### Active Aero Era Begins
 The new active aerodynamics rules have added a fascinating strategic layer. Teams can
@@ -122,7 +138,9 @@ Some drivers have adapted faster than others.
 ## Rivalries to Watch
 
 - **Antonelli vs Russell** (Mercedes): No longer a friendly intra-team thing. The
-  gap is now 43 points after Canada, and the Saturday sprint there was the first
+  gap has ballooned to 68 points after Monaco, where a team pit-stop fiasco dropped
+  Russell to P12 and out of the championship runner-up spot (now P3, behind Hamilton).
+  Back in Canada the Saturday sprint there was the first
   real flashpoint of the year — they touched at Turn 2 on lap 5, Antonelli ran off,
   came on the radio demanding a penalty for Russell, and Wolff cut him off live:
   "Concentrate on the driving please, and not on the radio moaning." Wolff followed
@@ -226,3 +244,28 @@ Some drivers have adapted faster than others.
   it again within the year. Russell took it on the chin, called himself
   "embarrassed" by the headrest moment, and publicly apologised to the marshals
   and the FIA for "making their job harder than it needed to be."
+- **Monaco GP — Antonelli untouchable, carnage behind** (Round 6, June 7):
+  A chaotic race that Antonelli barely had to think about. He led lights-to-flag
+  from pole for his fifth win in six, while everyone behind imploded. The DNF list
+  ran to seven: Verstappen out on lap 1 (anti-stall/start failure — a brutal way to
+  lose his first podium of the year so soon after finally getting one in Canada),
+  plus Leclerc, Sainz, Stroll, Norris, Bearman and Bottas. Lance Stroll crashed at
+  Anthony Noghes to bring out the safety car; then, agonisingly, Leclerc crashed at
+  the very same corner on the restart — blaming a braking issue — and triggered a
+  red flag, ending the home hero's race in front of his own crowd yet again. Hamilton
+  took P2 and the championship runner-up spot. The other big story:
+- **Russell's Monaco double-penalty disaster**: Mercedes turned a likely podium into
+  P12 through sheer self-sabotage. First, Russell was clocked 0.1 km/h over the pit
+  speed limit (a software glitch, per the team) for a 5s penalty. Then, in safety-car
+  confusion, Russell pitted when he'd been told to stay out, and the crew touched the
+  car before serving the 5s — earning a drive-through on top. Net result: "I probably
+  gained one tenth in the whole pit lane and lost 13 positions," he fumed, "beyond
+  frustrated." Wolff owned it as internal "confusion." The pointless P12 dropped Russell
+  from championship P2 to P3, now 68 back of Antonelli.
+- **Hadjar's podium survives the stewards**: Isack Hadjar took P3 — his second F1
+  podium and first in Red Bull colours — after inheriting the place when Gasly picked
+  up two 5s pit-lane speeding penalties. It then briefly hung in the balance: Red Bull
+  were investigated for working on Hadjar's car (chasing a PU/spark-plug problem)
+  during the red flag, but stewards cleared them because the modification wasn't
+  actually completed and the car was unchanged. A rare bright spot for Red Bull in a
+  grim weekend.
