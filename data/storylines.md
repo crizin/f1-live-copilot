@@ -3,7 +3,7 @@
 > Things Claude might not know from training data — recent drama, memes, narratives.
 > Updated throughout the season as stories develop.
 
-Last update: 2026-06-08, post-Monaco GP (next round: Barcelona-Catalunya, June 12-14)
+Last update: 2026-06-14, post-Barcelona-Catalunya GP (next round: Austria / Red Bull Ring, June 26-28)
 
 ---
 
@@ -15,7 +15,7 @@ MGU-H gone, 100% sustainable fuel — teams that nailed the new formula are thri
 others are struggling. The early picture:
 - **Mercedes**: Got it right. Antonelli is on a five-win-in-six streak after
   Monaco, and the new PU architecture plays to their EV expertise. Constructors
-  lead is now a yawning 79 points (244 to Ferrari's 165) — even after a self-
+  lead now stands at 72 points (262 to Ferrari's 190) — even after a self-
   inflicted Monaco pit blunder that cost Russell a likely top-five finish (he
   reckoned a podium had been on). Reliability finally bit them in
   Montreal though — Russell's PU let go on lap 30 while he was leading. James
@@ -24,7 +24,13 @@ others are struggling. The early picture:
   months because the damaged hybrid components have to go through strict safety
   / transport procedures before they ship back to the UK. Until then it's a
   telemetry-only diagnosis. The paddock subtext: did Mercedes' aggressive design
-  push the electrical systems too close to the edge?
+  push the electrical systems too close to the edge? That question got louder at
+  Barcelona, where Antonelli — leading the race-long intra-team scrap and having
+  just cleared Russell — retired four laps from home with a PU/electrical failure.
+  Two Mercedes power-unit DNFs in three races (Russell at Montreal, Antonelli here),
+  both while the car was running at the front, is now a genuine reliability worry,
+  not a one-off. Russell still salvaged
+  P2, so the constructors' lead survived, but it's narrowing as Ferrari claws back.
 - **McLaren**: Still fast but no longer untouchable. Norris took the Miami sprint —
   McLaren's first win of 2026 and the first non-Mercedes win of the year — then
   P2/P3 in the Miami race itself.
@@ -76,6 +82,12 @@ weekend. Rev1 starts tapering MGU-K deployment at 200 km/h (vs ~290 km/h on the
 normal map) and cuts deployment to zero at 300 km/h; even with overtake mode
 you get just 150 kW at 300 and zero by 310. Bearman, of all people, said it
 should make the cars "more like last year — we can just drive how we want."
+Then around the Barcelona weekend the bigger lever landed: F1 agreed a gradual
+shift of the ICE/electric balance away from the current 50/50 — 58/42 in 2027,
+60/40 in 2028. 60/40 happens to be the exact ratio Verstappen had named as his
+minimum to stay in the sport, and he cautiously approved: "the changes they are
+making are heading into the right direction." So the super-clipping era has a
+sunset date now, even if the 2026 cars are stuck with it.
 
 ### Antonelli's Breakout — Now The Real Deal
 Kimi Antonelli is the youngest-ever driver to lead the F1 World Championship at 19,
@@ -86,7 +98,13 @@ flag win from pole — "one of those days where we had incredible pace and it wa
 coming all so naturally," he said — while a string of his rivals either crashed,
 broke or penalised themselves out of contention. The paddock conversation isn't even
 "how does anyone beat him this year" anymore; it's "is there a championship fight at
-all?"
+all?" Barcelona answered that, at least for a week. Antonelli was in a race-long
+wheel-to-wheel fight with Russell, had just muscled past him into P2, then his
+Mercedes died with a PU/electrical failure four laps from the flag, scoring
+zero points on a day Hamilton won. The lead is still
+his (156) but it's been chopped to 41 over Hamilton, with Russell P3 on 106. The
+title isn't decided; it's just that the threat now comes as much from his own car's
+reliability as from anyone on track.
 
 ### Verstappen's Future in Doubt
 Max told the BBC after Suzuka he's considering retiring at the end of 2026 because
@@ -103,15 +121,18 @@ has explicitly ruled out a sabbatical ("No, not a sabbatical. If I stop, I'll
 stop completely") — but he's pointedly NOT committing to Red Bull beyond this
 year, saying he'd "prefer to stay connected to Red Bull for the rest of my life"
 but "that decision doesn't have to be today or tomorrow." His exit window opens
-in August. Watch this space all season.
+in August. One thing that may help keep him around: F1's agreed move to a 60/40
+ICE/electric split by 2028 hits the exact ratio Verstappen had named as his
+minimum to stay, and he's grudgingly conceded the rules are "heading into the
+right direction." Watch this space all season.
 
 ### Bahrain & Saudi Arabia Called Off
 Both Middle Eastern rounds were cancelled — a first for the modern calendar.
 Geopolitical tensions forced the FIA's hand. The schedule left a five-week gap
 between Suzuka and Miami.
 
-### Hamilton's Ferrari Struggles (Year 2)
-Year two at Maranello has been bumpy — but Montreal finally clicked. Career-best
+### Hamilton's Ferrari Turnaround (Year 2)
+Year two at Maranello started bumpy — but it has well and truly clicked. Career-best
 fourth in Melbourne, podium in China, then a "pretty terrible" weekend at Suzuka
 where he reportedly lost six to eight tenths of straight-line speed and dropped from
 a podium-running third to sixth, passed late on by Leclerc. Miami didn't help either:
@@ -124,8 +145,15 @@ Ferrari looked the team to beat in practice, kept Antonelli honest early (cuttin
 his lead to under 3s) and took a clean P2 that, combined
 with Russell's penalty meltdown, vaulted him to SECOND in the drivers' championship
 (90 points). Two strong weekends in a row have flipped the narrative on his Ferrari
-move. Leclerc, meanwhile, crashed out of his home race. Ferrari now 79 off Mercedes
-in the constructors'.
+move. Leclerc, meanwhile, crashed out of his home race. Then came Barcelona and the
+moment the whole move was for: Hamilton's MAIDEN Ferrari win. Ferrari gambled on a
+three-stop while the Mercedes ran two, a Virtual Safety Car (Alonso's stranded Aston)
+handed Lewis a near-free stop, and he checked out to win by 19.5s — his 106th career
+victory and a first all-British podium (Hamilton, Russell, Norris) since 1968. "I have
+to thank everyone here at Ferrari... we made so many improvements," he said. Three strong weekends became a win; he's now SECOND in the championship on
+115, just 41 behind Antonelli. Leclerc's barren run continued — power-steering failure
+late at Barcelona, another DNF, leaving him fourth on 75 as Hamilton outscores him by
+the week.
 
 ### Active Aero Era Begins
 The new active aerodynamics rules have added a fascinating strategic layer. Teams can
@@ -146,14 +174,23 @@ Some drivers have adapted faster than others.
   "Concentrate on the driving please, and not on the radio moaning." Wolff followed
   up: "Kimi this is the fourth time — we talk about it internally and not over the
   radio, OK." Russell won the sprint; the team-mate management is now an actual
-  storyline, not a future one.
+  storyline, not a future one. Barcelona made it worse: the pair raced each other
+  hard all afternoon, Antonelli eventually forcing his way past Russell for P2 — and
+  then his car broke. Mercedes conceded it "might have cost itself" the win
+  by letting them scrap instead of managing the situation, a tacit admission the free
+  intra-team racing is now hurting the team on Sundays, not just the airwaves.
 - **Norris vs Piastri** (McLaren): Reigning champion vs the Australian who almost took
   the title in 2025. Piastri currently has the edge on average — about 0.14 s faster
   in qualifying and 0.24 s in race trim across 2026 so far — but Norris struck back
   with the Miami sprint pole and win.
 - **Norris vs Verstappen**: 2025 title rivals, now in different tiers of machinery.
   Can Verstappen do it with an inferior car like 2024? Increasingly looking like no.
-- **Hamilton vs Leclerc** (Ferrari): The GOAT and the heir. Second season together.
+- **Hamilton vs Leclerc** (Ferrari): The GOAT and the heir. Second season together —
+  and the intra-Ferrari pecking order has flipped hard. Hamilton has reeled off three
+  big weekends ending in the Barcelona win and sits second in the championship (115);
+  Leclerc, who was ahead earlier in the year, has gone Monaco-crash → Barcelona
+  power-steering DNF and is stuck fourth on 75, watching his team-mate become Ferrari's
+  title hope.
 
 ---
 
@@ -173,6 +210,10 @@ Some drivers have adapted faster than others.
 - **"All on me"** — Leclerc's radio after binning his Miami podium on the final
   lap is the new Ferrari radio meme of the year, in the same lineage as the classic
   "Inters?" and "It's like driving on ice."
+- **Hamilton's first Ferrari win** was the season's big feel-good moment — an
+  emotional maiden victory for the Scuderia and the first all-British F1 podium
+  since 1968 (Hamilton, Russell, Norris), a rare break from the
+  regulation-grumbling discourse.
 - **"Concentrate on the driving, not on the radio moaning"** — Wolff to Antonelli
   mid-sprint at Montreal after Kimi went on the radio demanding a penalty for
   Russell. Instant T-shirt material; clips of Wolff's deadpan delivery have been
@@ -213,10 +254,17 @@ Some drivers have adapted faster than others.
   sounding out 2027 options on the assumption that Verstappen's exit clause
   (tied to him being top-two in the championship by midseason) might trigger.
   Tsunoda is among the names being floated for a Red Bull return seat.
-- **FIA ADUO mechanism activates after Canada**: The "Adjustment of Underperforming
-  Operations" provision — limited PU upgrades for struggling manufacturers — kicks
-  in from the Canadian GP onwards. Honda is the most likely beneficiary, with Audi
-  and Ferrari potentially qualifying too.
+- **FIA ADUO mechanism kicks in — with a twist**: The "Adjustment of
+  Underperforming Operations" provision — limited PU upgrades for struggling
+  manufacturers — kicked in once the FIA assessed the opening rounds. Pre-assessment,
+  Honda looked the likely beneficiary (it ended up cleared for the maximum two
+  upgrades, alongside Ferrari and Audi). Then the FIA's first ADUO ranking landed a genuine shock:
+  it judged Red Bull-Ford to have the BEST engine of 2026 — which means Red Bull is
+  the one team NOT allowed to upgrade, while Mercedes and Ferrari ARE. Verstappen was
+  baffled: "We just feel surprised, because we don't feel like we are the best." Red
+  Bull contested the verdict and the FIA is reviewing its analysis. A bizarre outcome
+  for a team whose first in-house PU has been dogged by reliability issues on a
+  notably short development timeframe.
 - **Monaco gets its own engine map**: For the first time at any race, the FIA has
   mandated a circuit-specific PU mode — "Rev1" — for the Monaco weekend, plus a
   total ban on active-aero "straight mode" for the whole lap. The point is to
@@ -269,3 +317,18 @@ Some drivers have adapted faster than others.
   during the red flag, but stewards cleared them because the modification wasn't
   actually completed and the car was unchanged. A rare bright spot for Red Bull in a
   grim weekend.
+- **Barcelona-Catalunya GP — Hamilton's maiden Ferrari win, Antonelli heartbreak**
+  (Round 7, June 12-14): The day the Hamilton-to-Ferrari project finally paid off.
+  Ferrari split strategy — Lewis on a three-stop while the Mercedes ran two — and a
+  Virtual Safety Car for Alonso's stranded Aston gifted Hamilton a near-free pit stop;
+  he cleared off to win by 19.5s. Russell P2, Norris P3 (first all-British podium since
+  1968), Verstappen a distant P4, Piastri P5 and the only other car on the lead lap.
+  The gut-punch: championship leader Antonelli, after a race-long wheel-to-wheel duel
+  with Russell and having just passed him for second, retired four laps from home with
+  a PU/electrical failure, and his lead slashed to 41.
+  Leclerc also retired late (power steering). Other DNFs: Albon, Stroll, Alonso,
+  Hulkenberg, Bottas. Mercedes admitted letting its two drivers race may
+  have cost it the win.
+- **Colapinto's yellow-flag penalty at Barcelona**: Franco Colapinto picked up a
+  post-race 10-second penalty for failing to slow sufficiently for yellow flags,
+  dropping him from P8 to P10 — he kept the final point but lost three places.
