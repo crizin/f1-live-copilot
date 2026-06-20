@@ -42,7 +42,7 @@ jobs:
           head=$(gh pr view ${{ github.event.issue.number }} --repo "${{ github.repository }}" --json headRefName --jq '.headRefName')
           echo "ref=$head" >> "$GITHUB_OUTPUT"
 
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           ref: ${{ steps.prhead.outputs.ref }}
 
