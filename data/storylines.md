@@ -3,7 +3,7 @@
 > Things Claude might not know from training data — recent drama, memes, narratives.
 > Updated throughout the season as stories develop.
 
-Last update: 2026-06-14, post-Barcelona-Catalunya GP (next round: Austria / Red Bull Ring, June 26-28)
+Last update: 2026-06-22, in the Barcelona→Austria gap (next round: Austria / Red Bull Ring, June 26-28)
 
 ---
 
@@ -31,6 +31,17 @@ others are struggling. The early picture:
   both while the car was running at the front, is now a genuine reliability worry,
   not a one-off. Russell still salvaged
   P2, so the constructors' lead survived, but it's narrowing as Ferrari claws back.
+  In the days after Barcelona Mercedes finally put a name to the problem: James
+  Allison said both failures "originate in the same broad part of the battery,"
+  and the fix is to phase new battery modules into the fleet as the season goes
+  on, with the team dialling back performance demands in the meantime to build
+  resilience. Wolff was blunt — "we just can't compete for a championship if every
+  second race a car is losing fat points... to finish first, first you have to
+  finish. That's just not good enough." Antonelli, for his part, is leaning on the
+  team to sort it: "It happened to George in Canada; it happened to me this time...
+  it's important points that we lost." So the issue is now understood, not mysterious
+  — but the points are gone and the cure is gradual: new battery modules phased
+  into the fleet over the season rather than fixed overnight.
 - **McLaren**: Still fast but no longer untouchable. Norris took the Miami sprint —
   McLaren's first win of 2026 and the first non-Mercedes win of the year — then
   P2/P3 in the Miami race itself.
@@ -124,7 +135,23 @@ but "that decision doesn't have to be today or tomorrow." His exit window opens
 in August. One thing that may help keep him around: F1's agreed move to a 60/40
 ICE/electric split by 2028 hits the exact ratio Verstappen had named as his
 minimum to stay, and he's grudgingly conceded the rules are "heading into the
-right direction." Watch this space all season.
+right direction." Update (mid-June, Barcelona→Austria gap): his manager Raymond
+Vermeulen confirmed "our contract runs until the end of 2028" and that the camp
+wants to settle the question fast — "we want to make a decision quickly so that
+everyone knows where they stand, possibly even before the summer break." The exit
+clause turns out to have a longer fuse than first reported: rather than expiring at
+the Hungary summer break (July 26), German reports say it can actually be invoked
+as late as October if he's outside the championship top two — and on 55 points in
+seventh, he's nowhere close. Behind the scenes Red Bull's
+shareholders are split on what to do: the Thai stakeholder (Chalerm
+Yoovidhya) reportedly favours simply buying the clause out (a "low double-digit
+millions" sum), while Mark Mateschitz and Oliver Mintzlaff are against it —
+Mintzlaff in particular arguing the money is better reinvested elsewhere (and that
+Verstappen has no viable alternative anyway). Red Bull is reportedly weighing such
+a buyout to remove the uncertainty altogether, but Ralf Schumacher claims Verstappen
+has rebuffed an attempt to tie himself down beyond 2028 — "I have a contract until
+2028 anyway. I want to wait and see" — leaving the team without the early commitment
+it wanted. Watch this space all season.
 
 ### Bahrain & Saudi Arabia Called Off
 Both Middle Eastern rounds were cancelled — a first for the modern calendar.
