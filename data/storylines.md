@@ -3,7 +3,7 @@
 > Things Claude might not know from training data — recent drama, memes, narratives.
 > Updated throughout the season as stories develop.
 
-Last update: 2026-06-22, in the Barcelona→Austria gap (next round: Austria / Red Bull Ring, June 26-28)
+Last update: 2026-06-29, in the Austria→Britain gap (next round: Britain / Silverstone, July 3-5 — a SPRINT weekend)
 
 ---
 
@@ -15,7 +15,7 @@ MGU-H gone, 100% sustainable fuel — teams that nailed the new formula are thri
 others are struggling. The early picture:
 - **Mercedes**: Got it right. Antonelli is on a five-win-in-six streak after
   Monaco, and the new PU architecture plays to their EV expertise. Constructors
-  lead now stands at 72 points (262 to Ferrari's 190) — even after a self-
+  lead has since stretched to 98 points (302 to Ferrari's 204 after Austria) — even after a self-
   inflicted Monaco pit blunder that cost Russell a likely top-five finish (he
   reckoned a podium had been on). Reliability finally bit them in
   Montreal though — Russell's PU let go on lap 30 while he was leading. James
@@ -45,9 +45,10 @@ others are struggling. The early picture:
 - **McLaren**: Still fast but no longer untouchable. Norris took the Miami sprint —
   McLaren's first win of 2026 and the first non-Mercedes win of the year — then
   P2/P3 in the Miami race itself.
-- **Red Bull-Ford**: New in-house PU is a work in progress. Sixth in constructors,
-  behind Haas and Alpine. Verstappen still extracting miracles, but he was a Q2 exit
-  at Suzuka.
+- **Red Bull-Ford**: New in-house PU is a work in progress, but trending up. A big
+  Austria upgrade package helped Verstappen take a strong P2 at the Red Bull Ring, and
+  the team is now fourth in constructors (115). Still a long way off Mercedes, but no
+  longer flailing at the back.
 - **Audi**: First season with own PU — reliability still bites. Hulkenberg's Audi
   caught fire on the reconnaissance lap to the Miami sprint grid; Allan McNish admitted
   the team thought they'd fixed it in the garage and clearly hadn't.
@@ -115,7 +116,12 @@ Mercedes died with a PU/electrical failure four laps from the flag, scoring
 zero points on a day Hamilton won. The lead is still
 his (156) but it's been chopped to 41 over Hamilton, with Russell P3 on 106. The
 title isn't decided; it's just that the threat now comes as much from his own car's
-reliability as from anyone on track.
+reliability as from anyone on track. Update post-Austria: the lead survived but the
+chaser changed. Antonelli had a scrappy Sunday at the Red Bull Ring — messy early off-
+track moments, found pace too late — and salvaged P3, while team-mate Russell won from
+pole. So now it's RUSSELL second, 40 back (171 to 131), with Hamilton bumped to third
+on 125. After the reliability scare it's at least a "normal" weekend: leader still
+leads, but his own team-mate is the renewed threat, not a broken battery.
 
 ### Verstappen's Future in Doubt
 Max told the BBC after Suzuka he's considering retiring at the end of 2026 because
@@ -151,7 +157,18 @@ Verstappen has no viable alternative anyway). Red Bull is reportedly weighing su
 a buyout to remove the uncertainty altogether, but Ralf Schumacher claims Verstappen
 has rebuffed an attempt to tie himself down beyond 2028 — "I have a contract until
 2028 anyway. I want to wait and see" — leaving the team without the early commitment
-it wanted. Watch this space all season.
+it wanted. Watch this space all season. Update (Austria weekend): Red Bull threw a
+major upgrade package — billed as crucial to its season — at the Red Bull Ring in a fairly
+open bid to keep Max happy, and it actually showed — he crashed in qualifying (P5 grid)
+but carved through to a strong P2 in the race, his best result in ages, and afterwards
+reckoned strategy was the only thing that denied him a shot at the win. Team boss
+Laurent Mekies kept it candid: he says Max "has made clear he wants to continue with the
+team" but is "well aware he needs a fast car to be happy," and pointedly insisted he's
+"not asking Max every week if he's going to stay" — the job is just to close the gap.
+The exit clause (outside championship top two at the summer break → free to leave for
+2027) is still live and Max is seventh, so on paper it's wide open; but a competitive
+weekend plus a genuine upgrade direction is the first thing this season that cuts
+against him walking.
 
 ### Bahrain & Saudi Arabia Called Off
 Both Middle Eastern rounds were cancelled — a first for the modern calendar.
@@ -180,7 +197,13 @@ victory and a first all-British podium (Hamilton, Russell, Norris) since 1968. "
 to thank everyone here at Ferrari... we made so many improvements," he said. Three strong weekends became a win; he's now SECOND in the championship on
 115, just 41 behind Antonelli. Leclerc's barren run continued — power-steering failure
 late at Barcelona, another DNF, leaving him fourth on 75 as Hamilton outscores him by
-the week.
+the week. Austria cooled the run a touch: Ferrari looked quick again (Leclerc and
+Hamilton qualified P2/P3) but the race didn't come — Hamilton ran a three-stop, scrapped
+hard with Verstappen (more on that below) and came home a frustrated P5 on a day the
+Mercedes were simply faster. He's been overtaken in the standings by Russell and is now
+THIRD on 125. Leclerc's weekend was worse still: he tumbled from the front row to P8,
+his single point of consolation being that at least he
+finished. He's now level on points with Norris (79) down in sixth.
 
 ### Active Aero Era Begins
 The new active aerodynamics rules have added a fascinating strategic layer. Teams can
@@ -206,6 +229,10 @@ Some drivers have adapted faster than others.
   then his car broke. Mercedes conceded it "might have cost itself" the win
   by letting them scrap instead of managing the situation, a tacit admission the free
   intra-team racing is now hurting the team on Sundays, not just the airwaves.
+  Austria was the swing: Russell took a (controversial) pole and a "cold-blooded" win
+  while Antonelli laboured to P3, so Russell has leapfrogged Hamilton to reclaim
+  championship runner-up and slashed the deficit from 50 back to 40. The senior driver
+  is reasserting himself just as the rookie's aura took its first dent.
 - **Norris vs Piastri** (McLaren): Reigning champion vs the Australian who almost took
   the title in 2025. Piastri currently has the edge on average — about 0.14 s faster
   in qualifying and 0.24 s in race trim across 2026 so far — but Norris struck back
@@ -214,10 +241,11 @@ Some drivers have adapted faster than others.
   Can Verstappen do it with an inferior car like 2024? Increasingly looking like no.
 - **Hamilton vs Leclerc** (Ferrari): The GOAT and the heir. Second season together —
   and the intra-Ferrari pecking order has flipped hard. Hamilton has reeled off three
-  big weekends ending in the Barcelona win and sits second in the championship (115);
-  Leclerc, who was ahead earlier in the year, has gone Monaco-crash → Barcelona
-  power-steering DNF and is stuck fourth on 75, watching his team-mate become Ferrari's
-  title hope.
+  big weekends ending in the Barcelona win and, after a P5 in Austria, sits third in the
+  championship (125 — only just edged out of second by the resurgent Russell). Leclerc,
+  who was ahead earlier in the year, has gone Monaco-crash → Barcelona power-steering DNF
+  → a wretched Austria where he fell from the front row to P8, and is now stuck sixth on
+  79 (level with Norris), watching his team-mate become Ferrari's clear title hope.
 
 ---
 
@@ -245,6 +273,11 @@ Some drivers have adapted faster than others.
   mid-sprint at Montreal after Kimi went on the radio demanding a penalty for
   Russell. Instant T-shirt material; clips of Wolff's deadpan delivery have been
   re-cut over every petty workplace complaint on F1 TikTok all week.
+- **"You don't expect to go around the outside of a champion"** — Hamilton's dry
+  comeback after Verstappen battled him hard in Austria and barked "Clear penalty!"
+  over the radio (stewards: no action). Two old rivals trading needle a decade on,
+  and the GOAT getting the last word — the petty-but-iconic
+  radio exchange of the weekend.
 
 ---
 
@@ -359,3 +392,33 @@ Some drivers have adapted faster than others.
 - **Colapinto's yellow-flag penalty at Barcelona**: Franco Colapinto picked up a
   post-race 10-second penalty for failing to slow sufficiently for yellow flags,
   dropping him from P8 to P10 — he kept the final point but lost three places.
+- **Austrian GP — Russell's controlled win, Verstappen revival** (Round 8, June 26-28):
+  George Russell led every key moment of the Red Bull Ring weekend. He took a chaotic
+  pole on Saturday (see below), then converted it into a "cold-blooded" win, leading
+  every lap bar the pit-stop phases — his second of 2026 and seventh career victory — even while nursing a failed
+  drinks system in brutal Spielberg heat. The headline behind him was Verstappen, who
+  crashed in qualifying (P5 grid) but charged to P2 on the back of Red Bull's big new
+  upgrade, finishing just 1.6s off Russell and reckoning only strategy denied him a real
+  crack at the win. Antonelli salvaged P3 after a messy opening stint, finishing 0.375s
+  behind Verstappen after chasing him down on the last lap. Piastri P4, Hamilton P5 after his
+  Verstappen scrap, Hadjar P6, Norris P7, Leclerc a dismal P8 (front row to nowhere),
+  Lawson and Lindblad rounding out the top ten. DNFs: Stroll (ERS), Sainz (electrical),
+  and both Cadillacs (Perez and Bottas, overheating brakes). Russell back to championship
+  P2, Antonelli's lead down to 40.
+- **Russell's yellow-flag pole** (Austria qualifying, June 27): The pole itself was the
+  story. Verstappen crashed at Turn 9 late in Q3, throwing yellows over the final
+  sector. Russell — who'd been off the pace all session — suddenly produced a barnstormer,
+  lifting briefly through the yellow zone (losing ~a tenth and a half) but still beating
+  Leclerc by 0.236s. The wrinkle: his team-mate Antonelli read the same flags as
+  double-waved and aborted, costing himself a front-row start, while Russell's stood.
+  Stewards noted Russell for a possible yellow-flag infringement and took "no
+  further action." Cue a weekend of "how did Russell find that?" muttering — fully
+  legal, but messy enough to leave a faint asterisk.
+- **Racing Bulls' ignored team order** (Austria): Rookie Arvid Lindblad was repeatedly
+  told to hold station behind Liam Lawson and lift to manage brake temps — "we are not
+  fighting" — and repeatedly attacked him anyway, eventually passing at Turn 4. Lawson
+  was audibly furious ("I lift for brakes and then get attacked"), but reclaimed the
+  spot with a one-lap undercut in the final stint. Both finished in the points (Lawson
+  P9, Lindblad P10); Lindblad shrugged off the friction afterward. A small but spicy
+  glimpse of the future RB pecking order — pundits like Gary Anderson are already touting
+  Lindblad as Red Bull's "next Verstappen" and a candidate to one day fill his seat.
