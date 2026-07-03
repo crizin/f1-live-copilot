@@ -46,11 +46,15 @@ When the user invokes this skill:
 
 ### Step 0: Load season context (REQUIRED, both modes)
 
-Before greeting or starting any daemon, load all three sources **in parallel**:
+Before greeting or starting any daemon, load all three sources **in parallel** — fetch and read
+these two URLs (use whatever web-fetch capability this session provides):
+
+- https://raw.githubusercontent.com/crizin/f1-live-copilot/main/data/standings.md
+- https://raw.githubusercontent.com/crizin/f1-live-copilot/main/data/storylines.md
+
+and run:
 
 ```
-WebFetch("https://raw.githubusercontent.com/crizin/f1-live-copilot/main/data/standings.md")
-WebFetch("https://raw.githubusercontent.com/crizin/f1-live-copilot/main/data/storylines.md")
 Bash("cd \"<plugin-root>\" && uv run -m f1live.latest_session")
 ```
 
@@ -223,11 +227,11 @@ team trajectories, or "remember when..." moments.
 
 All prefetched at skill startup (see Step 0):
 
-- **Current standings** (WebFetch `data/standings.md`): WDC + WCC points, recent-round
+- **Current standings** (fetched `data/standings.md`): WDC + WCC points, recent-round
   breakdown. Cron-updated daily after each race weekend. Reference when: user asks about
   championship standings, points, or who's leading.
 
-- **Season storylines** (WebFetch `data/storylines.md`): ongoing drama, controversies,
+- **Season storylines** (fetched `data/storylines.md`): ongoing drama, controversies,
   narratives. Reference when: relevant context comes up during the race.
 
 - **Latest session** (`uv run -m f1live.latest_session`): live fetch from jolpica-f1 API —

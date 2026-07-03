@@ -1,6 +1,6 @@
 # data/ — Live Season Data
 
-Files in this directory are fetched via WebFetch during race sessions.
+Files in this directory are web-fetched during race sessions.
 They contain frequently-updated information that changes throughout the season.
 
 ## Files
@@ -56,4 +56,4 @@ version of this file was a placeholder for a month before being noticed.
 
 ## After Updating
 
-Commit and push to `main` so the plugin can WebFetch the latest version.
+Commit and push to `main` so the plugin can fetch the latest version.

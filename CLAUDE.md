@@ -88,11 +88,11 @@ Key filters in `events.py`:
 skills/start-f1/SKILL.md    ← Main skill (how Claude should behave)
 skills/start-f1/references/  ← Season data (loaded on demand)
 f1live/                      ← Python daemon package (run via `uv run -m f1live.<module>`)
-data/                        ← Live season data (WebFetched by plugin)
+data/                        ← Live season data (web-fetched by plugin)
 dev/                         ← Development tools (not needed by end users)
 ```
 
 ## Live Season Data (`data/`)
 
-Files in `data/` are fetched via WebFetch during race sessions and updated throughout
+Files in `data/` are web-fetched during race sessions and updated throughout
 the season. See [`data/README.md`](data/README.md) for update rules and data sources.
