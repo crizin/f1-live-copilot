@@ -47,6 +47,13 @@
   - Ferrari customer engine
   - Bottas + Perez driver lineup
 
+### Qualifying Format (22-car grid)
+With 22 cars, **6 are eliminated per segment** — not 5 as in the 20-car era:
+- **Q1**: 22 cars → 16 advance (P17–P22 eliminated)
+- **Q2**: 16 → 10 advance (P11–P16 eliminated)
+- **Q3**: top-10 pole shootout
+- Sprint qualifying (SQ1/SQ2/SQ3) uses the same cuts: 16 → 10 → 10
+
 ## 2026 Calendar (22 rounds — Bahrain & Saudi Arabia called off)
 
 Originally 24 rounds. Bahrain (Apr 10-12) and Saudi Arabia (Apr 17-19) were cancelled
