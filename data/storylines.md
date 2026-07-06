@@ -3,7 +3,7 @@
 > Things Claude might not know from training data — recent drama, memes, narratives.
 > Updated throughout the season as stories develop.
 
-Last update: 2026-06-29, in the Austria→Britain gap (next round: Britain / Silverstone, July 3-5 — a SPRINT weekend)
+Last update: 2026-07-06, in the Britain→Belgium gap (British GP / Silverstone just ran — Round 9, a sprint weekend; next round: Belgian GP / Spa-Francorchamps, July 17-19)
 
 ---
 
@@ -15,7 +15,7 @@ MGU-H gone, 100% sustainable fuel — teams that nailed the new formula are thri
 others are struggling. The early picture:
 - **Mercedes**: Got it right. Antonelli is on a five-win-in-six streak after
   Monaco, and the new PU architecture plays to their EV expertise. Constructors
-  lead has since stretched to 98 points (302 to Ferrari's 204 after Austria) — even after a self-
+  lead stands at 78 points after Britain (333 to Ferrari's 255) — even after a self-
   inflicted Monaco pit blunder that cost Russell a likely top-five finish (he
   reckoned a podium had been on). Reliability finally bit them in
   Montreal though — Russell's PU let go on lap 30 while he was leading. James
@@ -46,9 +46,13 @@ others are struggling. The early picture:
   McLaren's first win of 2026 and the first non-Mercedes win of the year — then
   P2/P3 in the Miami race itself.
 - **Red Bull-Ford**: New in-house PU is a work in progress, but trending up. A big
-  Austria upgrade package helped Verstappen take a strong P2 at the Red Bull Ring, and
-  the team is now fourth in constructors (115). Still a long way off Mercedes, but no
-  longer flailing at the back.
+  Austria upgrade package helped Verstappen take a strong P2 at the Red Bull Ring —
+  then Silverstone turned sour. A recurring rear-wing fault (the wing not
+  fully closing after opening, so the car loses rear downforce and snaps round) pitched
+  Verstappen into the gravel in Austria qualifying AND again at Stowe while running P3
+  four laps from the end of the British GP. "It's getting very dangerous for me," he
+  said. The team sits fourth in constructors (128), still a long way off Mercedes but
+  no longer flailing at the back — the worry now is reliability/safety, not just pace.
 - **Audi**: First season with own PU — reliability still bites. Hulkenberg's Audi
   caught fire on the reconnaissance lap to the Miami sprint grid; Allan McNish admitted
   the team thought they'd fixed it in the garage and clearly hadn't.
@@ -121,7 +125,16 @@ chaser changed. Antonelli had a scrappy Sunday at the Red Bull Ring — messy ea
 track moments, found pace too late — and salvaged P3, while team-mate Russell won from
 pole. So now it's RUSSELL second, 40 back (171 to 131), with Hamilton bumped to third
 on 125. After the reliability scare it's at least a "normal" weekend: leader still
-leads, but his own team-mate is the renewed threat, not a broken battery.
+leads, but his own team-mate is the renewed threat, not a broken battery. Update
+post-Britain: another one that got away, and this time it was the car again. Antonelli
+had a brilliant Saturday — his maiden F1 SPRINT win (passing Hamilton with Boost on the
+Hangar Straight on lap 8) and then race pole — but the Sunday unravelled. Leclerc
+got ahead of him off the line, and then on lap 41 a bizarre left-front wheel-shield
+failure wrecked Antonelli's race; two pit stops and a 5s
+track-limits penalty later he trailed home 16th with nothing. From near-certain race
+lead to zero, again. The title lead is still his but it's now been shaved to 25 over
+Russell (179 to 154), and once more it's Mercedes'
+own machinery, not a rival on track, doing the damage.
 
 ### Verstappen's Future in Doubt
 Max told the BBC after Suzuka he's considering retiring at the end of 2026 because
@@ -168,7 +181,16 @@ team" but is "well aware he needs a fast car to be happy," and pointedly insiste
 The exit clause (outside championship top two at the summer break → free to leave for
 2027) is still live and Max is seventh, so on paper it's wide open; but a competitive
 weekend plus a genuine upgrade direction is the first thing this season that cuts
-against him walking.
+against him walking. Update (Britain weekend): that goodwill evaporated fast. The same
+rear-wing fault that binned him in Austria qualifying struck again at Silverstone —
+in the same fashion — spinning him out of a podium spot at Stowe with
+four laps to go. "When it happens one time, that can happen... Two times, it's getting
+very dangerous for me because you can really hurt yourself at these high-speed corners,"
+he said, adding he was "fed up" and "just looking forward to going home and not thinking
+about Formula 1." And the destination speculation got a concrete name for once: reports
+say his camp held talks with McLaren the previous month. So the
+"is he leaving?" question is back open with a vengeance — this time driven less by the
+regulations and more by a car he's now calling dangerous to drive.
 
 ### Bahrain & Saudi Arabia Called Off
 Both Middle Eastern rounds were cancelled — a first for the modern calendar.
@@ -203,7 +225,18 @@ hard with Verstappen (more on that below) and came home a frustrated P5 on a day
 Mercedes were simply faster. He's been overtaken in the standings by Russell and is now
 THIRD on 125. Leclerc's weekend was worse still: he tumbled from the front row to P8,
 his single point of consolation being that at least he
-finished. He's now level on points with Norris (79) down in sixth.
+finished. He's now level on points with Norris (79) down in sixth. Update post-Britain:
+Ferrari left Silverstone the happiest team on the grid, but this time it was Leclerc's
+day. Hamilton was still strong — pole for the sprint (nicked off Antonelli), P2 in the
+sprint itself, and P3 in the race despite a 5s false-start penalty and a late scare over
+a yellow-flag infringement that ended in only a reprimand — and he climbs to THIRD in
+the championship on 147. But it was Leclerc who finally ended a wretched run of weekends with
+a controlled lights-to-(near)-flag win: he got ahead of pole-man Antonelli off the line and
+never looked back, taking his ninth career win, his first at Silverstone and Ferrari's
+second victory of the year. "It feels incredible to win after the last few weekends that
+have been particularly difficult," he said. The win hauls Leclerc back up to FOURTH on
+108, so Ferrari now has both cars third and fourth in the standings — the Hamilton-Leclerc
+pecking order that had swung so hard to Lewis just tilted back a notch.
 
 ### Active Aero Era Begins
 The new active aerodynamics rules have added a fascinating strategic layer. Teams can
@@ -232,7 +265,9 @@ Some drivers have adapted faster than others.
   Austria was the swing: Russell took a (controversial) pole and a "cold-blooded" win
   while Antonelli laboured to P3, so Russell has leapfrogged Hamilton to reclaim
   championship runner-up and slashed the deficit from 50 back to 40. The senior driver
-  is reasserting himself just as the rookie's aura took its first dent.
+  is reasserting himself just as the rookie's aura took its first dent. Britain kept the
+  squeeze on: Antonelli's wheel-shield nightmare handed him another pointless Sunday
+  while Russell banked a solid P2, so the gap is down to just 25 (179 to 154).
 - **Norris vs Piastri** (McLaren): Reigning champion vs the Australian who almost took
   the title in 2025. Piastri currently has the edge on average — about 0.14 s faster
   in qualifying and 0.24 s in race trim across 2026 so far — but Norris struck back
@@ -244,8 +279,13 @@ Some drivers have adapted faster than others.
   big weekends ending in the Barcelona win and, after a P5 in Austria, sits third in the
   championship (125 — only just edged out of second by the resurgent Russell). Leclerc,
   who was ahead earlier in the year, has gone Monaco-crash → Barcelona power-steering DNF
-  → a wretched Austria where he fell from the front row to P8, and is now stuck sixth on
-  79 (level with Norris), watching his team-mate become Ferrari's clear title hope.
+  → a wretched Austria where he fell from the front row to P8, and was stuck sixth on
+  79 (level with Norris), watching his team-mate become Ferrari's clear title hope. Then
+  Britain flipped the script: Leclerc ended his miserable run with a controlled Silverstone
+  win (led off the line from Antonelli, never headed), while Hamilton took P3 despite a false-
+  start penalty. Both Ferraris on the podium, Hamilton still ahead in the title (third,
+  147) but Leclerc surging back to fourth on 108 — the intra-Ferrari fight has life in it
+  again.
 
 ---
 
@@ -273,6 +313,9 @@ Some drivers have adapted faster than others.
   mid-sprint at Montreal after Kimi went on the radio demanding a penalty for
   Russell. Instant T-shirt material; clips of Wolff's deadpan delivery have been
   re-cut over every petty workplace complaint on F1 TikTok all week.
+- **"Maybe I've hit a black cat"** — Verstappen, gallows-humouring Red Bull's run of
+  rotten 2026 luck as problem after problem piled up (the Silverstone power-unit trouble,
+  the Austria rear-wing shunt, and more): "I don't know what's causing it."
 - **"You don't expect to go around the outside of a champion"** — Hamilton's dry
   comeback after Verstappen battled him hard in Austria and barked "Clear penalty!"
   over the radio (stewards: no action). Two old rivals trading needle a decade on,
@@ -422,3 +465,29 @@ Some drivers have adapted faster than others.
   P9, Lindblad P10); Lindblad shrugged off the friction afterward. A small but spicy
   glimpse of the future RB pecking order — pundits like Gary Anderson are already touting
   Lindblad as Red Bull's "next Verstappen" and a candidate to one day fill his seat.
+- **Silverstone Sprint — Antonelli's maiden sprint win** (British GP, July 4): Hamilton
+  led the 17-lap dash from pole, but Antonelli reeled him in and pounced on lap 8, using
+  Boost down the Hangar Straight to take a lead he never gave back (won by 2.7s). Hamilton
+  P2, Norris P3, Russell P4, Leclerc P5, Verstappen P6, Piastri P7, Lawson P8. Perez
+  copped a 10s penalty for hitting Alonso; Lawson was investigated for moving under braking
+  against Hadjar. Antonelli's first F1 sprint win and a handy points bump before things
+  went wrong on Sunday.
+- **British GP — Leclerc wins, Antonelli's wheel-shield heartbreak, another Verstappen
+  crash** (Round 9, Silverstone, July 5): Leclerc got ahead of pole-sitter Antonelli off the line
+  and controlled the race for his ninth career win — his first at Silverstone and end of
+  a grim run of weekends. The Sunday had three big subplots. (1) Antonelli suffered a bizarre
+  left-front wheel-shield failure on lap 41, ran off track, needed two stops,
+  picked up a 5s track-limits penalty and finished 16th with nothing — his title lead cut
+  to 25. (2) Hamilton served a 5s false-start penalty and still recovered to P3, then
+  survived a late yellow-flag investigation with only a reprimand. (3) Verstappen, running
+  P3, spun into the gravel at Stowe with four laps left — same rear-wing-won't-close fault
+  as his Austria qualifying shunt — bringing out the safety car that ended the race and
+  let Russell (P2) leapfrog Hamilton. Norris P4, Hadjar P5, Lawson P6, Lindblad P7,
+  Bortoleto P8, Colapinto P9, Gasly P10. DNFs: Verstappen, Albon, Hulkenberg.
+- **Verstappen calls his own car "dangerous"** (British GP): After a SECOND rear-wing
+  failure in two weekends pitched him out of a podium, Verstappen didn't hold back:
+  "Two times, it's getting very dangerous for me because you can really hurt yourself at
+  these high-speed corners." He said he was "fed up" and just wanted to "go home and not
+  think about Formula 1." Team boss Mekies called the situation "very unpleasant" and
+  promised a fix. Adding to the intrigue: reports that his camp
+  held talks with McLaren the previous month.
