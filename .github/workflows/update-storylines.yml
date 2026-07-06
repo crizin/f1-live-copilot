@@ -68,7 +68,7 @@ jobs:
 
             7. Do NOT run git commit or git push. Just edit data/storylines.md
                in place; later steps fact-check it and open the PR.
-          claude_args: '--model opus --max-turns 25 --allowed-tools "Read,Edit,WebSearch,WebFetch,Write"'
+          claude_args: '--model opus --max-turns 40 --allowed-tools "Read,Edit,WebSearch,WebFetch,Write"'
 
       - name: Detect changes
         id: changes
@@ -164,7 +164,7 @@ jobs:
 
             Do NOT fabricate sources or events. Do NOT touch any file other than
             data/storylines.md. Do NOT run git commit or git push.
-          claude_args: '--model opus --max-turns 20 --allowed-tools "Read,Edit,WebSearch,WebFetch,Write"'
+          claude_args: '--model opus --max-turns 30 --allowed-tools "Read,Edit,WebSearch,WebFetch,Write"'
 
       # ── 4. Open the PR with the reviewed, revised content ───────────────
       - name: Compose PR body
