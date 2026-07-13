@@ -3,7 +3,7 @@
 > Things Claude might not know from training data — recent drama, memes, narratives.
 > Updated throughout the season as stories develop.
 
-Last update: 2026-07-06, in the Britain→Belgium gap (British GP / Silverstone just ran — Round 9, a sprint weekend; next round: Belgian GP / Spa-Francorchamps, July 17-19)
+Last update: 2026-07-13, still in the Britain→Belgium gap (British GP / Silverstone ran July 4-5 — Round 9, a sprint weekend; next round: Belgian GP / Spa-Francorchamps, July 17-19). This update: Verstappen's Red Bull exit clause is now mathematically tripped and his McLaren talks have heated up; Red Bull weighs parking the "Macarena" rear wing.
 
 ---
 
@@ -190,7 +190,24 @@ he said, adding he was "fed up" and "just looking forward to going home and not 
 about Formula 1." And the destination speculation got a concrete name for once: reports
 say his camp held talks with McLaren the previous month. So the
 "is he leaving?" question is back open with a vengeance — this time driven less by the
-regulations and more by a car he's now calling dangerous to drive.
+regulations and more by a car he's now calling dangerous to drive. Update
+(Britain→Belgium gap, early July): the exit clause is no longer hypothetical — it's
+tripped. Verstappen's Silverstone DNF made it mathematically certain he cannot reach
+the summer break inside the championship top two (he's 78 points behind Russell in P2 with
+only 50 left before the shutdown), so the performance clause that would free him to race
+elsewhere in 2027 is now certain to be met — reports say it formally activates the day after
+the Hungarian GP, and that he has until roughly October to actually pull the trigger. And the destination has stopped being vague: McLaren talks are
+now reported to be in their "closing stages," with the extra spice that Verstappen's
+long-time engineer Gianpiero Lambiase is said to be McLaren-bound too (as director of
+racing) — to the point that Red Bull tech chief Pierre Waché has reportedly stopped
+sharing confidential information with Lambiase to stop it leaking to a rival. It got frosty
+fast: a planned Monday meeting in London between the Verstappen camp (Max and his manager
+Raymond Vermeulen) and representatives of Red Bull's 49% ownership side (Mark Mateschitz and
+Oliver Mintzlaff) was scrapped after the post-race talks at Silverstone went badly, and
+Verstappen's jet was tracked leaving England on the Sunday night. Publicly everyone's playing it cool — Zak Brown insists "I'm very happy with my two
+racing drivers, Lando and Oscar," and Vermeulen stresses the camp has "never exercised" an
+exit clause and wants "to continue on this path with Red Bull" — but this is the most
+concrete the leave-Red-Bull story has been all year.
 
 ### Bahrain & Saudi Arabia Called Off
 Both Middle Eastern rounds were cancelled — a first for the modern calendar.
@@ -488,6 +505,13 @@ Some drivers have adapted faster than others.
   failure in two weekends pitched him out of a podium, Verstappen didn't hold back:
   "Two times, it's getting very dangerous for me because you can really hurt yourself at
   these high-speed corners." He said he was "fed up" and just wanted to "go home and not
-  think about Formula 1." Team boss Mekies called the situation "very unpleasant" and
-  promised a fix. Adding to the intrigue: reports that his camp
-  held talks with McLaren the previous month.
+  think about Formula 1." Team boss Mekies called the situation "very unpleasant" and,
+  heading to Spa, vowed the team would "do whatever is necessary to be on the safe side,"
+  with "all options open" — including scrapping the wing concept altogether. The culprit
+  has a name now: the "Macarena" rear wing, a trick Ferrari pioneered that Red Bull adapted
+  (its version rotates differently) and has run since Miami; at Silverstone the wing failed
+  to re-attach in time and dumped rear downforce into the corner, though Red Bull say the two
+  recent failures (Austria, Silverstone) had different causes. Red Bull is weighing whether
+  to simply park it for the Belgian GP. Adding to
+  the intrigue: reports that his camp held talks with McLaren the previous month — a saga
+  that has since escalated sharply (see "Verstappen's Future in Doubt").
