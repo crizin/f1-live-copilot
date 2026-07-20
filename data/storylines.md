@@ -3,7 +3,7 @@
 > Things Claude might not know from training data — recent drama, memes, narratives.
 > Updated throughout the season as stories develop.
 
-Last update: 2026-07-13, still in the Britain→Belgium gap (British GP / Silverstone ran July 4-5 — Round 9, a sprint weekend; next round: Belgian GP / Spa-Francorchamps, July 17-19). This update: Verstappen's Red Bull exit clause is now mathematically tripped and his McLaren talks have heated up; Red Bull weighs parking the "Macarena" rear wing.
+Last update: 2026-07-20, post-Belgium (Belgian GP / Spa-Francorchamps ran July 17-19 — Round 10; next round: Hungarian GP / Hungaroring, July 24-26, the last race before the summer break). This update: Antonelli won at Spa to stretch his title lead to 45 points over new runner-up Hamilton (and 50 over Russell); Russell DNF'd from a lap-1 clash with Hamilton after a Mercedes battery-deployment glitch (Wolff: "100% goes on us"); Hamilton climbs to championship P2; Red Bull actually parked the "Macarena" wing for Spa; and Verstappen played down the McLaren talk, calling Red Bull his "second family."
 
 ---
 
@@ -41,7 +41,16 @@ others are struggling. The early picture:
   team to sort it: "It happened to George in Canada; it happened to me this time...
   it's important points that we lost." So the issue is now understood, not mysterious
   — but the points are gone and the cure is gradual: new battery modules phased
-  into the fleet over the season rather than fixed overnight.
+  into the fleet over the season rather than fixed overnight. And at Spa a *new*
+  Mercedes gremlin surfaced — a battery/energy-deployment glitch that cut Russell's
+  power through Eau Rouge and down the Kemmel Straight, pitching him
+  backwards into the pack and into a race-ending lap-1 clash with Hamilton. Wolff
+  took it fully on the chin ("it 100% goes on us") and stressed it wasn't only
+  Russell: "All Mercedes engines had a lack of energy out of Turn 1... it affected
+  him more than Kimi, but also Kimi had that issue to a certain degree." So the
+  reliability worry now has a battery-hardware strand (Canada/Barcelona) *and* a
+  race-start energy-deployment strand (Spa) — but Antonelli still won,
+  so the car's raw pace clearly isn't the issue.
 - **McLaren**: Still fast but no longer untouchable. Norris took the Miami sprint —
   McLaren's first win of 2026 and the first non-Mercedes win of the year — then
   P2/P3 in the Miami race itself.
@@ -53,6 +62,13 @@ others are struggling. The early picture:
   four laps from the end of the British GP. "It's getting very dangerous for me," he
   said. The team sits fourth in constructors (128), still a long way off Mercedes but
   no longer flailing at the back — the worry now is reliability/safety, not just pace.
+  For Spa the team acted on the threat: it parked the trouble-making "Macarena"
+  revolving rear wing entirely and reverted to its previous, conventional spec while
+  it works on a permanent fix (the failures struck during the switch from straight mode
+  to corner mode, though the exact cause hadn't yet been pinned down). Verstappen said
+  the compromise made the car "slower" but was worth it for safety — and it held up: he
+  brought it home P3 at Spa, best of the rest behind the Mercedes and Ferrari, with the
+  modified wing due back as soon as it's ready.
 - **Audi**: First season with own PU — reliability still bites. Hulkenberg's Audi
   caught fire on the reconnaissance lap to the Miami sprint grid; Allan McNish admitted
   the team thought they'd fixed it in the garage and clearly hadn't.
@@ -134,7 +150,18 @@ failure wrecked Antonelli's race; two pit stops and a 5s
 track-limits penalty later he trailed home 16th with nothing. From near-certain race
 lead to zero, again. The title lead is still his but it's now been shaved to 25 over
 Russell (179 to 154), and once more it's Mercedes'
-own machinery, not a rival on track, doing the damage.
+own machinery, not a rival on track, doing the damage. Update post-Belgium: the wobble
+is over and the lead is a chasm again. Antonelli won at Spa — his sixth of the year —
+from pole, losing the lead to Verstappen at Eau Rouge on lap 1, snatching it straight
+back down Kemmel, then reeling in and passing Leclerc with 10 laps to go for a 1.9s win.
+"It's great to be back on the top step after obviously a few difficult rounds," he said.
+Crucially his chief rival wasn't even there to fight: Russell was wiped out on lap 1
+(battery-deployment glitch → clash with Hamilton), so Antonelli's cushion ballooned in a
+single afternoon — from 25 over Russell before the weekend to 45 over his new nearest
+challenger, Hamilton (and 50 over Russell, now shoved down to P3) — and, unlike Barcelona
+and Britain, this time his own car delivered the goods. He goes into the Hungary summer-break finale on 204 points, and the
+"is there a title fight at all?" question is right back where it was before the reliability
+scares.
 
 ### Verstappen's Future in Doubt
 Max told the BBC after Suzuka he's considering retiring at the end of 2026 because
@@ -196,8 +223,8 @@ tripped. Verstappen's Silverstone DNF made it mathematically certain he cannot r
 the summer break inside the championship top two (he's 78 points behind Russell in P2 with
 only 50 left before the shutdown), so the performance clause that would free him to race
 elsewhere in 2027 is now certain to be met — reports say it formally activates the day after
-the Hungarian GP, and that he has until roughly October to actually pull the trigger. And the destination has stopped being vague: McLaren talks are
-now reported to be in their "closing stages," with the extra spice that Verstappen's
+the Hungarian GP, and that he has until roughly October to actually pull the trigger. And the destination speculation got a concrete
+name: McLaren, with the extra spice that Verstappen's
 long-time engineer Gianpiero Lambiase is said to be McLaren-bound too (as director of
 racing) — to the point that Red Bull tech chief Pierre Waché has reportedly stopped
 sharing confidential information with Lambiase to stop it leaking to a rival. It got frosty
@@ -207,7 +234,19 @@ Oliver Mintzlaff) was scrapped after the post-race talks at Silverstone went bad
 Verstappen's jet was tracked leaving England on the Sunday night. Publicly everyone's playing it cool — Zak Brown insists "I'm very happy with my two
 racing drivers, Lando and Oscar," and Vermeulen stresses the camp has "never exercised" an
 exit clause and wants "to continue on this path with Red Bull" — but this is the most
-concrete the leave-Red-Bull story has been all year.
+concrete the leave-Red-Bull story has been all year. Update (Belgium weekend): the
+temperature came right back down — though driven more by his camp than by Max himself.
+Asked repeatedly at Spa about McLaren and his future,
+Verstappen shut it flat — "there's nothing to say" — while still refusing to commit either
+way ("I don't want to say yes and no, and this and that about my future"). He did pointedly
+warm to his current side, calling Red Bull his "second family" and insisting the atmosphere
+in the team is "exactly as it has always been." His manager Raymond Vermeulen went further:
+"the truth is, Max wants to finish his time with Red Bull. He has a contract until 2028 and would
+like to fulfill it," adding that the mere existence of the exit clause "doesn't mean
+we'll activate it — we could have activated it in recent years as well, and we haven't."
+Nothing's signed and the clause is still live (Max isn't even obliged to tell Red Bull
+until October), but Vermeulen's intervention swung the public mood back toward staying,
+even as Verstappen himself stayed noncommittal.
 
 ### Bahrain & Saudi Arabia Called Off
 Both Middle Eastern rounds were cancelled — a first for the modern calendar.
@@ -253,7 +292,16 @@ never looked back, taking his ninth career win, his first at Silverstone and Fer
 second victory of the year. "It feels incredible to win after the last few weekends that
 have been particularly difficult," he said. The win hauls Leclerc back up to FOURTH on
 108, so Ferrari now has both cars third and fourth in the standings — the Hamilton-Leclerc
-pecking order that had swung so hard to Lewis just tilted back a notch.
+pecking order that had swung so hard to Lewis just tilted back a notch. Update post-Belgium:
+messy day, good result. Hamilton overtook the struggling Russell down the Kemmel Straight,
+then the pair collided at Les Combes when Russell went round the outside — a 5s penalty for
+Lewis (he called it "a racing incident," and Russell agreed), plus a post-race unsafe-release
+scare and a Ferrari pit fumble that nearly hurt a mechanic when the crew forgot to adjust his
+front wing. Despite all that he came home P4 and, with Russell parked, that was enough to
+vault Hamilton back above his old team-mate into SECOND in the championship (159) — 45 behind
+Antonelli. Leclerc, meanwhile, kept his revival rolling with a strong P2 (leading much of the
+race before Antonelli got him), and now sits fourth on 126, only 28 shy of Russell. Both
+Ferraris are quietly closing on the Mercedes pair.
 
 ### Active Aero Era Begins
 The new active aerodynamics rules have added a fascinating strategic layer. Teams can
@@ -284,7 +332,13 @@ Some drivers have adapted faster than others.
   championship runner-up and slashed the deficit from 50 back to 40. The senior driver
   is reasserting himself just as the rookie's aura took its first dent. Britain kept the
   squeeze on: Antonelli's wheel-shield nightmare handed him another pointless Sunday
-  while Russell banked a solid P2, so the gap is down to just 25 (179 to 154).
+  while Russell banked a solid P2, so the gap is down to just 25 (179 to 154). Then Spa
+  blew it wide open again — but this time it wasn't a fair fight. A Mercedes battery-deployment
+  glitch gutted Russell's power on lap 1 and dumped him into a race-ending clash with
+  Hamilton, while Antonelli calmly won; the intra-team gap is back out to 50, and Russell
+  has been shoved down to championship P3 behind a resurgent Hamilton. Wolff took the blame
+  ("100% goes on us"), and both drivers publicly called the contact a racing incident — but
+  it's another Sunday where the rookie banked 25 and the senior man banked zero.
 - **Norris vs Piastri** (McLaren): Reigning champion vs the Australian who almost took
   the title in 2025. Piastri currently has the edge on average — about 0.14 s faster
   in qualifying and 0.24 s in race trim across 2026 so far — but Norris struck back
@@ -302,7 +356,10 @@ Some drivers have adapted faster than others.
   win (led off the line from Antonelli, never headed), while Hamilton took P3 despite a false-
   start penalty. Both Ferraris on the podium, Hamilton still ahead in the title (third,
   147) but Leclerc surging back to fourth on 108 — the intra-Ferrari fight has life in it
-  again.
+  again. Spa kept both trending up: Leclerc took a strong P2 (led much of the race) while
+  Hamilton scrapped his way to P4 through a penalty and a pit fumble. Hamilton's now up to
+  championship P2 (159) with Leclerc fourth on 126 and closing — for once the Ferrari story
+  is both cars climbing rather than one at the other's expense.
 
 ---
 
@@ -515,3 +572,29 @@ Some drivers have adapted faster than others.
   to simply park it for the Belgian GP. Adding to
   the intrigue: reports that his camp held talks with McLaren the previous month — a saga
   that has since escalated sharply (see "Verstappen's Future in Doubt").
+- **Belgian GP — Antonelli wins, Russell's lap-1 heartbreak** (Round 10, Spa, July 19):
+  Antonelli took pole and the win (his sixth of the year), losing the lead to Verstappen
+  at Eau Rouge on lap 1 but snatching it back down Kemmel, then chasing down and passing
+  Leclerc with 10 laps left to win by 1.9s. Leclerc P2, Verstappen P3 (best of the rest on
+  Red Bull's reverted wing), Hamilton P4 (after a 5s penalty), Piastri P5, Hadjar P6,
+  Norris P7, Bortoleto P8, Lindblad P9, Colapinto P10 (a double pass on Gasly and Lawson at
+  Les Combes was one of the moves of the day). The story of the race was up front on lap 1:
+  championship runner-up George Russell lost battery deployment through Eau Rouge (a Mercedes
+  power glitch), tumbled back into the pack and collided with Hamilton at Les Combes, ending
+  his race in the gravel. It cost him ~25 points and dropped him to championship P3. DNFs:
+  Russell (collision), Stroll (a suspected gearbox issue), Perez (a reported possible broken
+  suspension). Antonelli's lead over his nearest rival stretched to 45 (now over Hamilton; 50 over Russell).
+- **Russell's Spa DNF — "it 100% goes on us"**: The lap-1 crash that ended Russell's race
+  was traced by Mercedes to a battery/energy-deployment glitch that cut his power out of
+  Turn 1 (Wolff said "all Mercedes engines had a lack of energy out of Turn 1... it affected
+  him more than Kimi, but also Kimi had that issue to a certain degree").
+  Russell was furious less at the contact than at being there at all: "I shouldn't have been
+  in that position in the first place. That's why I'm the most angry," calling the contact with
+  Hamilton "honestly... a racing incident." Hamilton agreed it was "a racing incident" but
+  still copped a 5s penalty; Wolff owned the root cause outright — "it 100% goes on us."
+- **Red Bull parks the "Macarena" wing for Spa**: After the revolving rear wing pitched
+  Verstappen into the gravel in both Austria qualifying and the British GP, Red Bull removed
+  it entirely for Belgium and reverted to its previous conventional spec while chasing a
+  permanent fix (the failures struck in the straight-to-corner-mode switch, but the exact
+  cause hadn't yet been pinned down). Verstappen said the swap made the car "slower" but was
+  worth it for safety — and it held, P3 at Spa — with the modified Macarena wing due back once it's ready.
