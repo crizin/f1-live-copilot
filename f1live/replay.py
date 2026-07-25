@@ -27,6 +27,7 @@ from f1live.state import F1State
 
 OUTPUT_JSON = os.environ.get("F1LIVE_OUTPUT", os.path.join(tempfile.gettempdir(), "f1-live.json"))
 OUTPUT_MD = os.path.splitext(OUTPUT_JSON)[0] + ".md"
+TMP_SUFFIX = f".tmp.{os.getpid()}"
 
 logging.basicConfig(
     level=logging.INFO,
@@ -88,12 +89,12 @@ def load_all_messages(data_dir: str) -> list[tuple[float, str, dict]]:
 def dump_state(state: F1State, state_dict: dict):
     """Atomically write f1-live.md and f1-live.json snapshot files."""
     try:
-        md_tmp = OUTPUT_MD + ".tmp"
+        md_tmp = OUTPUT_MD + TMP_SUFFIX
         with open(md_tmp, "w") as f:
             f.write(state.to_markdown())
         os.replace(md_tmp, OUTPUT_MD)
 
-        json_tmp = OUTPUT_JSON + ".tmp"
+        json_tmp = OUTPUT_JSON + TMP_SUFFIX
         with open(json_tmp, "w") as f:
             f.write(json.dumps(state_dict, indent=2, ensure_ascii=False, default=str))
         os.replace(json_tmp, OUTPUT_JSON)

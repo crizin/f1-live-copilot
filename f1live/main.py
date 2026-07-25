@@ -5,6 +5,7 @@ stderr: logging → goes to log file
 File dumps: f1-live.md + f1-live.json every 3 seconds
 """
 
+import argparse
 import asyncio
 import json
 import logging
@@ -13,7 +14,7 @@ import signal
 import sys
 import tempfile
 
-from f1live import radio_stt
+from f1live import __version__, radio_stt
 from f1live.events import EventBatcher, EventDetector
 from f1live.signalr import connect_and_stream
 from f1live.state import F1State
@@ -21,8 +22,10 @@ from f1live.state import F1State
 DUMP_INTERVAL = 3
 OUTPUT_JSON = os.environ.get("F1LIVE_OUTPUT", os.path.join(tempfile.gettempdir(), "f1-live.json"))
 OUTPUT_MD = os.path.splitext(OUTPUT_JSON)[0] + ".md"
+TMP_SUFFIX = f".tmp.{os.getpid()}"
 TIMEOUT = int(os.environ.get("F1LIVE_TIMEOUT", "5400"))
 WARMUP_SECONDS = float(os.environ.get("F1LIVE_WARMUP", "10"))
+SESSION_OVER = ("Finalised", "Ends")
 
 logging.basicConfig(
     level=logging.INFO,
@@ -77,12 +80,12 @@ async def dump_and_detect_loop():
             state_dict = state.to_dict()
 
             # Dump files
-            md_tmp = OUTPUT_MD + ".tmp"
+            md_tmp = OUTPUT_MD + TMP_SUFFIX
             with open(md_tmp, "w") as f:
                 f.write(state.to_markdown())
             os.replace(md_tmp, OUTPUT_MD)
 
-            json_tmp = OUTPUT_JSON + ".tmp"
+            json_tmp = OUTPUT_JSON + TMP_SUFFIX
             with open(json_tmp, "w") as f:
                 f.write(json.dumps(state_dict, indent=2, ensure_ascii=False, default=str))
             os.replace(json_tmp, OUTPUT_JSON)
@@ -106,9 +109,24 @@ async def dump_and_detect_loop():
 
 
 async def status_monitor():
+    """Exit once the session we joined has finished.
+
+    Connecting between sessions lands on the *previous* one's finished state,
+    so only arm the exit after a live status has been seen.
+    """
+    armed = False
+    announced_wait = False
     while _running:
         status = state.session.get("status", "")
-        if status in ("Finalised", "Ends"):
+        if not armed:
+            if status and status not in SESSION_OVER:
+                armed = True
+                logger.info(f"Session live ({status}) — exit on finish armed")
+            elif status and not announced_wait:
+                announced_wait = True
+                logger.info(f"Previous session {status} — waiting for the next one")
+                print("[SESSION] Previous session over — waiting for the next one...", flush=True)
+        elif status in SESSION_OVER:
             logger.info(f"Session {status}. Exiting in 60s...")
             print(f"[SESSION] {status} — race over!", flush=True)
             await asyncio.sleep(60)
@@ -154,7 +172,16 @@ async def run():
 
 
 def main():
-    print("[SESSION] F1 Live Copilot v0.1.0", flush=True)
+    parser = argparse.ArgumentParser(
+        prog="f1live.main",
+        description="Stream live F1 timing events to stdout (Monitor-compatible).",
+        epilog="Env: F1LIVE_OUTPUT (dump path), F1LIVE_TIMEOUT (idle seconds), "
+               "F1LIVE_WARMUP (baseline seconds), OPENAI_API_KEY (team-radio STT).",
+    )
+    parser.add_argument("--version", action="version", version=f"f1-live-copilot {__version__}")
+    parser.parse_args()
+
+    print(f"[SESSION] F1 Live Copilot v{__version__}", flush=True)
     asyncio.run(run())
 
 

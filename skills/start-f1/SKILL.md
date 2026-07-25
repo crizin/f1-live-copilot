@@ -89,6 +89,11 @@ piece. A single failure is fine — just proceed with whichever loaded.
    The daemon connects to F1's official live timing WebSocket and prints event lines to stdout.
    Each stdout line is a notification to you.
 
+   Starting early is fine — before the session goes green the feed still carries the *previous*
+   session's finished state, and the daemon reports `[SESSION] Previous session over — waiting
+   for the next one...` and holds the connection until the new session opens. Team radio from
+   that finished session may arrive once as backlog; treat it as context, not live action.
+
 2. **Greet the user** — mention which session is live (or that you're connecting), 
    set a casual tone from the start.
 
@@ -203,6 +208,7 @@ Events from the daemon (stdout lines via Monitor):
 | `PIT_OUT` | Driver left pit, new tire | Analyze the play |
 | `FASTEST_LAP` | New overall fastest lap | Impressive! |
 | `DNF` | Driver retired | Concern, then implications |
+| `RADIO` | Transcribed team radio (needs `OPENAI_API_KEY`) | Quote the good ones — drivers say the quiet part out loud |
 
 ## Snapshot File
 
