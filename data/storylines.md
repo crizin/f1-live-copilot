@@ -3,7 +3,7 @@
 > Things Claude might not know from training data — recent drama, memes, narratives.
 > Updated throughout the season as stories develop.
 
-Last update: 2026-07-20, post-Belgium (Belgian GP / Spa-Francorchamps ran July 17-19 — Round 10; next round: Hungarian GP / Hungaroring, July 24-26, the last race before the summer break). This update: Antonelli won at Spa to stretch his title lead to 45 points over new runner-up Hamilton (and 50 over Russell); Russell DNF'd from a lap-1 clash with Hamilton after a Mercedes battery-deployment glitch (Wolff: "100% goes on us"); Hamilton climbs to championship P2; Red Bull actually parked the "Macarena" wing for Spa; and Verstappen played down the McLaren talk, calling Red Bull his "second family."
+Last update: 2026-07-27, post-Hungary (Hungarian GP / Hungaroring ran July 24-26 — Round 11, the last race before the summer break; the grid is now off until the Dutch GP at Zandvoort in late August). This update: Lando Norris took McLaren's FIRST win of 2026 (his first of the year) from pole, beating a surprise Max Verstappen (P2) and Antonelli (P3) — but the story was McLaren's intra-team mess. Piastri led the first half, McLaren gave him pit priority, Norris overcut him for the lead when Piastri got stuck behind Sainz, and a fuming Piastri ("Don't f****** talk to me") then retired with a gearbox failure — his first DNF of 2026. Antonelli's P3 (from P7 after a quali yellow-flag penalty) stretched his title lead to 50 over Hamilton heading into the break; Russell suffered ANOTHER disaster (anti-stall dropped him to 21st on lap 1, recovered to P7); and Verstappen's exit clause is now formally live.
 
 ---
 
@@ -52,8 +52,13 @@ others are struggling. The early picture:
   race-start energy-deployment strand (Spa) — but Antonelli still won,
   so the car's raw pace clearly isn't the issue.
 - **McLaren**: Still fast but no longer untouchable. Norris took the Miami sprint —
-  McLaren's first win of 2026 and the first non-Mercedes win of the year — then
-  P2/P3 in the Miami race itself.
+  McLaren's first sprint win of 2026 and the first non-Mercedes win of the year — then
+  P2/P3 in the Miami race itself. It took until Hungary (Round 11) for the first proper
+  GP win: an upgraded MCL40 let Norris convert pole into McLaren's first Grand Prix
+  victory of the season, though the day was overshadowed by intra-team drama (see the
+  Norris vs Piastri rivalry). Both cars are quick again — but the day was also a
+  reminder the machinery can still bite, with Piastri retiring from the lead fight on a
+  gearbox failure.
 - **Red Bull-Ford**: New in-house PU is a work in progress, but trending up. A big
   Austria upgrade package helped Verstappen take a strong P2 at the Red Bull Ring —
   then Silverstone turned sour. A recurring rear-wing fault (the wing not
@@ -68,7 +73,11 @@ others are struggling. The early picture:
   to corner mode, though the exact cause hadn't yet been pinned down). Verstappen said
   the compromise made the car "slower" but was worth it for safety — and it held up: he
   brought it home P3 at Spa, best of the rest behind the Mercedes and Ferrari, with the
-  modified wing due back as soon as it's ready.
+  modified wing due back as soon as it's ready. Hungary was a rollercoaster: Verstappen
+  raged all through qualifying — calling the car "not driveable" and "getting worse and
+  worse," and spinning in Q3 — yet somehow salvaged a surprise P2 in the race off a
+  strong start and a bold early pass on Hamilton, a result he called one of "survival"
+  and one that, by his own account, took him by surprise. A genuine bright spot to take into the break.
 - **Audi**: First season with own PU — reliability still bites. Hulkenberg's Audi
   caught fire on the reconnaissance lap to the Miami sprint grid; Allan McNish admitted
   the team thought they'd fixed it in the garage and clearly hadn't.
@@ -161,7 +170,13 @@ single afternoon — from 25 over Russell before the weekend to 45 over his new 
 challenger, Hamilton (and 50 over Russell, now shoved down to P3) — and, unlike Barcelona
 and Britain, this time his own car delivered the goods. He goes into the Hungary summer-break finale on 204 points, and the
 "is there a title fight at all?" question is right back where it was before the reliability
-scares.
+scares. Update post-Hungary: the lead is now a genuine chasm at the break. Antonelli only
+qualified P7 (a 3-place grid penalty for not slowing under yellows for Verstappen's Q3
+spin) but calmly worked his way to P3 on race day, while McLaren and Ferrari squabbled
+ahead of him. With Hamilton only fifth and
+Russell buried in the pack, Antonelli stretched his lead to 50 points (219 to
+Hamilton's 169) and heads into the summer break as the runaway favourite. He didn't even
+need to win — a quiet, mature P3 was plenty.
 
 ### Verstappen's Future in Doubt
 Max told the BBC after Suzuka he's considering retiring at the end of 2026 because
@@ -246,7 +261,15 @@ like to fulfill it," adding that the mere existence of the exit clause "doesn't 
 we'll activate it — we could have activated it in recent years as well, and we haven't."
 Nothing's signed and the clause is still live (Max isn't even obliged to tell Red Bull
 until October), but Vermeulen's intervention swung the public mood back toward staying,
-even as Verstappen himself stayed noncommittal.
+even as Verstappen himself stayed noncommittal. Update (post-Hungary): the clause is no
+longer theoretical — with Verstappen finishing the summer break sixth in the standings,
+well outside the top two, the performance clause that frees him to race elsewhere in 2027
+is now formally active, opening a window to decide over the break (reports put the real
+deadline around October). Paddock sources say McLaren-Verstappen talks are in their
+"closing stages," though Zak Brown keeps publicly insisting he's happy with Norris and
+Piastri. His P2 at the Hungaroring — the
+first competitive high in weeks — is at least a small argument for staying. Undecided,
+but the door is now genuinely open.
 
 ### Bahrain & Saudi Arabia Called Off
 Both Middle Eastern rounds were cancelled — a first for the modern calendar.
@@ -301,7 +324,13 @@ front wing. Despite all that he came home P4 and, with Russell parked, that was 
 vault Hamilton back above his old team-mate into SECOND in the championship (159) — 45 behind
 Antonelli. Leclerc, meanwhile, kept his revival rolling with a strong P2 (leading much of the
 race before Antonelli got him), and now sits fourth on 126, only 28 shy of Russell. Both
-Ferraris are quietly closing on the Mercedes pair.
+Ferraris are quietly closing on the Mercedes pair. Update post-Hungary: a frustrating one.
+Ferrari looked strong on Friday and Hamilton grabbed a front-row start — then lost it to a
+3-place grid penalty for impeding Piastri in Q3. In the race the pace faded and a 5s
+pit-lane speeding penalty dropped Hamilton from a would-be P4 to P5, behind team-mate
+Leclerc (P4). He's still second in the championship on 169, but the gap to Antonelli is out
+to 50 and the intra-Ferrari order flipped back Leclerc's way for the second race running.
+Not the note either Ferrari wanted to end the first half on.
 
 ### Active Aero Era Begins
 The new active aerodynamics rules have added a fascinating strategic layer. Teams can
@@ -338,11 +367,28 @@ Some drivers have adapted faster than others.
   Hamilton, while Antonelli calmly won; the intra-team gap is back out to 50, and Russell
   has been shoved down to championship P3 behind a resurgent Hamilton. Wolff took the blame
   ("100% goes on us"), and both drivers publicly called the contact a racing incident — but
-  it's another Sunday where the rookie banked 25 and the senior man banked zero.
+  it's another Sunday where the rookie banked 25 and the senior man banked zero. Hungary was
+  more of the same misery for Russell: an anti-stall activation at the start dumped him from
+  P6 to 21st on lap 1, and although he fought back to P7, it's two straight weekends where
+  the car has cost him a pile of points. Antonelli calmly banked P3;
+  Russell has now slid to championship P3, a huge 59 points behind his rookie team-mate. The
+  gap that was 25 after Silverstone is a chasm again, and none of it has been on merit.
 - **Norris vs Piastri** (McLaren): Reigning champion vs the Australian who almost took
-  the title in 2025. Piastri currently has the edge on average — about 0.14 s faster
-  in qualifying and 0.24 s in race trim across 2026 so far — but Norris struck back
-  with the Miami sprint pole and win.
+  the title in 2025. Piastri had the edge on average early on — about 0.14 s faster
+  in qualifying and 0.24 s in race trim across the first half — but Norris struck back
+  with the Miami sprint pole and win, and Hungary turned it genuinely spicy. Piastri
+  passed pole-man Norris at Turn 2 on lap 1 and controlled the first half; McLaren gave
+  him pit priority as the on-track leader, but at the second stops boxed him first to
+  cover a Hamilton undercut, and Piastri emerged straight into traffic — stuck behind
+  Sainz's Williams ("Get out of the f****** way you idiot"), even making light contact.
+  Norris, in clear air, found half a second a lap and overcut his way into the lead.
+  A furious Piastri fired sarcasm at the pit wall ("nice of you guys to factor that one
+  in, thanks") and later snapped "Don't f****** talk to me" — before a gearbox failure
+  ended his race entirely, his first DNF of 2026. Norris won and was unrepentant, saying he
+  was "just better in every sense, in terms of degradation and pace." McLaren (Stella) defended the strategy as correct
+  and said Piastri "understood it immediately" once he'd cooled down. In the standings
+  Norris is now clear of his team-mate — fifth on 128 to Piastri's seventh on 92 — and the
+  "papaya rules" détente is looking a lot more strained than it did a year ago.
 - **Norris vs Verstappen**: 2025 title rivals, now in different tiers of machinery.
   Can Verstappen do it with an inferior car like 2024? Increasingly looking like no.
 - **Hamilton vs Leclerc** (Ferrari): The GOAT and the heir. Second season together —
@@ -359,7 +405,12 @@ Some drivers have adapted faster than others.
   again. Spa kept both trending up: Leclerc took a strong P2 (led much of the race) while
   Hamilton scrapped his way to P4 through a penalty and a pit fumble. Hamilton's now up to
   championship P2 (159) with Leclerc fourth on 126 and closing — for once the Ferrari story
-  is both cars climbing rather than one at the other's expense.
+  is both cars climbing rather than one at the other's expense. Hungary tilted the intra-team
+  scrap back Leclerc's way: Hamilton lost a front-row start to a Q3 impeding penalty and then
+  a race-day pit-lane speeding penalty, finishing P5 behind Leclerc (P4). Hamilton still leads
+  Leclerc in the title (169 to 138), but that's back-to-back weekends where the younger
+  Ferrari has finished ahead — the pecking order that swung so hard to Lewis mid-season is
+  wobbling again heading into the break.
 
 ---
 
@@ -390,6 +441,10 @@ Some drivers have adapted faster than others.
 - **"Maybe I've hit a black cat"** — Verstappen, gallows-humouring Red Bull's run of
   rotten 2026 luck as problem after problem piled up (the Silverstone power-unit trouble,
   the Austria rear-wing shunt, and more): "I don't know what's causing it."
+- **"Don't f****** talk to me"** — Oscar Piastri's ice-cold radio to his own McLaren pit
+  wall at Hungary, after the team's pit-priority call let Norris overcut him for the lead.
+  Paired with his earlier "Get out of the f****** way you idiot" at Sainz, it was the
+  standout team-radio moment of the weekend. McLaren played it down as heat-of-the-moment.
 - **"You don't expect to go around the outside of a champion"** — Hamilton's dry
   comeback after Verstappen battled him hard in Austria and barked "Clear penalty!"
   over the radio (stewards: no action). Two old rivals trading needle a decade on,
@@ -598,3 +653,27 @@ Some drivers have adapted faster than others.
   permanent fix (the failures struck in the straight-to-corner-mode switch, but the exact
   cause hadn't yet been pinned down). Verstappen said the swap made the car "slower" but was
   worth it for safety — and it held, P3 at Spa — with the modified Macarena wing due back once it's ready.
+- **Hungarian GP qualifying — two big grid penalties reshuffle the front** (Round 11,
+  Hungaroring, July 25): Norris pipped Hamilton to pole by a scant 0.012s, but the stewards
+  then rewrote the front rows. Hamilton copped a 3-place drop for impeding Piastri at the end
+  of Q3 (he was crawling on the racing line into Turn 1 while Piastri arrived on a push lap,
+  forcing the McLaren wide), which shoved Lewis from P2 to P5. Antonelli took a matching
+  3-place penalty for not slowing enough under yellows thrown by Verstappen's late Q3 spin,
+  dropping the points leader to P7. Net grid: Norris, Leclerc, Piastri, Verstappen, Hamilton,
+  Russell, Antonelli.
+- **Hungarian GP — Norris wins, McLaren civil war, Piastri DNF** (Round 11, Hungaroring,
+  July 26): McLaren's first Grand Prix win of 2026, but a messy one. Piastri jumped pole-man
+  Norris at Turn 2 on lap 1 and led the first half; McLaren gave him pit priority, then boxed
+  him first at the second stops to cover Hamilton — only for Piastri to emerge into traffic
+  behind Sainz while Norris, in clear air, found half a second a lap and overcut into the
+  lead. Piastri raged on the radio, then retired with a gearbox failure (his first DNF of the
+  year). Verstappen grabbed a surprise P2 off a strong start and a bold pass on Hamilton;
+  Antonelli recovered from P7 to P3 to stretch his title lead to 50 at the break. Leclerc P4,
+  Hamilton P5 (after a 5s pit-lane speeding penalty), Hadjar P6, Russell P7, Lawson P8,
+  Hulkenberg P9, Lindblad P10. Championship at the break: Antonelli 219, Hamilton 169, Russell
+  160, Leclerc 138, Norris 128, Verstappen 109, Piastri 92.
+- **Russell's anti-stall nightmare** (Hungarian GP): Two weekends after his lap-1 Spa DNF,
+  George Russell was bitten again at the start — an unexpected anti-stall activation dropped
+  him from P6 on the grid to 21st by the end of lap 1. He recovered to P7, but it's
+  another chunk of points gone to a car problem rather than anything he did wrong, and it left
+  him third in the standings, 59 back of team-mate Antonelli.
