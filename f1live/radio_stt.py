@@ -1,14 +1,19 @@
-"""Optional team-radio transcription via OpenAI gpt-audio-1.5.
+"""Optional team-radio transcription via OpenAI gpt-transcribe.
 
 Active only when OPENAI_API_KEY is set. Every failure mode — no key, openai
 or ffmpeg missing, download/API error, unintelligible audio — degrades
 silently to None. The radio URL still appears in the snapshot regardless;
 this only adds a spoken-words transcript on top when available.
+
+A transcription model is used rather than an audio chat model on purpose. Chat models
+answer every clip, and on this audio — short, clipped, engine noise over the voice — an
+answer is not the same as a transcript: given a grid and a glossary they will compose a
+plausible radio call for a clip that contains no speech at all. Returning nothing is the
+correct output for an unintelligible clip, so an empty response here is a result, not a
+failure, and is never retried.
 """
 
 import asyncio
-import base64
-import json
 import logging
 import os
 import subprocess
@@ -17,7 +22,7 @@ import urllib.request
 
 logger = logging.getLogger("f1live.radio")
 
-MODEL = "gpt-audio-1.5"
+MODEL = "gpt-transcribe"
 
 _GRID_2026 = (
     "Mercedes: Antonelli, Russell. Ferrari: Leclerc, Hamilton. Red Bull: Verstappen, Hadjar. "
@@ -25,14 +30,11 @@ _GRID_2026 = (
     "Racing Bulls: Lawson, Lindblad. Williams: Sainz, Albon. Audi: Hulkenberg, Bortoleto. "
     "Cadillac: Bottas, Perez. Aston Martin: Alonso, Stroll."
 )
-_SYSTEM = (
-    "You transcribe Formula 1 team radio between a driver and their race engineer. "
-    "The audio is short, noisy and clipped — use F1 context to resolve unclear words. "
+_PROMPT = (
+    "Formula 1 team radio between a driver and their race engineer. Short, noisy, clipped audio. "
     f"Current grid — {_GRID_2026} "
     "Common terms: box, pit, push, tyres, sector, traffic, DRS, undercut, overcut, "
-    "chequered flag, balance, understeer, oversteer, degradation, delta, formation lap. "
-    'Respond ONLY with JSON: {"transcript": "<the words spoken verbatim, '
-    'or an empty string if unintelligible>"}'
+    "chequered flag, balance, understeer, oversteer, degradation, delta, formation lap."
 )
 
 
@@ -69,34 +71,11 @@ def _transcribe_wav(wav: str) -> str | None:
         return None
     try:
         client = OpenAI()
-        b64 = base64.b64encode(open(wav, "rb").read()).decode()
+        with open(wav, "rb") as f:
+            r = client.audio.transcriptions.create(model=MODEL, file=f, prompt=_PROMPT)
     except Exception:
         return None
-
-    for _ in range(2):  # gpt-audio occasionally returns empty; one retry
-        try:
-            r = client.chat.completions.create(
-                model=MODEL, modalities=["text"],
-                messages=[
-                    {"role": "system", "content": _SYSTEM},
-                    {"role": "user", "content": [
-                        {"type": "input_audio", "input_audio": {"data": b64, "format": "wav"}},
-                        {"type": "text", "text": "Transcribe this radio clip."},
-                    ]},
-                ],
-            )
-            out = (r.choices[0].message.content or "").strip()
-        except Exception:
-            return None
-        if not out:
-            continue
-        try:
-            text = (json.loads(out).get("transcript") or "").strip()
-        except Exception:
-            text = out.strip().strip("`{}").strip()
-        if text:
-            return text
-    return None
+    return (getattr(r, "text", "") or "").strip() or None
 
 
 def _transcribe_sync(url: str) -> str | None:

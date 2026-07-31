@@ -1,7 +1,7 @@
 {
   "name": "f1-live-copilot",
   "description": "Watch F1 races with an AI friend — real-time race companion powered by official F1 live timing data",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": {
     "name": "crizin",
     "url": "https://github.com/crizin"

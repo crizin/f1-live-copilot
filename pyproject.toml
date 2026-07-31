@@ -1,6 +1,6 @@
 [project]
 name = "f1-live-copilot"
-version = "0.1.4"
+version = "0.1.5"
 description = "F1 Live Copilot — AI-powered real-time F1 race commentary"
 requires-python = ">=3.10"
 dependencies = [
