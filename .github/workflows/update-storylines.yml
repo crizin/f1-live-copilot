@@ -56,12 +56,18 @@ jobs:
                  in place — never create a second entry for an event already
                  covered (e.g. a race that already has a recap).
                - Refresh existing storylines only if status changed materially.
-               - PRUNE: this file is a briefing, not an archive. If it runs
-                 past ~700 lines, compress the oldest material — early-season
-                 race recaps and resolved storylines get squashed to a line,
-                 or dropped when a later entry already supersedes them. Keep
-                 it modest: a few entries per run, not a rewrite. Deletions
-                 need no source entry.
+               - NEVER append "Update post-<race>:" paragraphs. Rewrite the
+                 section current-state-first, folding the new development in.
+                 If a section has turned into a chronological log of every
+                 round, collapse it: keep what still matters, drop the
+                 intermediate snapshots (superseded rumours, past
+                 championship gaps, a result a later entry already covers).
+               - Points and standings live in standings.md — don't restate
+                 tallies here. Describe the narrative ("goes into the break
+                 50 clear"), not the table.
+               - This file is a briefing, not an archive. Keep it under ~400
+                 lines; if it drifts over, that's the append pattern creeping
+                 back in. Deletions and rewrites need no source entry.
                - Update the "Last update" line at the top.
                - Keep tone conversational; this feeds a race-watching companion,
                  not a news article.

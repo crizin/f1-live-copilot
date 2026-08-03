@@ -44,7 +44,8 @@ version of this file was a placeholder for a month before being noticed.
 **Steps**:
 1. WebSearch for recent F1 news since the last update date
 2. Add new items to relevant sections (Big Stories, Rivalries, Memes, Incidents)
-3. Update existing storylines if status changed
+3. Rewrite existing storylines current-state-first if status changed — never
+   append an "Update post-[GP]:" paragraph to a section
 4. Remove stale items no longer relevant
 5. Update "Last update" line at the top
 
@@ -53,6 +54,8 @@ version of this file was a placeholder for a month before being noticed.
 - Write conversationally — this feeds a race-watching companion, not a news article
 - Focus on context useful during live commentary
   (e.g., "Hamilton and Leclerc collided last race" matters for their next battle)
+- A briefing, not an archive — keep it under ~400 lines. Points and standings
+  belong in `standings.md`; carry the narrative here, not the table.
 
 ## After Updating
 
