@@ -13,9 +13,15 @@ updates:
       - "crizin"
     groups:
       actions:
+        applies-to: version-updates
         update-types:
           - "minor"
           - "patch"
+      # security-updates 는 그룹 기본 적용 대상이 아님 — 선언 없으면 패키지당 PR 이 따로 열림
+      security:
+        applies-to: security-updates
+        patterns:
+          - "*"
   - package-ecosystem: "uv"
     directory: "/"
     schedule:
@@ -29,6 +35,12 @@ updates:
       - "crizin"
     groups:
       minor-and-patch:
+        applies-to: version-updates
         update-types:
           - "minor"
           - "patch"
+      # security-updates 는 그룹 기본 적용 대상이 아님 — 선언 없으면 패키지당 PR 이 따로 열림
+      security:
+        applies-to: security-updates
+        patterns:
+          - "*"
