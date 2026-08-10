@@ -4,15 +4,16 @@
 > Updated throughout the season as stories develop.
 > Championship points live in `standings.md`. This file carries the narrative, not the table.
 
-Last update: 2026-07-27, post-Hungary. The Hungarian GP (Round 11, July 24-26) was the
-last race before the summer break — the grid is off until the Dutch GP at Zandvoort in
-late August.
+Last update: 2026-08-10, mid-summer-break. The Hungarian GP (Round 11, July 24-26) was
+the last race; racing resumes at Zandvoort on August 21-23, a weekend that carries a
+Sprint on the Saturday.
 
 **Where it stands at the break:** Antonelli goes into the shutdown as the runaway
 favourite, roughly 50 points clear after a quiet, mature P3 at the Hungaroring. Hamilton
 is his nearest challenger, with Russell shoved down to third by two straight weekends of
 Mercedes car failures. McLaren finally won a Grand Prix — and immediately tore into
-itself over how. Verstappen's exit clause is now formally active.
+itself over how. Verstappen's exit clause is now formally active, and Red Bull has put a
+richer, clause-free contract on the table trying to close it off.
 
 ---
 
@@ -124,16 +125,29 @@ mathematically certain, and finishing the first half sixth formally activated it
 Reports put the real decision deadline around October — he isn't even obliged to tell
 Red Bull before then.
 
-The destination has a name now. Paddock sources say McLaren-Verstappen talks are in
+Red Bull's counter is already on the table. Bild reported on the Tuesday after Hungary
+(July 28) that Laurent Mekies and Oliver Mintzlaff had put a new deal to Verstappen's
+camp several weeks earlier: an extra year to the end of 2029 and a pay rise on top of his
+current basic salary of roughly €65m a season — figures around $80m have been quoted — on
+one condition, that the exit clauses come out. He has neither accepted nor rejected it.
+Part of the urgency is commercial; Red Bull is tired of the annual will-he-won't-he cycle,
+with sponsors and potential hires said to be holding off on committing until Verstappen
+decides. When Dutch reports during the break claimed Max was preparing to recommit for
+2027 while negotiating a richer, clause-free contract, Jos Verstappen killed it on X in
+four words: "You know absolutely nothing."
+
+The alternative destination has a name. Paddock sources say McLaren-Verstappen talks are in
 their "closing stages," with the extra spice that his long-time engineer Gianpiero
 Lambiase is said to be McLaren-bound too, as director of racing — to the point that Red
 Bull tech chief Pierre Waché has reportedly stopped sharing confidential information
 with him. It got frosty after Silverstone: a planned London meeting between the
 Verstappen camp and Red Bull's 49% ownership side (Mark Mateschitz and Oliver Mintzlaff)
 was scrapped when the post-race talks went badly, and Verstappen's jet was tracked
-leaving England that Sunday night. Behind the scenes the shareholders are split on
-buying the clause out — the Thai stakeholder Chalerm Yoovidhya reportedly in favour of
-paying "low double-digit millions" to make it go away, Mateschitz and Mintzlaff against.
+leaving England that Sunday night. Earlier reports had the shareholders split over
+simply buying the clause out — the Thai stakeholder Chalerm Yoovidhya in favour of
+paying "low double-digit millions" to make it go away, Mateschitz and Mintzlaff against;
+the Bild version says they've gone the other route and tried to buy it out with a longer,
+richer contract instead.
 
 Publicly everyone is playing it cool. Zak Brown insists "I'm very happy with my two
 racing drivers, Lando and Oscar." Team boss Laurent Mekies says Max "has made clear he
