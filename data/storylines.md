@@ -4,20 +4,37 @@
 > Updated throughout the season as stories develop.
 > Championship points live in `standings.md`. This file carries the narrative, not the table.
 
-Last update: 2026-08-10, mid-summer-break. The Hungarian GP (Round 11, July 24-26) was
-the last race; racing resumes at Zandvoort on August 21-23, a weekend that carries a
-Sprint on the Saturday.
+Last update: 2026-08-17, still in the summer break. The Hungarian GP (Round 11, July
+24-26) was the last race; racing resumes at Zandvoort on August 21-23 — Round 12, a
+Sprint weekend, and the last Dutch Grand Prix under the promoter's current deal with F1.
 
 **Where it stands at the break:** Antonelli goes into the shutdown as the runaway
 favourite, roughly 50 points clear after a quiet, mature P3 at the Hungaroring. Hamilton
 is his nearest challenger, with Russell shoved down to third by two straight weekends of
 Mercedes car failures. McLaren finally won a Grand Prix — and immediately tore into
 itself over how. Verstappen's exit clause is now formally active, and Red Bull has put a
-richer, clause-free contract on the table trying to close it off.
+richer, clause-free contract on the table trying to close it off. The break has been
+quiet on track and noisy off it: no announcement either way, and his call is widely read
+as the trigger that has to fall before the rest of the 2027 driver market moves.
 
 ---
 
 ## The Big Stories
+
+### Zandvoort's last dance
+
+Round 12 is the final Dutch Grand Prix under the promoter's current agreement with F1 —
+they chose not to continue beyond 2026, with rising costs and F1's European venue
+rotation making it unsustainable. Nobody has said the sport can never come back, but
+there is no deal past this year. Zandvoort first held a world championship race in 1952,
+went 36 years off the calendar and came back in 2021 on the back of Verstappen-mania;
+the grandstands and dunes awash in orange have been one of the modern era's signature
+atmospheres. The farewell gets a Sprint — the first time the Dutch Grand Prix has run
+the format. Verstappen is characteristically unsentimental — "the track will
+fortunately remain, and I'm sure I'll do many more laps there. Just not in a Formula 1
+race anymore" — and says he mainly wants "to enjoy this last weekend together with the
+fans. What they've created here is impressive." Expect the crowd to be enormous and loud
+regardless of where the Red Bull actually finishes.
 
 ### The new rules reshuffled the grid
 
@@ -159,6 +176,14 @@ as well, and we haven't." Verstappen himself shut it flat — "there's nothing t
 while refusing to commit either way, calling Red Bull his "second family." His surprise
 P2 at Hungary, the first competitive high in weeks, is at least a small argument for
 staying. Undecided, but the door is genuinely open.
+
+And his decision is the domino the 2027 market is waiting on. Carlos Sainz is the
+clearest case: Williams want him re-signed and have reportedly gone well above his
+current ~€13m to do it, but through the break he's declined to put pen to paper, unhappy
+with an FW48 that has him fighting far further back than he signed up for. His camp is
+said to be pushing for a Verstappen-style performance exit clause of his own, on a
+one-year deal only — they don't fully trust Williams to improve. The alternatives being
+floated for him are Red Bull, which only exists if Max leaves, and Audi.
 
 ### Ferrari's year two — Hamilton clicked, then Leclerc came back
 
@@ -355,7 +380,3 @@ than others.
   Bull media briefing over a question asked back in late 2025, then skipped the Pirelli
   tyre test at Suzuka with Hadjar running it instead. Combined with the retirement talk,
   the optics were not great.
-- **Driver-manager speed-dating** (Miami paddock): Multiple reports of driver managers
-  holding informal meetings, quietly sounding out 2027 options on the assumption
-  Verstappen's exit clause might trigger. Tsunoda was among the names floated for a Red
-  Bull return seat.
