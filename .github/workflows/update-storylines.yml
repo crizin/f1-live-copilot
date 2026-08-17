@@ -24,7 +24,7 @@ jobs:
       # ── 1. Claude drafts the update ─────────────────────────────────────
       # continue-on-error: a turn-limit stop still leaves a usable partial
       # draft. The guard step below fails the job only if nothing came out.
-      - uses: anthropics/claude-code-action@1623c36729ac1cd5895198cded705a287de7db79 # v1.0.187
+      - uses: anthropics/claude-code-action@9d7150bc8a3dae8149739a88019d192b579ad90c # v1.0.193
         id: draft
         continue-on-error: true
         with:
@@ -174,7 +174,7 @@ jobs:
               purpose. Only check claims that are new or changed.
 
       # ── 3. Claude revises the draft per Codex's findings ────────────────
-      - uses: anthropics/claude-code-action@1623c36729ac1cd5895198cded705a287de7db79 # v1.0.187
+      - uses: anthropics/claude-code-action@9d7150bc8a3dae8149739a88019d192b579ad90c # v1.0.193
         id: revise
         if: steps.changes.outputs.changed == 'true'
         continue-on-error: true
