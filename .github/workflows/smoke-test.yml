@@ -1,0 +1,36 @@
+name: Smoke test
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: smoke-test-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # Floor from pyproject's requires-python, plus current stable.
+        python: ["3.10", "3.13"]
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          enable-cache: true
+          python-version: ${{ matrix.python }}
+
+      - run: uv sync --extra dev
+
+      # Fully offline: the replay runs on a generated fixture, since F1's archive
+      # is neither ours to commit nor reachable from CI (their CDN 403s cloud egress).
+      - run: uv run --extra dev dev/smoke-test.py

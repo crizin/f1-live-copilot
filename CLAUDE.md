@@ -66,9 +66,36 @@ uv run -m f1live.replay dev/data/suzuka-race/ --speed 20
 # Download archive — production mode (saves to $TMPDIR/f1-replay/)
 uv run -m f1live.download --path "2026/2026-03-29_Japanese_Grand_Prix/2026-03-29_Race" --skip-telemetry
 
+# Smoke test — what CI runs on every PR (generates its own fixture)
+uv run --extra dev dev/smoke-test.py
+
+# Same, but replaying a real downloaded archive instead of the fixture
+uv run --extra dev dev/smoke-test.py dev/data/suzuka-race/
+
+# Regenerate the synthetic fixture on its own (to eyeball or replay by hand)
+uv run dev/make-fixture.py /tmp/fixture
+
 # Test plugin locally
 claude --plugin-dir .
 ```
+
+## CI
+
+`.github/workflows/smoke-test.yml` runs `dev/smoke-test.py` on every PR against
+Python 3.10 and 3.13. It replays a full race through the real state/event
+pipeline and constructs the openai and httpx clients — a replay alone reads only
+local files, so it would pass a broken dependency bump untouched.
+
+The replay runs on a synthetic archive from `dev/make-fixture.py`: fictional
+drivers on fictional teams, in the jsonStream wire format `state.py` parses.
+F1's real archive is not an option — it is not ours to redistribute, and their
+CDN 403s cloud egress, so a CI download fails from any GitHub-hosted runner.
+The fixture is generated per run rather than committed, so it cannot drift from
+the generator.
+
+When `state.py`'s schema handling changes, update `dev/make-fixture.py` alongside
+it; when event detection is retuned, the floors in `dev/smoke-test.py`'s
+`MIN_EVENTS` are deliberately slack, but check them.
 
 ## Event Detection Tuning
 
