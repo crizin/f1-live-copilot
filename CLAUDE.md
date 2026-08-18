@@ -66,9 +66,23 @@ uv run -m f1live.replay dev/data/suzuka-race/ --speed 20
 # Download archive — production mode (saves to $TMPDIR/f1-replay/)
 uv run -m f1live.download --path "2026/2026-03-29_Japanese_Grand_Prix/2026-03-29_Race" --skip-telemetry
 
+# Smoke test — what CI runs on every PR (imports, clients, full replay)
+uv run --extra dev dev/smoke-test.py dev/data/suzuka-race/
+
 # Test plugin locally
 claude --plugin-dir .
 ```
+
+## CI
+
+`.github/workflows/smoke-test.yml` runs `dev/smoke-test.py` on every PR against
+Python 3.10 and 3.13. It replays a full archived race through the real
+state/event pipeline and constructs the openai and httpx clients — a replay
+alone reads only local files, so it would pass a broken dependency bump.
+
+The archive is downloaded and cached rather than committed: it is F1's data,
+not ours to redistribute. When the fetch fails the replay downgrades to a
+warning and the offline checks still gate the merge.
 
 ## Event Detection Tuning
 
