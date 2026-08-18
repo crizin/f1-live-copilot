@@ -13,10 +13,6 @@ concurrency:
   group: smoke-test-${{ github.ref }}
   cancel-in-progress: true
 
-env:
-  # Any finished race works; a full one exercises every event type.
-  ARCHIVE_PATH: 2026/2026-03-29_Japanese_Grand_Prix/2026-03-29_Race
-
 jobs:
   smoke:
     runs-on: ubuntu-latest
@@ -35,19 +31,6 @@ jobs:
 
       - run: uv sync --extra dev
 
-      # F1's timing archive is unofficial and not ours to redistribute, so it is
-      # fetched instead of committed. The cache keeps a CDN outage off the merge
-      # path; when the fetch fails anyway the replay downgrades to a warning and
-      # the offline checks still gate the merge.
-      - id: archive
-        uses: actions/cache@v6
-        with:
-          path: archive
-          key: f1-archive-${{ env.ARCHIVE_PATH }}
-
-      - name: Download archive
-        if: steps.archive.outputs.cache-hit != 'true'
-        continue-on-error: true
-        run: uv run -m f1live.download --path "$ARCHIVE_PATH" -o archive --skip-telemetry
-
-      - run: uv run --extra dev dev/smoke-test.py archive --skip-if-unavailable
+      # Fully offline: the replay runs on a generated fixture, since F1's archive
+      # is neither ours to commit nor reachable from CI (their CDN 403s cloud egress).
+      - run: uv run --extra dev dev/smoke-test.py

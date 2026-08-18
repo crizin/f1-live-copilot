@@ -6,10 +6,13 @@ openai, httpx, requests or websockets sails straight through it. Each client
 whose breaking change would otherwise surface mid-race is constructed here
 too. Nothing reaches the network: the archive is downloaded by the caller.
 
+With no archive given it generates a synthetic one (dev/make-fixture.py) and
+replays that, so the whole run is hermetic. Pass a real downloaded archive to
+replay actual session data instead.
+
 Usage:
-    uv run -m f1live.download --path "2026/2026-03-29_Japanese_Grand_Prix/2026-03-29_Race" \
-        -o /tmp/archive --skip-telemetry
-    uv run --extra dev dev/smoke-test.py /tmp/archive
+    uv run --extra dev dev/smoke-test.py
+    uv run --extra dev dev/smoke-test.py dev/data/suzuka-race/
 """
 
 import argparse
@@ -107,6 +110,15 @@ def archive_is_usable(archive: str) -> str | None:
     return None
 
 
+def make_fixture(out_dir: str) -> str:
+    script = os.path.join(os.path.dirname(os.path.abspath(__file__)), "make-fixture.py")
+    proc = subprocess.run([sys.executable, script, out_dir],
+                          capture_output=True, text=True, timeout=120)
+    if proc.returncode != 0:
+        raise Failure(f"fixture generation failed\n{proc.stderr[-2000:]}")
+    return proc.stdout.strip()
+
+
 def run_replay(archive: str, dump_json: str) -> str:
     env = {**os.environ, "F1LIVE_OUTPUT": dump_json}
     proc = subprocess.run(
@@ -165,9 +177,8 @@ def check_dumps(dump_json: str) -> str:
 
 def main():
     parser = argparse.ArgumentParser(description="Smoke-test the F1 Live Copilot package")
-    parser.add_argument("archive", nargs="?", help="Directory with .jsonStream files")
-    parser.add_argument("--skip-if-unavailable", action="store_true",
-                        help="Warn instead of failing when the archive is missing")
+    parser.add_argument("archive", nargs="?",
+                        help="Directory with .jsonStream files (default: a generated fixture)")
     args = parser.parse_args()
 
     checks = [check_imports, check_openai, check_radio_stt_degrades, check_httpx]
@@ -180,25 +191,24 @@ def main():
             failed.append(f"{check.__name__}: {e}")
             print(f"FAIL  {check.__name__}: {e}", file=sys.stderr)
 
-    if args.archive:
-        reason = archive_is_usable(args.archive)
-        if reason and args.skip_if_unavailable:
-            print(f"::warning::F1 archive unavailable ({reason}) — replay skipped")
-        elif reason:
-            failed.append(f"archive: {reason}")
-            print(f"FAIL  archive: {reason}", file=sys.stderr)
-        else:
-            with tempfile.TemporaryDirectory() as d:
-                dump_json = os.path.join(d, "f1-live.json")
-                try:
-                    stdout = run_replay(args.archive, dump_json)
-                    print(f"ok    {check_events(stdout)}")
-                    print(f"ok    {check_dumps(dump_json)}")
-                except Exception as e:
-                    failed.append(f"replay: {e}")
-                    print(f"FAIL  replay: {e}", file=sys.stderr)
-    else:
-        print("::warning::no archive given — replay skipped")
+    with tempfile.TemporaryDirectory() as d:
+        try:
+            archive = args.archive
+            if not archive:
+                archive = os.path.join(d, "fixture")
+                print(f"ok    {make_fixture(archive)}")
+
+            reason = archive_is_usable(archive)
+            if reason:
+                raise Failure(reason)
+
+            dump_json = os.path.join(d, "f1-live.json")
+            stdout = run_replay(archive, dump_json)
+            print(f"ok    {check_events(stdout)}")
+            print(f"ok    {check_dumps(dump_json)}")
+        except Exception as e:
+            failed.append(f"replay: {e}")
+            print(f"FAIL  replay: {e}", file=sys.stderr)
 
     if failed:
         print(f"\n{len(failed)} check(s) failed.", file=sys.stderr)
