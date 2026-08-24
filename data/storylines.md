@@ -324,87 +324,58 @@ than others.
 
 ### Hungarian GP (Round 11, Hungaroring, July 25-26)
 
-- **Qualifying reshuffled by two grid penalties.** Norris pipped Hamilton to pole by
-  0.012s, then the stewards rewrote the front rows: Hamilton dropped three places for
-  impeding Piastri at the end of Q3 (crawling on the racing line into Turn 1 as the
-  McLaren arrived on a push lap), Antonelli three places for not slowing enough under
-  the yellows from Verstappen's late Q3 spin. Net grid: Norris, Leclerc, Piastri,
-  Verstappen, Hamilton, Russell, Antonelli.
-- **The race — McLaren's first win of 2026, and a civil war.** Piastri jumped Norris at
-  Turn 2 on lap 1 and led the first half before the pit-priority call and the Sainz
-  traffic handed Norris the lead; Piastri raged on the radio, then retired with a
-  gearbox failure. Verstappen grabbed a surprise P2 off a strong start and a bold pass
-  on Hamilton, a result he called one of "survival." Antonelli recovered from P7 to P3.
-  Then Leclerc, Hamilton (5s pit-lane speeding penalty), Hadjar, Russell, Lawson,
-  Hulkenberg, Lindblad.
-- **Russell's anti-stall nightmare.** Two weekends after his Spa DNF, an unexpected
-  anti-stall activation dropped him from P6 to 21st by the end of lap 1. He recovered to
-  P7, but it's another pile of points lost to the car rather than anything he did.
+- **Two grid penalties rewrote the front rows.** Norris pipped Hamilton to pole by
+  0.012s, then Hamilton dropped three places for impeding Piastri at the end of Q3 and
+  Antonelli three for not slowing enough under the yellows from Verstappen's late Q3
+  spin. Net grid: Norris, Leclerc, Piastri, Verstappen, Hamilton, Russell, Antonelli.
+- **McLaren's first win of 2026 — and a civil war.** Piastri jumped Norris at Turn 2 and
+  led the first half before the pit-priority call handed the lead over; he raged on the
+  radio, then retired with a gearbox failure (detail under Norris vs Piastri). Verstappen
+  took a surprise P2 he called one of "survival," Antonelli recovered from P7 to P3, and
+  Russell's anti-stall start cost him 15 places before he salvaged P7.
 
 ### Belgian GP (Round 10, Spa, July 19)
 
-- **Antonelli wins, Russell's lap-1 heartbreak.** Pole to flag apart from the Eau Rouge
-  moment, winning by 1.9s from Leclerc, with Verstappen P3 on the reverted wing,
-  Hamilton P4 (after a 5s penalty), Piastri P5, Hadjar P6, Norris P7, Bortoleto P8,
-  Lindblad P9, Colapinto P10 — his double pass on Gasly and Lawson at Les Combes was one
-  of the moves of the day. DNFs: Russell, Stroll (suspected gearbox), Perez (reported
-  broken suspension).
-- **"It 100% goes on us."** Russell lost battery deployment through Eau Rouge, tumbled
-  back into the pack and collided with Hamilton at Les Combes. He was angrier about
-  being there at all than about the contact — "I shouldn't have been in that position in
-  the first place. That's why I'm the most angry" — and called it "honestly... a racing
-  incident." Hamilton agreed, and still took a 5s penalty. Wolff owned the root cause.
+- **Antonelli wins, Russell's lap-1 heartbreak.** Pole to flag bar one Eau Rouge moment,
+  1.9s clear of Leclerc, Verstappen P3 on the reverted wing, Hamilton P4 after a 5s
+  penalty. Russell lost battery deployment through Eau Rouge, tumbled back into the pack,
+  collided with Hamilton at Les Combes and retired — angrier about being there at all
+  than about the contact, and Wolff owned the root cause (see Mercedes above).
+  Colapinto's double pass on Gasly and Lawson at Les Combes was the move of the day.
 
 ### Earlier in the season
 
 - **FIA ADUO ruling backfires on Red Bull** (still contested): The "Adjustment of
   Underperforming Operations" provision allows limited PU upgrades for struggling
-  manufacturers. Honda, Ferrari and Audi were cleared for upgrades — and the FIA's first
-  ranking judged Red Bull-Ford to have the BEST engine of 2026, meaning Red Bull is the
-  one team NOT allowed to upgrade. Verstappen was baffled: "We just feel surprised,
-  because we don't feel like we are the best." Red Bull contested it and the FIA is
-  reviewing its analysis — a bizarre outcome for a first in-house PU dogged by
-  reliability problems.
-- **British GP** (Round 9, Silverstone, July 4-5): Antonelli took his maiden F1 sprint
-  win, passing Hamilton with Boost down the Hangar Straight on lap 8. Sunday belonged to
-  Leclerc, who got ahead off the line and never looked back. Antonelli's wheel-shield
-  failure wrecked his race; Hamilton served a 5s false-start penalty and still recovered
-  to P3; Verstappen spun into the gravel at Stowe with four laps left on the second
-  rear-wing failure in two weekends, bringing out the race-ending safety car.
-- **Austrian GP** (Round 8, June 26-28): Russell led every key moment for a
-  "cold-blooded" win, nursing a failed drinks system in brutal Spielberg heat.
-  Verstappen charged from P5 on the grid to P2 on Red Bull's big upgrade. Two side
-  stories: Russell's pole came under yellows from Verstappen's Q3 crash — he lifted
-  briefly and still beat Leclerc by 0.236s while Antonelli read the same flags as
-  double-waved and aborted, and the stewards took "no further action," leaving a faint
-  asterisk. And Racing Bulls rookie Arvid Lindblad repeatedly ignored orders to hold
-  station behind Lawson ("we are not fighting") and passed him anyway; Lawson was
-  audibly furious — "I lift for brakes and then get attacked" — before reclaiming the
-  spot with an undercut. Pundits are already touting Lindblad as Red Bull's "next
-  Verstappen."
-- **Spanish GP** (Round 7, June 12-14): Hamilton's maiden Ferrari win; Antonelli's
-  PU failure four laps from home after passing Russell for second; Leclerc's
-  power-steering DNF.
-- **Monaco GP** (Round 6, June 7): Antonelli untouchable, lights to flag from pole,
-  carnage behind — seven DNFs including Verstappen on lap 1 (anti-stall/start failure)
-  and Leclerc crashing on the restart at the same corner Stroll had, in front of his own
-  crowd. Russell turned a likely podium into P12 by himself: a 0.1 km/h pit-speed breach
-  (a software glitch, per the team) for 5s, then pitting when told to stay out and being
-  touched by the crew before serving it, earning a drive-through. "I probably gained one
-  tenth in the whole pit lane and lost 13 positions." Hadjar took P3 — his first podium
-  in Red Bull colours — and survived a stewards' investigation into work done on his car
-  during the red flag.
-- **Canadian GP** (Round 5, May 22-24): The Mercedes sprint clash that triggered Wolff's
-  "radio moaning" line, then Russell's PU letting go on lap 30 while leading the race.
-  He sat stunned in the cockpit, smacked the car and hurled his headrest onto the track
-  — "it feels like somebody doesn't want me to fight for this championship" — drawing an
-  FIA "unsafe act" investigation and a €5,000 fine suspended for 12 months. He called
-  himself "embarrassed" and apologised to the marshals. Hamilton took P2, Verstappen his
+  manufacturers. Honda, Ferrari and Audi were cleared — and the FIA's first ranking
+  judged Red Bull-Ford to have the BEST engine of 2026, meaning Red Bull is the one team
+  NOT allowed to upgrade. Verstappen was baffled: "We just feel surprised, because we
+  don't feel like we are the best." Red Bull contested it; the FIA is reviewing.
+- **British GP** (Round 9, July 4-5): Leclerc got ahead off the line and never looked
+  back. Antonelli took his maiden F1 sprint win on Saturday, then a wheel-shield failure
+  wrecked his Sunday; Verstappen's second rear-wing failure in two weekends put him in
+  the Stowe gravel with four laps left.
+- **Austrian GP** (Round 8, June 26-28): Russell's "cold-blooded" win nursing a failed
+  drinks system in brutal heat, Verstappen P5 to P2 on Red Bull's big upgrade. Racing
+  Bulls rookie Arvid Lindblad ignored orders to hold station behind Lawson ("we are not
+  fighting") and passed him anyway — Lawson audibly furious, "I lift for brakes and then
+  get attacked," before reclaiming the spot with an undercut. Pundits have been touting
+  Lindblad as Red Bull's "next Verstappen" ever since.
+- **Spanish GP** (Round 7, June 12-14): Hamilton's maiden Ferrari win; Antonelli's PU
+  failure four laps from home after passing Russell for second; Leclerc's power-steering
+  DNF.
+- **Monaco GP** (Round 6, June 7): Antonelli lights to flag from pole, carnage behind —
+  seven DNFs including Verstappen on lap 1. Hadjar took P3, his first podium in Red Bull
+  colours. Russell turned a likely podium into P12 by himself, a 0.1 km/h pit-speed
+  breach compounded by a botched penalty service: "I probably gained one tenth in the
+  whole pit lane and lost 13 positions."
+- **Canadian GP** (Round 5, May 22-24): Russell's PU let go on lap 30 while he led. He
+  sat stunned, smacked the car and hurled his headrest onto the track — "it feels like
+  somebody doesn't want me to fight for this championship" — drawing an FIA "unsafe act"
+  investigation and a €5,000 fine suspended for 12 months. Hamilton P2, Verstappen's
   first podium of 2026.
 - **Miami GP** (Round 4, May 2-3): Chaos. Hulkenberg's Audi caught fire on the
-  reconnaissance lap to the sprint grid. In the race, Antonelli, Verstappen and Leclerc
-  went three-wide into Turn 1 and Verstappen spun a full 360 without contact; Gasly
-  flipped after contact with Lawson. Antonelli won by 3.3s from Norris. Leclerc was on
-  podium pace before spinning into the wall on the final lap and taking a 20-second
-  post-race penalty for repeatedly using the run-offs afterwards — the stewards
-  explicitly rejected his "mechanical issue" defence.
+  reconnaissance lap to the sprint grid; Antonelli, Verstappen and Leclerc went three-wide
+  into Turn 1 and Verstappen spun a full 360 without contact; Gasly flipped after contact
+  with Lawson. Antonelli won by 3.3s from Norris. Leclerc threw away podium pace into the
+  wall on the final lap, then took a 20s penalty for repeatedly using the run-offs.
