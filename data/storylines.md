@@ -5,8 +5,7 @@
 > Championship points live in `standings.md`. This file carries the narrative, not the table.
 
 Last update: 2026-08-24, the day after the Dutch GP (Round 12, Zandvoort, August 21-23 —
-a Sprint weekend, and the last Dutch Grand Prix, full stop). Next up is Monza, Round 13,
-September 4-6.
+a Sprint weekend, and the circuit's farewell). Next up is Monza, Round 13, September 4-6.
 
 **Where it stands:** Antonelli still leads comfortably and is now being actively
 protected — Mercedes used team orders in his favour at Zandvoort days after Russell had
@@ -133,10 +132,9 @@ obviously a few difficult rounds." At Hungary he didn't even need to win — a 3
 grid penalty for not slowing under yellows dropped him to P7 on the grid, and he calmly
 worked back to P3 while McLaren and Ferrari squabbled ahead of him.
 
-The clearest sign of where he stands isn't a result, it's what Mercedes did at Zandvoort:
-they pitted him under a late VSC, he came out behind Russell, and they told Russell to
-move over. That's a team that has picked its championship horse. The paddock question is
-back to where it was before the reliability scares — is there a title fight at all?
+The clearest sign of where he stands isn't a result: at Zandvoort Mercedes ordered Russell
+to move over for him (see Rivalries). That team has picked its horse — and the paddock
+question is back to what it was before the reliability scares: is there a title fight?
 
 ### Verstappen re-signed — the saga is over
 
@@ -222,13 +220,14 @@ than others.
   moment" at Mercedes, won the Sprint, and then on Sunday was told to let Antonelli by at
   Turn 1 after the team pitted Kimi onto fresh softs under a late VSC. His radio was pure
   acid — "is he fighting for the win? Or is he planning to catch Norris?" (Norris was 11
-  seconds up the road). Then he U-turned completely once he'd cooled off: "Kimi was ahead of me anyway,
-  so he deserved to finish ahead... with the pace with the new tyre, he would have
+  seconds up the road). Then he U-turned once he'd cooled off: "Kimi was ahead of me
+  anyway, so he deserved to finish ahead... with the pace with the new tyre, he would have
   overtaken anyway. It was the right decision," adding that inverting on split strategies
   is long-standing team policy. Wolff called it "not a difficult decision" — the team had
   agreed beforehand "we're not going to lose time fighting with each other and have two
   Ferraris breathing down our neck." For all that, Antonelli only pulled about four
-  seconds clear by the flag — the pass was not obviously inevitable. Watch how Russell races his team-mate from here.
+  seconds clear by the flag — the pass was not obviously inevitable. Watch how Russell
+  races his team-mate from here.
 - **Norris vs Piastri** (McLaren): Reigning champion vs the Australian who almost took
   the 2025 title. Piastri had the edge on average early on — about 0.14s faster in
   qualifying and 0.24s in race trim across the first half — but Hungary turned it
@@ -298,28 +297,30 @@ than others.
 
 ### Dutch GP (Round 12, Zandvoort, August 21-23)
 
+- **Hadjar out, Lawson up, Tsunoda back.** A wrist injury ruled Isack Hadjar out on the
+  Thursday, so Liam Lawson was promoted to partner Verstappen — the Red Bull seat he lost
+  two races into 2025 — and Yuki Tsunoda, reserve since Hadjar took his drive, returned to
+  Racing Bulls alongside Lindblad.
 - **Sprint: Russell lights to flag.** Pole converted into a controlled 24-lap win, 1.360s
   clear of Leclerc, with Norris P3 and Antonelli P4. Piastri, Verstappen, Hamilton and
   Gasly completed the points. Russell's second Sprint win of the year.
 - **The race lasted one lap before the red flag.** Damp track — inters and full wets were
   on show as the field headed to the grid, though everyone ultimately started on slicks.
   Verstappen, running seventh, dipped a wheel over the white line at the final corner,
-  tried to catch the slide and speared into the barrier opposite — a heavy hit, two
-  impacts, car destroyed, driver fine. "I'm OK," he said on the radio. His explanation:
-  "It was still quite wet in that corner and then as soon as I saw the dry patch coming,
-  I was like, now you can accelerate but clearly that didn't work so probably was still a
-  bit too early." Thirty-minute stoppage; the restart went ahead on
-  slicks.
+  tried to catch the slide and speared into the barrier opposite — two impacts, car
+  destroyed, driver unhurt. "I'm OK," he said on the radio. His explanation: "It was still
+  quite wet in that corner and then as soon as I saw the dry patch coming, I was like, now
+  you can accelerate but clearly that didn't work." Thirty-minute stoppage; the restart
+  went ahead on slicks.
 - **Norris wins from Antonelli and Russell.** Antonelli led after the restart, Norris
-  chipped away and got by, then won by 11.5s. Hamilton P4, Leclerc P5, Piastri P6, Lawson
-  P7, Hulkenberg P8, Alonso P9, Gasly P10. Five retirements — Verstappen, Bottas, Ocon,
-  Stroll and Bearman — with Albon classified 17th, six laps down. Sainz took a 10s
-  penalty for causing a collision; Lawson and Colapinto both got 10s for yellow-flag
-  infringements.
-- **Mercedes swap places, Russell fumes, then agrees.** The story of the afternoon — see
-  the Antonelli vs Russell entry under Rivalries. Short version: fresh softs for Antonelli
-  under a late VSC, a "let him past" call on lap 65, a very sarcastic radio reply, and a
-  full retraction an hour later.
+  chipped away and got by, then won by 11.5s. Hamilton P4, Leclerc P5, Piastri P6, then
+  Lawson P7 — the only Red Bull still running — Hulkenberg P8, Alonso P9, Gasly P10, with
+  Tsunoda P11 on his first start of the year. Five retirements — Verstappen, Bottas, Ocon,
+  Stroll and Bearman — with Albon classified 17th, six laps down. Sainz took 10s for
+  causing a collision; Lawson and Colapinto 10s each for yellow-flag infringements.
+- **Mercedes swap places, Russell fumes, then agrees.** The story of the afternoon — fresh
+  softs for Antonelli under a late VSC, a "let him past" call on lap 65, a very sarcastic
+  radio reply, a full retraction an hour later. Detail under Rivalries.
 
 ### Hungarian GP (Round 11, Hungaroring, July 25-26)
 
