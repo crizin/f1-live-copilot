@@ -4,37 +4,39 @@
 > Updated throughout the season as stories develop.
 > Championship points live in `standings.md`. This file carries the narrative, not the table.
 
-Last update: 2026-08-17, still in the summer break. The Hungarian GP (Round 11, July
-24-26) was the last race; racing resumes at Zandvoort on August 21-23 — Round 12, a
-Sprint weekend, and the last Dutch Grand Prix under the promoter's current deal with F1.
+Last update: 2026-08-24, the day after the Dutch GP (Round 12, Zandvoort, August 21-23 —
+a Sprint weekend, and the last Dutch Grand Prix, full stop). Next up is Monza, Round 13,
+September 4-6.
 
-**Where it stands at the break:** Antonelli goes into the shutdown as the runaway
-favourite, roughly 50 points clear after a quiet, mature P3 at the Hungaroring. Hamilton
-is his nearest challenger, with Russell shoved down to third by two straight weekends of
-Mercedes car failures. McLaren finally won a Grand Prix — and immediately tore into
-itself over how. Verstappen's exit clause is now formally active, and Red Bull has put a
-richer, clause-free contract on the table trying to close it off. The break has been
-quiet on track and noisy off it: no announcement either way, and his call is widely read
-as the trigger that has to fall before the rest of the 2027 driver market moves.
+**Where it stands:** Antonelli still leads comfortably and is now being actively
+protected — Mercedes used team orders in his favour at Zandvoort days after Russell had
+said such a call was "not even a consideration," which tells you how they read the title
+fight. Norris has won two Grands Prix back to back and is the form driver of the second
+half. Russell won the Sprint and then had to hand a place to his own title rival on
+Sunday. And the 2027 driver market, which spent all summer waiting on one man, resolved
+inside 48 hours: Sainz re-signed with Williams on August 19, Verstappen with Red Bull
+through 2030 on August 20. McLaren, Ferrari, Williams and Cadillac now have both 2027
+seats confirmed; Red Bull's second seat is still open.
 
 ---
 
 ## The Big Stories
 
-### Zandvoort's last dance
+### Zandvoort's last dance — and it ended in the wall
 
-Round 12 is the final Dutch Grand Prix under the promoter's current agreement with F1 —
-they chose not to continue beyond 2026, with rising costs and F1's European venue
-rotation making it unsustainable. Nobody has said the sport can never come back, but
-there is no deal past this year. Zandvoort first held a world championship race in 1952,
-went 36 years off the calendar and came back in 2021 on the back of Verstappen-mania;
-the grandstands and dunes awash in orange have been one of the modern era's signature
-atmospheres. The farewell gets a Sprint — the first time the Dutch Grand Prix has run
-the format. Verstappen is characteristically unsentimental — "the track will
-fortunately remain, and I'm sure I'll do many more laps there. Just not in a Formula 1
-race anymore" — and says he mainly wants "to enjoy this last weekend together with the
-fans. What they've created here is impressive." Expect the crowd to be enormous and loud
-regardless of where the Red Bull actually finishes.
+The Dutch Grand Prix is gone from the calendar. The promoter chose not to continue past
+2026, citing the long-term financial risk of hosting without state subsidies rather than
+any lack of demand; nobody has ruled out a return, but there's no deal. Zandvoort first
+held a world championship race in 1952, went 36 years away and came back in 2021 on the
+back of Verstappen-mania. Over 100,000 were expected for the send-off, the dunes went
+orange one last time, and the town partied into the night at a "Final Lap" farewell.
+
+The one thing the script needed, it didn't get. Verstappen — who'd run a bespoke Delft
+Blue helmet and a black suit with orange shoulder detailing as a thank-you to the fans —
+put it in the barrier at the last corner of lap one, in front of all of them. He'd been
+unsentimental about the place going in ("the track will fortunately remain, and I'm sure
+I'll do many more laps there. Just not in a Formula 1 race anymore"), but crashing out
+of your own final home race is a brutal way for six years of orange to end.
 
 ### The new rules reshuffled the grid
 
@@ -52,11 +54,16 @@ The 2026 power unit overhaul — electric power tripled, MGU-H gone, 100% sustai
   championship if every second race a car is losing fat points" — and owned the Spa one
   outright: "it 100% goes on us," adding that all Mercedes engines lacked energy out of
   Turn 1, Antonelli included. Raw pace was never the issue; Antonelli won that same day.
-- **McLaren**: Fast, no longer untouchable. Norris took the Miami sprint — the first
-  non-Mercedes win of the year — but it took until Hungary for the first proper Grand
-  Prix win, off the back of an upgraded MCL40. Both cars are quick again, though Piastri
-  retiring from the lead fight there on a gearbox failure was a reminder the machinery
-  can still bite.
+  Zandvoort was a clean weekend at last: Sprint win for Russell, both cars on the Sunday
+  podium.
+- **McLaren**: Back-to-back wins have made them the form team of the second half. The
+  turn came with an upgrade package at Hungary — McLaren's first win of the season came
+  straight after it, and a new rear wing and rear brake ducts at Zandvoort were billed as
+  completing that package. Norris took the Miami sprint early on, then won Hungary and
+  Zandvoort back to back — the Dutch one off a genuinely fiddly damp-to-dry strategic
+  race he rated "probably one of my better wins." Both cars are quick, though Piastri's
+  gearbox failure from the lead fight in Hungary was a reminder the machinery can still
+  bite.
 - **Red Bull-Ford**: The in-house PU is a work in progress, trending up. A big Austria
   upgrade package put Verstappen on the podium there, but the story has been the
   "Macarena" revolving rear wing — a trick Ferrari pioneered and Red Bull adapted, run
@@ -124,66 +131,45 @@ snatched it straight back down the Kemmel Straight, then reeled in and passed Le
 with 10 laps to go to win by 1.9s. "It's great to be back on the top step after
 obviously a few difficult rounds." At Hungary he didn't even need to win — a 3-place
 grid penalty for not slowing under yellows dropped him to P7 on the grid, and he calmly
-worked back to P3 while McLaren and Ferrari squabbled ahead of him, stretching his lead
-to 50 at the break. The paddock question is back to where it was before the reliability
-scares: is there a title fight at all?
+worked back to P3 while McLaren and Ferrari squabbled ahead of him.
 
-### Verstappen's future — the exit clause is live
+The clearest sign of where he stands isn't a result, it's what Mercedes did at Zandvoort:
+they pitted him under a late VSC, he came out behind Russell, and they told Russell to
+move over. That's a team that has picked its championship horse. The paddock question is
+back to where it was before the reliability scares — is there a title fight at all?
 
-Max told the BBC after Suzuka he was considering retiring at the end of 2026 because
-he's "not enjoying" the cars. He has since ruled that out — he told De Telegraaf he WILL
-race in 2027 and explicitly rejected a sabbatical ("No, not a sabbatical. If I stop,
-I'll stop completely") — but he has pointedly never committed to Red Bull beyond this
-year.
+### Verstappen re-signed — the saga is over
 
-His contract runs to the end of 2028 with a performance exit clause: outside the
-championship top two, and he's free to leave for 2027. Silverstone made that
-mathematically certain, and finishing the first half sixth formally activated it.
-Reports put the real decision deadline around October — he isn't even obliged to tell
-Red Bull before then.
+He's staying. Red Bull announced on the Thursday of the Dutch GP weekend (August 20) that
+Verstappen has extended through the end of 2030, when he'll be 33. That's the story that
+dominated half a season, resolved in a press release: "I am really pleased with the
+contract extension. We have the best people and I'm excited to keep working together."
+Mekies: "retaining the best driver on the grid is fantastic news for everyone."
 
-Red Bull's counter is already on the table. Bild reported on the Tuesday after Hungary
-(July 28) that Laurent Mekies and Oliver Mintzlaff had put a new deal to Verstappen's
-camp several weeks earlier: an extra year to the end of 2029 and a pay rise on top of his
-current basic salary of roughly €65m a season — figures around $80m have been quoted — on
-one condition, that the exit clauses come out. He has neither accepted nor rejected it.
-Part of the urgency is commercial; Red Bull is tired of the annual will-he-won't-he cycle,
-with sponsors and potential hires said to be holding off on committing until Verstappen
-decides. When Dutch reports during the break claimed Max was preparing to recommit for
-2027 while negotiating a richer, clause-free contract, Jos Verstappen killed it on X in
-four words: "You know absolutely nothing."
+Some context for how big a swing this was. His old deal ran to 2028 with a performance
+exit clause — outside the championship top two at the break and he was free to leave for
+2027 — and finishing the first half sixth formally activated it. He'd talked openly about
+retiring because he wasn't enjoying the 2026 cars, his management held real talks with
+McLaren about a 2027 switch, and the paddock spent the summer treating his decision as the
+domino everything else was waiting on. None of it happened.
 
-The alternative destination has a name. Paddock sources say McLaren-Verstappen talks are in
-their "closing stages," with the extra spice that his long-time engineer Gianpiero
-Lambiase is said to be McLaren-bound too, as director of racing — to the point that Red
-Bull tech chief Pierre Waché has reportedly stopped sharing confidential information
-with him. It got frosty after Silverstone: a planned London meeting between the
-Verstappen camp and Red Bull's 49% ownership side (Mark Mateschitz and Oliver Mintzlaff)
-was scrapped when the post-race talks went badly, and Verstappen's jet was tracked
-leaving England that Sunday night. Earlier reports had the shareholders split over
-simply buying the clause out — the Thai stakeholder Chalerm Yoovidhya in favour of
-paying "low double-digit millions" to make it go away, Mateschitz and Mintzlaff against;
-the Bild version says they've gone the other route and tried to buy it out with a longer,
-richer contract instead.
+Two details worth knowing. First, the exit clause did not go away: Red Bull had been
+reported to want it removed as the price of a longer deal, but Max says the terms are
+unchanged — "I've never disclosed anything in my contract, so yeah, that stays the same"
+— and Mekies stonewalled the rest with "everything else is our business, really." So the
+performance escape hatch survives into the new contract. Second, he's negotiated
+permission to race endurance events, 24-hour races included, when the F1 calendar allows.
+Money figures floating around (a reported €92m base from 2027, up to €115m with bonuses,
+~€460m total) come from outside analysts, not from Red Bull.
 
-Publicly everyone is playing it cool. Zak Brown insists "I'm very happy with my two
-racing drivers, Lando and Oscar." Team boss Laurent Mekies says Max "has made clear he
-wants to continue with the team" but is "well aware he needs a fast car to be happy."
-Manager Raymond Vermeulen went furthest at Spa: "the truth is, Max wants to finish his
-time with Red Bull. He has a contract until 2028 and would like to fulfill it," noting
-the clause "doesn't mean we'll activate it — we could have activated it in recent years
-as well, and we haven't." Verstappen himself shut it flat — "there's nothing to say" —
-while refusing to commit either way, calling Red Bull his "second family." His surprise
-P2 at Hungary, the first competitive high in weeks, is at least a small argument for
-staying. Undecided, but the door is genuinely open.
-
-And his decision is the domino the 2027 market is waiting on. Carlos Sainz is the
-clearest case: Williams want him re-signed and have reportedly gone well above his
-current ~€13m to do it, but through the break he's declined to put pen to paper, unhappy
-with an FW48 that has him fighting far further back than he signed up for. His camp is
-said to be pushing for a Verstappen-style performance exit clause of his own, on a
-one-year deal only — they don't fully trust Williams to improve. The alternatives being
-floated for him are Red Bull, which only exists if Max leaves, and Audi.
+Loose ends: Gianpiero Lambiase, his race engineer of a decade, is still leaving for
+McLaren — but in 2028, not next year. And Carlos Sainz, who had Audi and Aston Martin as
+alternatives, re-signed with Williams on multi-year terms the day before the Verstappen
+news, completing Williams' line-up alongside Albon for the team's 50th-anniversary season
+despite a miserable 2026 in an FW48 that has him nowhere. That leaves McLaren, Ferrari,
+Williams and Cadillac as the only teams with both 2027 seats confirmed. Still open: Red
+Bull's second seat, both Racing Bulls, and one apiece at Aston Martin, Haas and Alpine —
+with Mercedes' and Audi's line-ups yet to be made official.
 
 ### Ferrari's year two — Hamilton clicked, then Leclerc came back
 
@@ -197,11 +183,11 @@ have to thank everyone here at Ferrari... we made so many improvements."
 Leclerc, who had been ahead earlier in the year, went through a wretched run — a home
 crash at Monaco, a late power-steering DNF at Barcelona, front row to P8 in Austria —
 before ending it with a controlled Silverstone win, his ninth career victory and his
-first there. Since then he has finished ahead of Hamilton twice running: P2 at Spa
-(leading much of the race before Antonelli got him), then P4 at Hungary while Hamilton
-lost a front-row start to a Q3 impeding penalty and then a 5s pit-lane speeding penalty
-on race day, finishing P5. Hamilton still leads him in the championship, but the
-intra-Ferrari pecking order that swung so hard to Lewis mid-season is wobbling again.
+first there. He then finished ahead of Hamilton twice running — P2 at Spa (leading much
+of the race before Antonelli got him), P4 at Hungary — before Zandvoort flipped it back:
+Leclerc took P2 in the Sprint, then Hamilton beat him to P4 on Sunday. Hamilton still
+leads him in the championship, and the intra-Ferrari pecking order keeps changing hands
+without either of them landing a decisive blow.
 
 ### Bahrain & Saudi Arabia called off
 
@@ -229,10 +215,20 @@ than others.
   broke, and Mercedes conceded it "might have cost itself" the win by letting them scrap
   — a tacit admission that free intra-team racing is now hurting the team on Sundays.
   Austria was Russell's swing back: a controversial pole and a "cold-blooded" win while
-  Antonelli laboured to P3. But the last two weekends have been brutal for him and none
-  of it on merit — the Spa battery glitch, then an anti-stall activation at the Hungary
-  start that dumped him from P6 to 21st on lap 1. He clawed back to P7; Antonelli calmly
-  banked another podium. The gap that was 25 points after Silverstone is a chasm again.
+  Antonelli laboured to P3. Then two weekends of pure bad luck — the Spa battery glitch,
+  an anti-stall at the Hungary start that dumped him from P6 to 21st on lap 1 — blew the
+  gap wide open again. Zandvoort was the moment it stopped being a rivalry between
+  equals. Russell arrived saying team orders were "not even a consideration at the
+  moment" at Mercedes, won the Sprint, and then on Sunday was told to let Antonelli by at
+  Turn 1 after the team pitted Kimi onto fresh softs under a late VSC. His radio was pure
+  acid — "is he fighting for the win? Or is he planning to catch Norris?" (Norris was 11
+  seconds up the road). Then he U-turned completely once he'd cooled off: "Kimi was ahead of me anyway,
+  so he deserved to finish ahead... with the pace with the new tyre, he would have
+  overtaken anyway. It was the right decision," adding that inverting on split strategies
+  is long-standing team policy. Wolff called it "not a difficult decision" — the team had
+  agreed beforehand "we're not going to lose time fighting with each other and have two
+  Ferraris breathing down our neck." For all that, Antonelli only pulled about four
+  seconds clear by the flag — the pass was not obviously inevitable. Watch how Russell races his team-mate from here.
 - **Norris vs Piastri** (McLaren): Reigning champion vs the Australian who almost took
   the 2025 title. Piastri had the edge on average early on — about 0.14s faster in
   qualifying and 0.24s in race trim across the first half — but Hungary turned it
@@ -246,12 +242,15 @@ than others.
   ended his race, his first DNF of 2026. Norris was unrepentant: he was "just better in
   every sense, in terms of degradation and pace." Stella defended the strategy as
   correct and said Piastri "understood it immediately" once he'd cooled down. The
-  "papaya rules" détente looks a lot more strained than it did a year ago.
+  "papaya rules" détente looks a lot more strained than it did a year ago — and Zandvoort
+  did nothing to level it back up, Norris winning again while Piastri trailed home P6.
 - **Hamilton vs Leclerc** (Ferrari): The GOAT and the heir, second season together, and
   the pecking order has flipped twice already this year. See "Ferrari's year two" above.
-- **Norris vs Verstappen**: 2025 title rivals, now in different tiers of machinery. Can
-  Verstappen do it with an inferior car like 2024? Increasingly looking like no — and
-  the twist is they may be team-mates in 2027.
+- **Norris vs Verstappen**: 2025 title rivals, now in very different tiers of machinery.
+  Can Verstappen do it with an inferior car like 2024? The answer this year is no. The
+  team-mates-in-2027 subplot is dead — Max re-signed with Red Bull to 2030 — so this
+  stays what it's been all season: occasional flashes when their races intersect,
+  nothing sustained.
 
 ---
 
@@ -275,6 +274,15 @@ than others.
   at Hungary. Paired with the earlier "Get out of the f****** way you idiot" at Sainz,
   the standout team-radio moment of the weekend. McLaren played it down as
   heat-of-the-moment.
+- **"Is he fighting for the win? Or is he planning to catch Norris?"** — Russell's
+  withering radio at Zandvoort on being told to let his own title rival past. Deadpan,
+  devastating, and instantly the clip of the weekend; the fact he then publicly agreed
+  with the call afterwards only made it better.
+- **Zandvoort's orange goodbye.** Verstappen's Delft Blue helmet and orange-shouldered
+  suit for his last home race, a 100,000-plus crowd expected in the dunes, a town-wide
+  "Final Lap" party — and then he stuck it in the wall at the last corner of lap one, in
+  front of every one of them. The gap between the tribute build-up and the actual outcome
+  is the kind of thing F1 fan edits are made of.
 - **"You don't expect to go around the outside of a champion"** — Hamilton's dry
   comeback after Verstappen battled him hard in Austria and barked "Clear penalty!" over
   the radio (stewards: no action). Two old rivals trading needle a decade on.
@@ -287,6 +295,31 @@ than others.
 ---
 
 ## Recent Incidents & Controversies
+
+### Dutch GP (Round 12, Zandvoort, August 21-23)
+
+- **Sprint: Russell lights to flag.** Pole converted into a controlled 24-lap win, 1.360s
+  clear of Leclerc, with Norris P3 and Antonelli P4. Piastri, Verstappen, Hamilton and
+  Gasly completed the points. Russell's second Sprint win of the year.
+- **The race lasted one lap before the red flag.** Damp track — inters and full wets were
+  on show as the field headed to the grid, though everyone ultimately started on slicks.
+  Verstappen, running seventh, dipped a wheel over the white line at the final corner,
+  tried to catch the slide and speared into the barrier opposite — a heavy hit, two
+  impacts, car destroyed, driver fine. "I'm OK," he said on the radio. His explanation:
+  "It was still quite wet in that corner and then as soon as I saw the dry patch coming,
+  I was like, now you can accelerate but clearly that didn't work so probably was still a
+  bit too early." Thirty-minute stoppage; the restart went ahead on
+  slicks.
+- **Norris wins from Antonelli and Russell.** Antonelli led after the restart, Norris
+  chipped away and got by, then won by 11.5s. Hamilton P4, Leclerc P5, Piastri P6, Lawson
+  P7, Hulkenberg P8, Alonso P9, Gasly P10. Five retirements — Verstappen, Bottas, Ocon,
+  Stroll and Bearman — with Albon classified 17th, six laps down. Sainz took a 10s
+  penalty for causing a collision; Lawson and Colapinto both got 10s for yellow-flag
+  infringements.
+- **Mercedes swap places, Russell fumes, then agrees.** The story of the afternoon — see
+  the Antonelli vs Russell entry under Rivalries. Short version: fresh softs for Antonelli
+  under a late VSC, a "let him past" call on lap 65, a very sarcastic radio reply, and a
+  full retraction an hour later.
 
 ### Hungarian GP (Round 11, Hungaroring, July 25-26)
 
@@ -350,8 +383,7 @@ than others.
   Verstappen."
 - **Spanish GP** (Round 7, June 12-14): Hamilton's maiden Ferrari win; Antonelli's
   PU failure four laps from home after passing Russell for second; Leclerc's
-  power-steering DNF. Colapinto also took a post-race 10s penalty for not slowing
-  sufficiently for yellows, dropping him from P8 to P10.
+  power-steering DNF.
 - **Monaco GP** (Round 6, June 7): Antonelli untouchable, lights to flag from pole,
   carnage behind — seven DNFs including Verstappen on lap 1 (anti-stall/start failure)
   and Leclerc crashing on the restart at the same corner Stroll had, in front of his own
@@ -374,9 +406,4 @@ than others.
   flipped after contact with Lawson. Antonelli won by 3.3s from Norris. Leclerc was on
   podium pace before spinning into the wall on the final lap and taking a 20-second
   post-race penalty for repeatedly using the run-offs afterwards — the stewards
-  explicitly rejected his "mechanical issue" defence. Sunday's race had been brought
-  forward to 1pm local over forecast thunderstorms.
-- **Verstappen's media tension** (pre-Suzuka): He ejected a British reporter from a Red
-  Bull media briefing over a question asked back in late 2025, then skipped the Pirelli
-  tyre test at Suzuka with Hadjar running it instead. Combined with the retirement talk,
-  the optics were not great.
+  explicitly rejected his "mechanical issue" defence.
