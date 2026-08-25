@@ -24,7 +24,7 @@ jobs:
       # ── 1. Claude drafts the update ─────────────────────────────────────
       # continue-on-error: a turn-limit stop still leaves a usable partial
       # draft. The guard step below fails the job only if nothing came out.
-      - uses: anthropics/claude-code-action@9d7150bc8a3dae8149739a88019d192b579ad90c # v1.0.193
+      - uses: anthropics/claude-code-action@dcb57747bfceeaa1fa72638cae52295d1d853d4a # v1.0.199
         id: draft
         continue-on-error: true
         with:
@@ -125,7 +125,7 @@ jobs:
 
       - name: Codex fact-check
         if: steps.changes.outputs.changed == 'true'
-        uses: openai/codex-action@52fe01ec70a42f454c9d2ebd47598f9fd6893d56 # v1.11
+        uses: openai/codex-action@86365089eb2b84e0a8fb0717b304f8bdcb13b20e # v1.12
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           allow-bots: "true"
@@ -174,7 +174,7 @@ jobs:
               purpose. Only check claims that are new or changed.
 
       # ── 3. Claude revises the draft per Codex's findings ────────────────
-      - uses: anthropics/claude-code-action@9d7150bc8a3dae8149739a88019d192b579ad90c # v1.0.193
+      - uses: anthropics/claude-code-action@dcb57747bfceeaa1fa72638cae52295d1d853d4a # v1.0.199
         id: revise
         if: steps.changes.outputs.changed == 'true'
         continue-on-error: true
