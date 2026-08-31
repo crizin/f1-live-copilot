@@ -116,11 +116,20 @@ jobs:
       # ── 2. Codex fact-checks the draft (working-tree diff) ──────────────
       # Codex verifies Claude's claims against the URLs it reported using.
       # Different model family → independent failure modes vs same-model self-review.
+
+      # Fetching the sources under review needs egress, which codex-action
+      # rejects as a `codex-args` override but honours from a trusted
+      # config.toml under `codex-home`.
       - name: Prepare Codex inputs
         if: steps.changes.outputs.changed == 'true'
         run: |
           git diff -- data/storylines.md > /tmp/storylines.diff
           touch /tmp/storylines-sources.md
+          mkdir -p "$RUNNER_TEMP/codex-home"
+          cat > "$RUNNER_TEMP/codex-home/config.toml" <<'TOML'
+          [sandbox_workspace_write]
+          network_access = true
+          TOML
           echo "Draft prepared ($(wc -l < /tmp/storylines.diff) diff lines)"
 
       - name: Codex fact-check
@@ -131,7 +140,8 @@ jobs:
           allow-bots: "true"
           effort: high
           sandbox: workspace-write
-          codex-args: '--config web_search="live" --config sandbox_workspace_write.network_access=true'
+          codex-home: ${{ runner.temp }}/codex-home
+          codex-args: '--config web_search="live"'
           output-file: codex-review.md
           prompt: |
             You are fact-checking a draft update to data/storylines.md
