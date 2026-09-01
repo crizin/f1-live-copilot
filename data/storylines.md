@@ -4,7 +4,7 @@
 > Updated throughout the season as stories develop.
 > Championship points live in `standings.md`. This file carries the narrative, not the table.
 
-Last update: 2026-08-24, the day after the Dutch GP (Round 12, Zandvoort, August 21-23 —
+Last update: 2026-08-31, in the gap after the Dutch GP (Round 12, Zandvoort, August 21-23 —
 a Sprint weekend, and the circuit's farewell). Next up is Monza, Round 13, September 4-6.
 
 **Where it stands:** Antonelli still leads comfortably and is now being actively
@@ -297,10 +297,17 @@ than others.
 
 ### Dutch GP (Round 12, Zandvoort, August 21-23)
 
-- **Hadjar out, Lawson up, Tsunoda back.** A wrist injury ruled Isack Hadjar out on the
-  Thursday, so Liam Lawson was promoted to partner Verstappen — the Red Bull seat he lost
-  two races into 2025 — and Yuki Tsunoda, reserve since Hadjar took his drive, returned to
-  Racing Bulls alongside Lindblad.
+- **Hadjar out, Lawson up, Tsunoda back.** Isack Hadjar cracked a small bone in his left
+  wrist in a boxing session over the summer break, and discussions with Red Bull's medical
+  staff late in the week before the race ruled him out of Zandvoort. Liam Lawson was
+  promoted to partner Verstappen — the Red Bull seat he lost two races into 2025 — and Yuki
+  Tsunoda, reserve since Hadjar took his drive, returned to Racing Bulls alongside
+  Lindblad. Hadjar is targeting a Monza return and says it's "not swollen, which is very
+  good" with a bit more mobility every day; Wednesday of race week is reported to be the
+  final cut-off for a fitness-test call. It isn't a formality — Monza's high-speed
+  right-handers (Curva Grande, the Lesmos, Ascari, Parabolica) put sustained load through
+  the wheel on exactly the left side in question — and if he fails, the Zandvoort pairings
+  are likely to continue for another weekend.
 - **Sprint: Russell lights to flag.** Pole converted into a controlled 24-lap win, 1.360s
   clear of Leclerc, with Norris P3 and Antonelli P4. Piastri, Verstappen, Hamilton and
   Gasly completed the points. Russell's second Sprint win of the year.
