@@ -48,7 +48,7 @@ uv run dev/replay.py dev/data/new-race/ --speed 50 --events-only
 ## Development
 
 ```bash
-# Install dependencies
+# Install dependencies (and f1live itself, as an editable package)
 uv sync
 
 # Download archive data for testing (dev → saves to dev/data/)
@@ -85,6 +85,10 @@ claude --plugin-dir .
 Python 3.10 and 3.13. It replays a full race through the real state/event
 pipeline and constructs the openai and httpx clients — a replay alone reads only
 local files, so it would pass a broken dependency bump untouched.
+
+The smoke step runs with `PYTHONSAFEPATH=1` (honoured from Python 3.11). `-m f1live.*`
+has to resolve through the editable install `uv sync` makes, never through the working
+directory, because some users' shells set that variable.
 
 The replay runs on a synthetic archive from `dev/make-fixture.py`: fictional
 drivers on fictional teams, in the jsonStream wire format `state.py` parses.

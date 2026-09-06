@@ -22,6 +22,7 @@ import sys
 import tempfile
 import time
 
+from f1live import __version__
 from f1live.events import EventBatcher, EventDetector
 from f1live.state import F1State
 
@@ -181,13 +182,14 @@ def main():
     parser.add_argument("data_dir", help="Directory with .jsonStream files")
     parser.add_argument("--speed", type=float, default=1.0,
                         help="Playback speed multiplier (default: 1.0 = real-time)")
+    parser.add_argument("--version", action="version", version=f"f1-live-copilot {__version__}")
     args = parser.parse_args()
 
     if not os.path.isdir(args.data_dir):
         print(f"[SESSION] Error: directory not found: {args.data_dir}", flush=True)
         sys.exit(1)
 
-    print("[SESSION] F1 Live Copilot v0.1.0 (replay)", flush=True)
+    print(f"[SESSION] F1 Live Copilot v{__version__} (replay)", flush=True)
     print(f"[SESSION] Replaying from {args.data_dir} at {args.speed}x speed", flush=True)
 
     replay(args.data_dir, speed=args.speed)

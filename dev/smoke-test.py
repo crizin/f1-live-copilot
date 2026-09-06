@@ -23,8 +23,6 @@ import subprocess
 import sys
 import tempfile
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 MODULES = [
     "signalr", "state", "events", "main",
     "replay", "download", "latest_session", "radio_stt",
@@ -124,7 +122,6 @@ def run_replay(archive: str, dump_json: str) -> str:
     proc = subprocess.run(
         [sys.executable, "-m", "f1live.replay", archive, "--speed", str(REPLAY_SPEED)],
         capture_output=True, text=True, timeout=REPLAY_TIMEOUT, env=env,
-        cwd=os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
     )
     if proc.returncode != 0:
         raise Failure(f"replay exited {proc.returncode}\n{proc.stderr[-2000:]}")

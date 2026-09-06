@@ -8,7 +8,7 @@ def _detect_version() -> str:
         return version("f1-live-copilot")
     except PackageNotFoundError:
         pass
-    # Plugin installs run straight from the checkout, where no dist-info exists.
+    # Dev scripts with inline metadata import the checkout via sys.path, where no dist-info exists.
     pyproject = Path(__file__).resolve().parent.parent / "pyproject.toml"
     try:
         match = re.search(r'^version\s*=\s*"([^"]+)"', pyproject.read_text(), re.M)

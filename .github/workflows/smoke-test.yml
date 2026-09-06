@@ -38,3 +38,7 @@ jobs:
       # Fully offline: the replay runs on a generated fixture, since F1's archive
       # is neither ours to commit nor reachable from CI (their CDN 403s cloud egress).
       - run: uv run --extra dev dev/smoke-test.py
+        env:
+          # Some shells set this (honoured from Python 3.11). `-m f1live.*` must
+          # then resolve through the installed package, never the working directory.
+          PYTHONSAFEPATH: "1"
