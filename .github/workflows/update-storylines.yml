@@ -27,6 +27,7 @@ jobs:
       - uses: anthropics/claude-code-action@a874e9ecd7bb36efdad65429c6b35815f5a08f10 # v1.0.210
         id: draft
         continue-on-error: true
+        timeout-minutes: 25
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: |
@@ -134,10 +135,15 @@ jobs:
 
       - name: Codex fact-check
         if: steps.changes.outputs.changed == 'true'
+        timeout-minutes: 20
         uses: openai/codex-action@86365089eb2b84e0a8fb0717b304f8bdcb13b20e # v1.12
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           allow-bots: "true"
+          # The action pins itself by SHA but installs the CLI from npm latest,
+          # so both the CLI and the model it defaults to have to be pinned here.
+          codex-version: "0.153.4"
+          model: gpt-5.6-sol
           effort: high
           sandbox: workspace-write
           codex-home: ${{ runner.temp }}/codex-home
@@ -188,6 +194,7 @@ jobs:
         id: revise
         if: steps.changes.outputs.changed == 'true'
         continue-on-error: true
+        timeout-minutes: 25
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: |

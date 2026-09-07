@@ -1,0 +1,105 @@
+name: Codex probe
+
+# Temporary: bisects the storylines fact-check hang (run 34125483096).
+# Delete once the cause is pinned down.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - label: as-is-latest-cli-default-model
+            codex_version: ""
+            model: ""
+          - label: cli-0.151.0-default-model
+            codex_version: "0.151.0"
+            model: ""
+          - label: latest-cli-model-sol
+            codex_version: ""
+            model: "gpt-5.6-sol"
+    name: ${{ matrix.label }}
+    steps:
+      - uses: actions/checkout@v7
+
+      # Mirrors the real job's inputs: a small draft diff plus the empty
+      # sources file `touch` leaves behind when the draft step writes none.
+      - name: Prepare Codex inputs
+        run: |
+          cat > /tmp/storylines.diff <<'DIFF'
+          --- a/data/storylines.md
+          +++ b/data/storylines.md
+          @@ -10,6 +10,8 @@
+           ## Big Stories
+          +- Isack Hadjar picked up a wrist injury before the Italian Grand Prix;
+          +  Red Bull said he was cleared to race.
+          DIFF
+          touch /tmp/storylines-sources.md
+          mkdir -p "$RUNNER_TEMP/codex-home"
+          cat > "$RUNNER_TEMP/codex-home/config.toml" <<'TOML'
+          [sandbox_workspace_write]
+          network_access = true
+          TOML
+
+      - name: Codex fact-check
+        id: codex
+        timeout-minutes: 12
+        continue-on-error: true
+        uses: openai/codex-action@86365089eb2b84e0a8fb0717b304f8bdcb13b20e # v1.12
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          allow-bots: "true"
+          codex-version: ${{ matrix.codex_version }}
+          model: ${{ matrix.model }}
+          effort: high
+          sandbox: workspace-write
+          codex-home: ${{ runner.temp }}/codex-home
+          codex-args: '--config web_search="live"'
+          output-file: codex-review.md
+          prompt: |
+            You are fact-checking a draft update to data/storylines.md
+            (F1 2026 narrative content) before it becomes a PR.
+
+            Inputs on disk:
+            - /tmp/storylines.diff          — the draft's diff for that file
+            - /tmp/storylines-sources.md    — the sources the generator claims
+                                              to have used (### blocks with URLs)
+
+            For each substantive new or materially changed claim in the diff:
+            1. State the claim in one line of plain English.
+            2. Find its source URLs in the sources file.
+            3. Fetch each URL and read it.
+            4. Classify alignment:
+               - VERIFIED     — source clearly states the claim
+               - PARTIAL      — source touches the topic but the exact detail
+                                or wording differs
+               - UNSUPPORTED  — no source given, or source unrelated
+               - CONTRADICTED — source actively says something different
+
+            Output STRICTLY in this markdown format. No preamble, no extra prose:
+
+            | Status | Claim | Source check |
+            |---|---|---|
+            | VERIFIED | <one-line claim> | <brief note> |
+
+            End with one summary line:
+            **Summary:** Verified A · Partial B · Unsupported C · Contradicted D
+
+            Rules:
+            - Be conservative — if unsure, mark PARTIAL.
+            - Do NOT search for new sources beyond what the sources file lists.
+
+      - name: Report
+        if: always()
+        run: |
+          echo "outcome: ${{ steps.codex.outcome }}"
+          echo "--- codex-review.md ---"
+          cat codex-review.md 2>/dev/null || echo "(no output file)"
