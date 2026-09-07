@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: read
 
 jobs:
   probe:
@@ -20,9 +21,6 @@ jobs:
           - label: as-is-latest-cli-default-model
             codex_version: ""
             model: ""
-          - label: cli-0.151.0-default-model
-            codex_version: "0.151.0"
-            model: ""
           - label: latest-cli-model-sol
             codex_version: ""
             model: "gpt-5.6-sol"
@@ -30,24 +28,22 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      # Mirrors the real job's inputs: a small draft diff plus the empty
-      # sources file `touch` leaves behind when the draft step writes none.
+      # Replays a real past run's inputs: PR #53's diff plus the source
+      # list its body records, so the fact-check actually fetches URLs.
       - name: Prepare Codex inputs
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          cat > /tmp/storylines.diff <<'DIFF'
-          --- a/data/storylines.md
-          +++ b/data/storylines.md
-          @@ -10,6 +10,8 @@
-           ## Big Stories
-          +- Isack Hadjar picked up a wrist injury before the Italian Grand Prix;
-          +  Red Bull said he was cleared to race.
-          DIFF
-          touch /tmp/storylines-sources.md
+          gh pr diff 53 --repo "$GITHUB_REPOSITORY" > /tmp/storylines.diff
+          gh pr view 53 --repo "$GITHUB_REPOSITORY" --json body -q .body \
+            | sed -n '/^## Sources/,/^## .* Codex cross-check/p' \
+            | sed '1d;$d' > /tmp/storylines-sources.md
           mkdir -p "$RUNNER_TEMP/codex-home"
           cat > "$RUNNER_TEMP/codex-home/config.toml" <<'TOML'
           [sandbox_workspace_write]
           network_access = true
           TOML
+          echo "diff: $(wc -l < /tmp/storylines.diff) lines, sources: $(grep -c '^- http' /tmp/storylines-sources.md) urls"
 
       - name: Codex fact-check
         id: codex
