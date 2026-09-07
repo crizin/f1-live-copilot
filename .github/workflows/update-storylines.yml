@@ -133,6 +133,38 @@ jobs:
           TOML
           echo "Draft prepared ($(wc -l < /tmp/storylines.diff) diff lines)"
 
+      # `timeout-minutes` on the Codex step is a no-op: codex-action is a
+      # composite action, and GitHub does not propagate a step timeout into
+      # one. Worse, a step still running when the job ends leaves the whole
+      # run without a log archive, which is how run 34125483096 died
+      # undiagnosable. So arm a watchdog that dumps state and kills the CLI —
+      # the step then *finishes*, and the logs survive.
+      - name: Arm Codex watchdog
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          WATCHDOG_MINUTES: "12"
+        run: |
+          dump="$RUNNER_TEMP/codex-watchdog.txt"
+          echo "watchdog_dump=$dump" >> "$GITHUB_ENV"
+          setsid nohup bash -c '
+            sleep $((WATCHDOG_MINUTES * 60))
+            pgrep -x codex >/dev/null || exit 0
+            {
+              echo "=== watchdog fired after ${WATCHDOG_MINUTES}m: $(date -u) ==="
+              ps auxf
+              echo "--- sockets ---"
+              ss -tunp 2>/dev/null || true
+              for pid in $(pgrep -x codex); do
+                echo "--- pid $pid ---"
+                tr "\0" " " < "/proc/$pid/cmdline"; echo
+                echo "wchan: $(cat "/proc/$pid/wchan" 2>/dev/null)"
+                grep -E "^(State|Threads)" "/proc/$pid/status" 2>/dev/null
+              done
+            } > "'"$dump"'" 2>&1
+            pkill -TERM -x codex; sleep 10; pkill -KILL -x codex
+          ' >/dev/null 2>&1 &
+          echo "Watchdog armed (${WATCHDOG_MINUTES}m)."
+
       - name: Codex fact-check
         if: steps.changes.outputs.changed == 'true'
         timeout-minutes: 20
@@ -188,6 +220,26 @@ jobs:
             - Skip cosmetic edits (whitespace, the "Last update" line, etc.).
             - Ignore pure deletions — the draft prunes stale entries on
               purpose. Only check claims that are new or changed.
+
+      - name: Codex watchdog report
+        if: always() && steps.changes.outputs.changed == 'true'
+        run: |
+          if [ -s "${watchdog_dump:-}" ]; then
+            echo "::warning::Codex watchdog fired — the fact-check hung."
+            cat "$watchdog_dump"
+          else
+            echo "Watchdog did not fire."
+          fi
+
+      - name: Upload fact-check inputs
+        if: always() && steps.changes.outputs.changed == 'true'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: storylines-factcheck-inputs
+          path: |
+            /tmp/storylines.diff
+            /tmp/storylines-sources.md
+          if-no-files-found: warn
 
       # ── 3. Claude revises the draft per Codex's findings ────────────────
       - uses: anthropics/claude-code-action@a874e9ecd7bb36efdad65429c6b35815f5a08f10 # v1.0.210
