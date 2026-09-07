@@ -3,124 +3,55 @@ name: Codex probe
 # Temporary: bisects the storylines fact-check hang (run 34125483096).
 # Delete once the cause is pinned down.
 #
-# `codex exec` blocks on "Reading additional input from stdin..." until stdin
-# hits EOF — even with the prompt in argv — and codex-action feeds the prompt
-# that way. A fixture-only probe passed twice, so the suspect is the step in
-# front of it in the real job: claude-code-action leaving an inherited pipe
-# open. Both variants below run that step first; they differ only in how the
-# fact-check is invoked.
+# Ruled out so far: the CLI's default-model switch (0.153.4 → gpt-6-astra),
+# Astra itself, the preceding claude-code-action step, and input size — the
+# real 557-line / 24-URL fixture fact-checks locally in 9m16s. What is left
+# is where the fetches originate. The run that hung cites formula1.com,
+# planetf1, espn and aljazeera; the last run that passed cited none of them.
+# So: can a GitHub runner actually reach these, and how fast?
 
 on:
   workflow_dispatch:
+    inputs:
+      run_id:
+        description: "run id holding the storylines-factcheck-inputs artifact"
+        default: "34148567142"
 
 permissions:
   contents: read
-  pull-requests: read
+  actions: read
 
 jobs:
-  probe:
+  reachability:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - label: draft-then-codex-action
-            direct: "false"
-          - label: draft-then-direct-cli-stdin-closed
-            direct: "true"
-    name: ${{ matrix.label }}
+    timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v7
-
-      # Stands in for the real draft step: same action, trivial workload.
-      - uses: anthropics/claude-code-action@a874e9ecd7bb36efdad65429c6b35815f5a08f10 # v1.0.210
-        continue-on-error: true
-        with:
-          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          prompt: |
-            Read the first line of data/storylines.md and print it.
-            Do not edit any file.
-          claude_args: '--model sonnet --max-turns 3 --allowed-tools "Read"'
-
-      - name: Prepare Codex inputs
+      - name: Fetch the source list
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh pr diff 53 --repo "$GITHUB_REPOSITORY" > /tmp/storylines.diff
-          gh pr view 53 --repo "$GITHUB_REPOSITORY" --json body -q .body \
-            | sed -n '/^## Sources/,/^## .* Codex cross-check/p' \
-            | sed '1d;$d' > /tmp/storylines-sources.md
-          mkdir -p "$RUNNER_TEMP/codex-home"
-          cat > "$RUNNER_TEMP/codex-home/config.toml" <<'TOML'
-          [sandbox_workspace_write]
-          network_access = true
-          TOML
-          cat > "$RUNNER_TEMP/prompt.txt" <<'PROMPT'
-          You are fact-checking a draft update to data/storylines.md
-          (F1 2026 narrative content) before it becomes a PR.
+          gh run download "${{ inputs.run_id }}" --repo "$GITHUB_REPOSITORY" \
+            -n storylines-factcheck-inputs -D fixture
+          grep -ho 'https\?://[^ )]*' fixture/storylines-sources.md | sort -u > urls.txt
+          echo "$(wc -l < urls.txt) unique urls"
 
-          Inputs on disk:
-          - /tmp/storylines.diff          — the draft's diff for that file
-          - /tmp/storylines-sources.md    — the sources the generator claims
-                                            to have used (### blocks with URLs)
-
-          For each substantive new or materially changed claim in the diff:
-          state it in one line, find its source URLs in the sources file,
-          fetch each URL, and classify as VERIFIED / PARTIAL / UNSUPPORTED /
-          CONTRADICTED.
-
-          Output STRICTLY as this markdown table. No preamble, no extra prose:
-
-          | Status | Claim | Source check |
-          |---|---|---|
-
-          End with one summary line:
-          **Summary:** Verified A · Partial B · Unsupported C · Contradicted D
-          PROMPT
-          echo "diff: $(wc -l < /tmp/storylines.diff) lines, sources: $(grep -c '^- http' /tmp/storylines-sources.md) urls"
-
-      # Variant A — the real job's shape. If this hangs, the draft step is it.
-      - name: Codex fact-check (codex-action)
-        if: matrix.direct == 'false'
-        continue-on-error: true
-        uses: openai/codex-action@86365089eb2b84e0a8fb0717b304f8bdcb13b20e # v1.12
-        with:
-          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
-          allow-bots: "true"
-          codex-version: "0.153.4"
-          model: gpt-5.6-sol
-          effort: high
-          sandbox: workspace-write
-          codex-home: ${{ runner.temp }}/codex-home
-          codex-args: '--config web_search="live"'
-          output-file: codex-review.md
-          prompt-file: ${{ runner.temp }}/prompt.txt
-
-      # Variant B — same CLI, invoked directly with stdin closed and a real
-      # timeout. A `run:` step keeps its own log even when the command dies.
-      - name: Codex fact-check (direct CLI)
-        if: matrix.direct == 'true'
-        continue-on-error: true
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      - name: Probe each URL from the runner
         run: |
-          npm install -g "@openai/codex@0.153.4" >/dev/null
-          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0 >/dev/null 2>&1 || true
-          set +e
-          CODEX_HOME="$RUNNER_TEMP/codex-home" timeout --kill-after=30 600 \
-            codex exec --skip-git-repo-check --cd "$GITHUB_WORKSPACE" \
-              -m gpt-5.6-sol \
-              --config model_reasoning_effort="high" \
-              --config web_search="live" \
-              --sandbox workspace-write \
-              --output-last-message codex-review.md \
-              "$(cat "$RUNNER_TEMP/prompt.txt")" < /dev/null 2>&1 | tail -40
-          rc=${PIPESTATUS[0]}
-          echo "codex exit: $rc  (124 = timed out)"
+          printf '%-6s %-9s %-9s %s\n' CODE TIME SIZE URL
+          while read -r url; do
+            out=$(curl -sSL -o /dev/null \
+                    -w '%{http_code} %{time_total} %{size_download}' \
+                    --max-time 45 "$url" 2>&1) || out="ERR($?) - -"
+            printf '%-6s %-9s %-9s %s\n' $out "$url"
+          done < urls.txt
 
-      - name: Report
-        if: always()
+      - name: Probe again with a browser UA
         run: |
-          echo "--- codex-review.md ---"
-          cat codex-review.md 2>/dev/null || echo "(no output file)"
+          UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0 Safari/537.36'
+          printf '%-6s %-9s %-9s %s\n' CODE TIME SIZE URL
+          while read -r url; do
+            out=$(curl -sSL -o /dev/null -A "$UA" \
+                    -w '%{http_code} %{time_total} %{size_download}' \
+                    --max-time 45 "$url" 2>&1) || out="ERR($?) - -"
+            printf '%-6s %-9s %-9s %s\n' $out "$url"
+          done < urls.txt
