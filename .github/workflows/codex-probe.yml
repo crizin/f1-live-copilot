@@ -3,12 +3,15 @@ name: Codex probe
 # Temporary: bisects the storylines fact-check hang (run 34125483096).
 # Delete once the cause is pinned down.
 #
-# Ruled out so far: the CLI's default-model switch (0.153.4 → gpt-6-astra),
-# Astra itself, the preceding claude-code-action step, and input size — the
-# real 557-line / 24-URL fixture fact-checks locally in 9m16s. What is left
-# is where the fetches originate. The run that hung cites formula1.com,
-# planetf1, espn and aljazeera; the last run that passed cited none of them.
-# So: can a GitHub runner actually reach these, and how fast?
+# Ruled out: the CLI's default-model switch, Astra itself, the preceding
+# claude-code-action step, input size, and network reachability (all 24
+# source URLs answer 200 in under a second from a runner).
+#
+# Locally the same fixture finishes in 9m16s because the model pipes each
+# fetch through `sed`/`rg` and opens only one URL. The 8/31 CI log instead
+# shows whole raw pages inline. This runs the real fixture through the CLI
+# directly — stdin closed, hard timeout, log kept — to see which strategy
+# the runner actually takes.
 
 on:
   workflow_dispatch:
@@ -22,36 +25,93 @@ permissions:
   actions: read
 
 jobs:
-  reachability:
+  direct:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - name: Fetch the source list
+      - uses: actions/checkout@v7
+
+      - name: Fetch the real fixture
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh run download "${{ inputs.run_id }}" --repo "$GITHUB_REPOSITORY" \
-            -n storylines-factcheck-inputs -D fixture
-          grep -ho 'https\?://[^ )]*' fixture/storylines-sources.md | sort -u > urls.txt
-          echo "$(wc -l < urls.txt) unique urls"
+            -n storylines-factcheck-inputs -D /tmp/fixture
+          cp /tmp/fixture/storylines.diff /tmp/storylines.diff
+          cp /tmp/fixture/storylines-sources.md /tmp/storylines-sources.md
+          echo "diff: $(wc -l < /tmp/storylines.diff) lines, urls: $(grep -c '^- http' /tmp/storylines-sources.md)"
+          command -v rg >/dev/null && echo "ripgrep: present" || echo "ripgrep: ABSENT"
 
-      - name: Probe each URL from the runner
+      - name: Codex fact-check (direct CLI, logged)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          printf '%-6s %-9s %-9s %s\n' CODE TIME SIZE URL
-          while read -r url; do
-            out=$(curl -sSL -o /dev/null \
-                    -w '%{http_code} %{time_total} %{size_download}' \
-                    --max-time 45 "$url" 2>&1) || out="ERR($?) - -"
-            printf '%-6s %-9s %-9s %s\n' $out "$url"
-          done < urls.txt
+          npm install -g "@openai/codex@0.153.4" >/dev/null
+          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0 >/dev/null 2>&1 || true
+          mkdir -p "$RUNNER_TEMP/codex-home"
+          cat > "$RUNNER_TEMP/codex-home/config.toml" <<'TOML'
+          [sandbox_workspace_write]
+          network_access = true
+          TOML
+          cat > /tmp/prompt.txt <<'PROMPT'
+          You are fact-checking a draft update to data/storylines.md
+          (F1 2026 narrative content) before it becomes a PR.
 
-      - name: Probe again with a browser UA
+          Inputs on disk:
+          - /tmp/storylines.diff          — the draft's diff for that file
+          - /tmp/storylines-sources.md    — the sources the generator claims
+                                            to have used (### blocks with URLs)
+
+          For each substantive new or materially changed claim in the diff:
+          1. State the claim in one line of plain English.
+          2. Find its source URLs in the sources file.
+          3. Fetch each URL and read it.
+          4. Classify alignment: VERIFIED / PARTIAL / UNSUPPORTED / CONTRADICTED
+
+          Output STRICTLY in this markdown format. No preamble, no extra prose:
+
+          | Status | Claim | Source check |
+          |---|---|---|
+
+          End with one summary line:
+          **Summary:** Verified A · Partial B · Unsupported C · Contradicted D
+
+          Rules:
+          - Be conservative — if unsure, mark PARTIAL.
+          - Do NOT judge writing style; only facts.
+          - Do NOT search for new sources beyond what the sources file lists.
+          - Skip cosmetic edits (whitespace, the "Last update" line, etc.).
+          - Ignore pure deletions — the draft prunes stale entries on
+            purpose. Only check claims that are new or changed.
+          PROMPT
+          set +e
+          date -u +"start %H:%M:%S"
+          CODEX_HOME="$RUNNER_TEMP/codex-home" timeout --kill-after=30 1200 \
+            codex exec --skip-git-repo-check --cd "$GITHUB_WORKSPACE" \
+              -m gpt-5.6-sol \
+              --config model_reasoning_effort="high" \
+              --config web_search="live" \
+              --sandbox workspace-write \
+              --output-last-message /tmp/codex-review.md \
+              "$(cat /tmp/prompt.txt)" < /dev/null > /tmp/codex-exec.log 2>&1
+          echo "codex exit: $?  (124 = timed out)"
+          date -u +"end %H:%M:%S"
+
+      - name: What did it actually do
+        if: always()
         run: |
-          UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0 Safari/537.36'
-          printf '%-6s %-9s %-9s %s\n' CODE TIME SIZE URL
-          while read -r url; do
-            out=$(curl -sSL -o /dev/null -A "$UA" \
-                    -w '%{http_code} %{time_total} %{size_download}' \
-                    --max-time 45 "$url" 2>&1) || out="ERR($?) - -"
-            printf '%-6s %-9s %-9s %s\n' $out "$url"
-          done < urls.txt
+          echo "log size: $(wc -lc < /tmp/codex-exec.log)"
+          echo "=== shell commands it ran ==="
+          grep -oE "/bin/(ba)?sh -lc .{0,180}" /tmp/codex-exec.log | head -40
+          echo "=== last 30 lines ==="
+          tail -30 /tmp/codex-exec.log | cut -c1-300
+          echo "=== output file ==="
+          tail -5 /tmp/codex-review.md 2>/dev/null || echo "(none)"
+
+      - name: Upload full log
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: codex-direct-log
+          path: /tmp/codex-exec.log
+          if-no-files-found: warn
