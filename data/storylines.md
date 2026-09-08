@@ -4,18 +4,19 @@
 > Updated throughout the season as stories develop.
 > Championship points live in `standings.md`. This file carries the narrative, not the table.
 
-Last update: 2026-08-31, in the gap after the Dutch GP (Round 12, Zandvoort, August 21-23 —
-a Sprint weekend, and the circuit's farewell). Next up is Monza, Round 13, September 4-6.
+Last update: 2026-09-08, in the gap after the Italian GP (Round 13, Monza, September 4-6 —
+the last European round of the year). Next up is Madrid, Round 14, September 11-13.
 
-**Where it stands:** Antonelli still leads comfortably and is now being actively
-protected — Mercedes used team orders in his favour at Zandvoort days after Russell had
-said such a call was "not even a consideration," which tells you how they read the title
-fight. Norris has won two Grands Prix back to back and is the form driver of the second
-half. Russell won the Sprint and then had to hand a place to his own title rival on
-Sunday. And the 2027 driver market, which spent all summer waiting on one man, resolved
-inside 48 hours: Sainz re-signed with Williams on August 19, Verstappen with Red Bull
-through 2030 on August 20. McLaren, Ferrari, Williams and Cadillac now have both 2027
-seats confirmed; Red Bull's second seat is still open.
+**Where it stands:** Antonelli has turned a lead into a stranglehold. Mercedes deliberately
+took a 30-place grid penalty at his home race, banked it because their calculations said
+Monza was the best track to take it — and he won anyway from 19th, the kind of result
+that ends championships. Russell, again, was the team-mate on the wrong end of the strategy call, and
+again bit his tongue afterwards. Ferrari's home weekend went the other way entirely: the two
+drivers collided on lap 1, Leclerc crashed out on lap 2, and Hamilton spent Sunday evening
+telling anyone with a microphone that Ferrari has no rules of engagement and has left it too
+late to pick a side. The 2027 driver market is largely settled — Sainz to Williams,
+Verstappen to Red Bull through 2030 — with Red Bull's second seat the big one still open,
+and Hadjar, currently sidelined with a broken wrist, reportedly in line for an extension.
 
 ---
 
@@ -25,24 +26,18 @@ seats confirmed; Red Bull's second seat is still open.
 
 The Dutch Grand Prix is gone from the calendar. The promoter chose not to continue past
 2026, citing the long-term financial risk of hosting without state subsidies rather than
-any lack of demand; nobody has ruled out a return, but there's no deal. Zandvoort first
-held a world championship race in 1952, went 36 years away and came back in 2021 on the
-back of Verstappen-mania. Over 100,000 were expected for the send-off, the dunes went
-orange one last time, and the town partied into the night at a "Final Lap" farewell.
-
-The one thing the script needed, it didn't get. Verstappen — who'd run a bespoke Delft
-Blue helmet and a black suit with orange shoulder detailing as a thank-you to the fans —
-put it in the barrier at the last corner of lap one, in front of all of them. He'd been
-unsentimental about the place going in ("the track will fortunately remain, and I'm sure
-I'll do many more laps there. Just not in a Formula 1 race anymore"), but crashing out
-of your own final home race is a brutal way for six years of orange to end.
+any lack of demand; nobody has ruled out a return, but there's no deal. A record 325,000 came
+across the three days, the dunes went orange one last time — and Verstappen, in a bespoke Delft
+Blue helmet and an orange-shouldered suit as a thank-you to the fans, put it in the barrier
+at the last corner of lap one in front of every one of them. Six years of orange, over like
+that.
 
 ### The new rules reshuffled the grid
 
 The 2026 power unit overhaul — electric power tripled, MGU-H gone, 100% sustainable fuel
 — redrew the order. Where each team landed:
 
-- **Mercedes**: Got it right, and it isn't close on pace. Antonelli has six wins.
+- **Mercedes**: Got it right, and it isn't close on pace. Antonelli has seven wins.
   The problem is the battery. Russell's PU let go while leading at Montreal, Antonelli's
   died four laps from home at Barcelona while running second, and at Spa an
   energy-deployment glitch cut Russell's power through Eau Rouge and pitched him into a
@@ -51,18 +46,20 @@ The 2026 power unit overhaul — electric power tripled, MGU-H gone, 100% sustai
   modules into the fleet over the season while dialling back performance demands, not an
   overnight cure. Wolff has been blunt about the cost — "we just can't compete for a
   championship if every second race a car is losing fat points" — and owned the Spa one
-  outright: "it 100% goes on us," adding that all Mercedes engines lacked energy out of
-  Turn 1, Antonelli included. Raw pace was never the issue; Antonelli won that same day.
-  Zandvoort was a clean weekend at last: Sprint win for Russell, both cars on the Sunday
-  podium.
-- **McLaren**: Back-to-back wins have made them the form team of the second half. The
-  turn came with an upgrade package at Hungary — McLaren's first win of the season came
-  straight after it, and a new rear wing and rear brake ducts at Zandvoort were billed as
-  completing that package. Norris took the Miami sprint early on, then won Hungary and
-  Zandvoort back to back — the Dutch one off a genuinely fiddly damp-to-dry strategic
-  race he rated "probably one of my better wins." Both cars are quick, though Piastri's
-  gearbox failure from the lead fight in Hungary was a reminder the machinery can still
-  bite.
+  outright: "it 100% goes on us." Raw pace was never the issue; Antonelli won that same
+  day. The bill finally came due at Monza: those failures had eaten through Antonelli's
+  season allocation, so Mercedes took a fresh ICE, control electronics and energy store —
+  30 grid places — and he won from 19th anyway. Zandvoort and Monza were 1-2 and 1-2 in
+  all but name; the car is on top of the sport right now.
+- **McLaren**: The upgrade package at Hungary turned their season — first win of the year
+  straight after it, and a new rear wing and rear brake ducts at Zandvoort billed as
+  completing it. Norris won Hungary and Zandvoort back to back, the Dutch one off a fiddly
+  damp-to-dry race he rated "probably one of my better wins." Monza was the reality check:
+  Verstappen held both of them off for P3 in a straight-line-speed contest, and the two
+  papaya cars spent the last five laps trading P4 until Norris made it stick at Ascari on
+  the final lap — no contact, but close enough that McLaren said it would review it, after
+  Piastri's defence at Curva Grande put Norris two wheels on the grass. Piastri's gearbox
+  failure from the lead fight in Hungary was a reminder the machinery can still bite too.
 - **Red Bull-Ford**: The in-house PU is a work in progress, trending up. A big Austria
   upgrade package put Verstappen on the podium there, but the story has been the
   "Macarena" revolving rear wing — a trick Ferrari pioneered and Red Bull adapted, run
@@ -72,10 +69,16 @@ The 2026 power unit overhaul — electric power tripled, MGU-H gone, 100% sustai
   parked the wing entirely for Spa and reverted to its old conventional spec while
   chasing a permanent fix. Verstappen said the compromise made the car "slower" but was
   worth it — and it held, P3 at Spa, best of the rest behind the Mercedes and Ferrari.
-  The modified wing comes back when it's ready.
+  The modified wing comes back when it's ready. Monza gave him another P3 with both
+  McLarens behind — but don't read it as the PU deficit closing. The gap that cost him most
+  there was energy deployment, which the FIA's ADUO ranking doesn't measure at all: it
+  scores the combustion side only, has Red Bull as the benchmark, and therefore locks them
+  out of upgrading the electrical side they actually need. Verstappen, drily, on being told
+  again that he has the best engine: "apparently the fastest engine."
 - **Audi**: First season with its own PU, and reliability still bites. Hulkenberg's car
   caught fire on the reconnaissance lap to the Miami sprint grid; Allan McNish admitted
-  the team thought they'd fixed it in the garage and clearly hadn't.
+  the team thought they'd fixed it in the garage and clearly hadn't. They're also the team
+  currently picking a fight with the stewards — see the Tsunoda restart appeal under Monza.
 - **Cadillac**: The new 11th team, still backmarkers but operating better every weekend.
   Miami was their best showing — Perez beat Albon's Williams and Stroll's Aston in the
   sprint, both cars finished. Monaco was the gut-punch: Perez crossed the line in the
@@ -106,9 +109,8 @@ acceleration zones" (350 kW inside them), race boost mode capped at +150 kW, a n
 higher tyre-blanket temperatures for inters. Verstappen called the changes "a tickle."
 
 Monaco then got its own one-off treatment — a mandatory "Rev1" engine map plus a total
-ban on active-aero "straight mode" for the entire weekend — the first circuit-specific
-PU mode ever mandated. Bearman, of all people, reckoned it should make the cars "more
-like last year — we can just drive how we want."
+ban on active-aero "straight mode" for the weekend — the first circuit-specific PU mode
+ever mandated.
 
 The bigger lever landed around Barcelona: F1 agreed to shift the ICE/electric balance
 away from 50/50 — to 58/42 in 2027 and 60/40 in 2028. That 60/40 is the exact ratio
@@ -116,25 +118,26 @@ Verstappen had named as his minimum to stay in the sport, and he cautiously appr
 "the changes they are making are heading into the right direction." The super-clipping
 era has a sunset date now, even if the 2026 cars are stuck with it.
 
-### Antonelli's breakout — now the real deal
+### Antonelli's breakout — and then Monza
 
 Kimi Antonelli became the youngest driver ever to lead the F1 World Championship, at 19,
-and he has spent the season turning that into a cushion. Six wins. The only things that
-have dented him all year have been his own car and the stewards, not a rival on track:
-a PU failure four laps from the flag at Barcelona while running second, and a bizarre
-left-front wheel-shield failure at Silverstone on lap 41 that cost him two pit stops, a
-track-limits penalty and a 16th-place finish from near-certain race lead.
+and he has spent the season turning that into a cushion. Seven wins now. The only things
+that have dented him all year have been his own car and the stewards, not a rival on
+track: the Barcelona PU failure four laps from the flag while running second, and a
+bizarre left-front wheel-shield failure at Silverstone that turned a near-certain win
+into 16th.
 
-Spa answered any doubt. He took pole, lost the lead to Verstappen at Eau Rouge on lap 1,
-snatched it straight back down the Kemmel Straight, then reeled in and passed Leclerc
-with 10 laps to go to win by 1.9s. "It's great to be back on the top step after
-obviously a few difficult rounds." At Hungary he didn't even need to win — a 3-place
-grid penalty for not slowing under yellows dropped him to P7 on the grid, and he calmly
-worked back to P3 while McLaren and Ferrari squabbled ahead of him.
+Monza is the one people will remember. Now 20, he arrived at his home race carrying a
+30-place grid penalty for three fresh power-unit elements, qualified irrelevantly and
+lined up 19th on hards. He was 12th by the lap-2 red flag, gambled on mediums for the
+restart while most went hard, and was leading inside 18 laps. Brundle called it one of the
+best races he'd commentated on in 30 years. He's the first Italian to win at Monza since
+Ludovico Scarfiotti in 1966 — and he did it in a Mercedes, which the tifosi seemed
+entirely fine with once the noise started.
 
-The clearest sign of where he stands isn't a result: at Zandvoort Mercedes ordered Russell
-to move over for him (see Rivalries). That team has picked its horse — and the paddock
-question is back to what it was before the reliability scares: is there a title fight?
+The clearest sign of where he stands isn't any single result: Mercedes ordered Russell to
+move over for him at Zandvoort, then split the strategy his way at Monza (see Rivalries).
+That team has picked its horse, and right now nobody is laying a glove on him.
 
 ### Verstappen re-signed — the saga is over
 
@@ -157,8 +160,7 @@ unchanged — "I've never disclosed anything in my contract, so yeah, that stays
 — and Mekies stonewalled the rest with "everything else is our business, really." So the
 performance escape hatch survives into the new contract. Second, he's negotiated
 permission to race endurance events, 24-hour races included, when the F1 calendar allows.
-Money figures floating around (a reported €92m base from 2027, up to €115m with bonuses,
-~€460m total) come from outside analysts, not from Red Bull.
+(The eye-watering money figures doing the rounds come from outside analysts, not Red Bull.)
 
 Loose ends: Gianpiero Lambiase, his race engineer of a decade, is still leaving for
 McLaren — but in 2028, not next year. And Carlos Sainz, who had Audi and Aston Martin as
@@ -169,82 +171,88 @@ Williams and Cadillac as the only teams with both 2027 seats confirmed. Still op
 Bull's second seat, both Racing Bulls, and one apiece at Aston Martin, Haas and Alpine —
 with Mercedes' and Audi's line-ups yet to be made official.
 
-### Ferrari's year two — Hamilton clicked, then Leclerc came back
+On that Red Bull seat: German reports have the team preparing a contract extension for
+Hadjar as a reward for his season, with the paddock line being that they're genuinely happy
+with him — notable, given how short the tenure has been for everyone else who has sat in
+that car. Which is a slightly awkward story to be running while he's on the sidelines with
+a broken wrist and Liam Lawson, the man he replaced, is driving the car instead.
 
-Year two at Maranello started bumpy and then delivered the moment the whole move was
-for: Hamilton's maiden Ferrari win at Barcelona. Ferrari split strategy — Lewis on a
-three-stop while the Mercedes ran two — a Virtual Safety Car for Alonso's stranded Aston
-handed him a near-free stop, and he cleared off to win by 19.5s. His 106th career
-victory, and the first all-British podium (Hamilton, Russell, Norris) since 1968. "I
-have to thank everyone here at Ferrari... we made so many improvements."
+### Ferrari's year two — and the rules-of-engagement row
 
-Leclerc, who had been ahead earlier in the year, went through a wretched run — a home
-crash at Monaco, a late power-steering DNF at Barcelona, front row to P8 in Austria —
-before ending it with a controlled Silverstone win, his ninth career victory and his
-first there. He then finished ahead of Hamilton twice running — P2 at Spa (leading much
-of the race before Antonelli got him), P4 at Hungary — before Zandvoort flipped it back:
-Leclerc took P2 in the Sprint, then Hamilton beat him to P4 on Sunday. Hamilton still
-leads him in the championship, and the intra-Ferrari pecking order keeps changing hands
-without either of them landing a decisive blow.
+Ferrari's home weekend detonated. On lap 1 at Monza Hamilton dived up the inside of
+Leclerc at the first chicane, they touched, and Hamilton bounced through the gravel from
+P4 to P10. Lap 2, Leclerc — busy holding off Piastri — lost the rear on the exit of
+Parabolica and went into the tyre barrier at 60G. Red flag, Ferrari down to one car in
+front of the tifosi, and that car sixth.
 
-### Bahrain & Saudi Arabia called off
+Nobody was penalised (stewards: racing incident) but the pundits split down the middle,
+Rosberg blaming Leclerc for not leaving room and Brundle reckoning Leclerc was far enough
+ahead to be entitled to the line. Leclerc took it on the chin: "We went too far. I tried
+to do the tightest corner possible, but that was just not enough." Hamilton went further
+and made it about the team: "When I was at Mercedes, we had written rules of engagement...
+Here, there are no rules. We need to address that." And then the sting — he thinks it's
+already moot: "we just lost so much ground to them on points, and it's far too late for
+those decisions to come." Vasseur, who'd argued before Monza that it was too early to pick
+a driver (citing McLaren's 2025 experience with Piastri), has now shifted: "for sure, at
+one stage you have to make a decision... Now we have time to discuss with the guys." Watch
+Madrid for whether that discussion produced anything.
 
-Both Middle Eastern rounds were cancelled — a first for the modern calendar.
-Geopolitical tensions forced the FIA's hand. The schedule left a five-week gap between
-Suzuka and Miami.
+The backdrop: year two at Maranello delivered the moment the whole move was for, Hamilton's
+maiden Ferrari win at Barcelona — split strategy, a friendly VSC, a 19.5s win, and the
+first all-British podium (Hamilton, Russell, Norris) since 1968. Leclerc answered with a
+controlled Silverstone win, his first there. The pecking order has changed hands all year
+without either of them landing a decisive blow, which is precisely why the no-rules
+question got so loud at Monza.
 
-### Active aero era begins
+### Two things worth remembering about this calendar
 
-The new active aerodynamics rules added a strategic layer — teams adjust aero surfaces
-on the fly, think DRS on steroids but with defensive and cornering applications too.
-It's changed overtaking dynamics significantly, and some drivers have adapted faster
-than others.
+Bahrain and Saudi Arabia were both cancelled — a first for the modern calendar,
+geopolitical tensions forcing the FIA's hand — leaving a five-week gap between Suzuka and
+Miami. And active aero arrived: teams adjusting aero surfaces on the fly, DRS on steroids
+but with defensive and cornering uses too. It has changed overtaking dynamics a lot, and
+some drivers adapted faster than others.
 
 ---
 
 ## Rivalries to Watch
 
-- **Antonelli vs Russell** (Mercedes): No longer a friendly intra-team thing. The first
-  real flashpoint was the Canada sprint — they touched at Turn 2 on lap 5, Antonelli ran
-  off, came on the radio demanding a penalty for Russell, and Wolff cut him off live:
-  "Concentrate on the driving please, and not on the radio moaning," following up with
-  "Kimi this is the fourth time — we talk about it internally and not over the radio,
-  OK." At Barcelona the pair raced each other hard all afternoon before Antonelli's car
-  broke, and Mercedes conceded it "might have cost itself" the win by letting them scrap
-  — a tacit admission that free intra-team racing is now hurting the team on Sundays.
-  Austria was Russell's swing back: a controversial pole and a "cold-blooded" win while
-  Antonelli laboured to P3. Then two weekends of pure bad luck — the Spa battery glitch,
-  an anti-stall at the Hungary start that dumped him from P6 to 21st on lap 1 — blew the
-  gap wide open again. Zandvoort was the moment it stopped being a rivalry between
-  equals. Russell arrived saying team orders were "not even a consideration at the
-  moment" at Mercedes, won the Sprint, and then on Sunday was told to let Antonelli by at
-  Turn 1 after the team pitted Kimi onto fresh softs under a late VSC. His radio was pure
-  acid — "is he fighting for the win? Or is he planning to catch Norris?" (Norris was 11
-  seconds up the road). Then he U-turned once he'd cooled off: "Kimi was ahead of me
-  anyway, so he deserved to finish ahead... with the pace with the new tyre, he would have
-  overtaken anyway. It was the right decision," adding that inverting on split strategies
-  is long-standing team policy. Wolff called it "not a difficult decision" — the team had
-  agreed beforehand "we're not going to lose time fighting with each other and have two
-  Ferraris breathing down our neck." For all that, Antonelli only pulled about four
-  seconds clear by the flag — the pass was not obviously inevitable. Watch how Russell
-  races his team-mate from here.
+- **Antonelli vs Russell** (Mercedes): Not a rivalry between equals any more — it's a
+  number one and a driver who keeps being asked to make way, politely. Two weekends
+  running now, Mercedes' calls have gone Antonelli's way. Zandvoort was explicit: Russell
+  had arrived saying team orders were "not even a consideration at the moment," won the
+  Sprint, then was told with six laps to go to let Antonelli by after the team pitted Kimi
+  onto fresh tyres under a late VSC. His radio was pure acid — "Is he fighting for the win?
+  Or, is he planning to catch Norris?" (Norris was over 11 seconds up the road) — and then he
+  U-turned once he'd cooled off, calling it the right decision and noting that inverting
+  on split strategies is long-standing team policy. Monza did it again by stealth: under
+  the lap-28 VSC, Antonelli and Verstappen pitted while Russell stayed out, and Russell
+  believed both Mercedes were staying out. He lost the place on track late on to a car
+  with far fresher tyres, and Brundle reckoned he had "no credible options" by then; the
+  team framed it as trying two approaches. Russell hasn't blown up publicly either time,
+  but Brundle's read was that he "will feel bruised by how that played out."
+  Earlier flashpoints for context: the Canada sprint contact and Wolff's live "concentrate
+  on the driving, not on the radio moaning" telling-off, and Barcelona, where Mercedes
+  conceded it "might have cost itself" the win by letting them scrap freely. Nobody at
+  Brackley is letting them scrap freely now.
 - **Norris vs Piastri** (McLaren): Reigning champion vs the Australian who almost took
-  the 2025 title. Piastri had the edge on average early on — about 0.14s faster in
-  qualifying and 0.24s in race trim across the first half — but Hungary turned it
-  genuinely spicy. Piastri passed pole-man Norris at Turn 2 on lap 1 and controlled the
-  first half; McLaren gave him pit priority as the on-track leader, then boxed him first
-  at the second stops to cover a Hamilton undercut, and he emerged straight into traffic
-  behind Sainz's Williams ("Get out of the f****** way you idiot"), even making light
-  contact. Norris, in clear air, found half a second a lap and overcut into the lead. A
-  furious Piastri fired sarcasm at the pit wall ("nice of you guys to factor that one
-  in, thanks") and later snapped "Don't f****** talk to me" — before a gearbox failure
-  ended his race, his first DNF of 2026. Norris was unrepentant: he was "just better in
-  every sense, in terms of degradation and pace." Stella defended the strategy as
-  correct and said Piastri "understood it immediately" once he'd cooled down. The
-  "papaya rules" détente looks a lot more strained than it did a year ago — and Zandvoort
-  did nothing to level it back up, Norris winning again while Piastri trailed home P6.
-- **Hamilton vs Leclerc** (Ferrari): The GOAT and the heir, second season together, and
-  the pecking order has flipped twice already this year. See "Ferrari's year two" above.
+  the 2025 title, and the "papaya rules" détente is fraying. Hungary was the blow-up:
+  Piastri led the first half, McLaren's second-stop call to cover a Hamilton undercut
+  dropped him into traffic behind Sainz ("Get out of the f****** way you idiot"), Norris
+  overcut into the lead in clear air, and Piastri went full ice — "nice of you guys to
+  factor that one in, thanks," then "Don't f****** talk to me" — before a gearbox failure
+  ended his day. Stella defended the strategy; Norris said he was "just better in every
+  sense." Since then Zandvoort went Norris's way again (win vs P6), and at Monza they spent
+  the closing laps swapping P4 — Piastri covering the inside at Curva Grande and putting
+  Norris two wheels on the grass, Norris on the radio claiming he'd been pushed off, then
+  taking the place at Ascari on the last lap. Brundle's word for how it looked was
+  "personal." Both walked it back afterwards ("a good battle," said Norris; "good racing –
+  exciting," said Piastri) and Stella called it "much more benign than what it might have
+  looked like in the heat of the moment" — but McLaren said it would review the move
+  anyway. That's the thing to watch.
+- **Hamilton vs Leclerc** (Ferrari): No longer just a pecking-order question — they
+  collided on lap 1 at Monza, Leclerc crashed out on lap 2, and Hamilton came out of it
+  demanding Ferrari write down rules of engagement it doesn't have. See "Ferrari's year
+  two" above.
 - **Norris vs Verstappen**: 2025 title rivals, now in very different tiers of machinery.
   Can Verstappen do it with an inferior car like 2024? The answer this year is no. The
   team-mates-in-2027 subplot is dead — Max re-signed with Red Bull to 2030 — so this
@@ -273,15 +281,22 @@ than others.
   at Hungary. Paired with the earlier "Get out of the f****** way you idiot" at Sainz,
   the standout team-radio moment of the weekend. McLaren played it down as
   heat-of-the-moment.
-- **"Is he fighting for the win? Or is he planning to catch Norris?"** — Russell's
+- **"Is he fighting for the win? Or, is he planning to catch Norris?"** — Russell's
   withering radio at Zandvoort on being told to let his own title rival past. Deadpan,
   devastating, and instantly the clip of the weekend; the fact he then publicly agreed
   with the call afterwards only made it better.
 - **Zandvoort's orange goodbye.** Verstappen's Delft Blue helmet and orange-shouldered
-  suit for his last home race, a 100,000-plus crowd expected in the dunes, a town-wide
+  suit for his last home race, a record 325,000 across the weekend in the dunes, a town-wide
   "Final Lap" party — and then he stuck it in the wall at the last corner of lap one, in
   front of every one of them. The gap between the tribute build-up and the actual outcome
   is the kind of thing F1 fan edits are made of.
+- **"There are no rules"** — Hamilton on Ferrari's absent rules of engagement after the
+  Monza clash, delivered with the weary precision of a man who has had this argument
+  before. Immediately weaponised by both halves of the Ferrari fanbase against each other.
+- **Monza's Italian winner.** A home driver winning at Monza for the first time in 60
+  years, from 19th, on a strategy gamble, in front of a grandstand that turned up to
+  watch Ferrari — and Ferrari had one car through the gravel and the other in the barrier
+  before lap 3. The tifosi-cheering-a-Mercedes footage is the fan-edit fuel of the season.
 - **"You don't expect to go around the outside of a champion"** — Hamilton's dry
   comeback after Verstappen battled him hard in Austria and barked "Clear penalty!" over
   the radio (stewards: no action). Two old rivals trading needle a decade on.
@@ -295,63 +310,82 @@ than others.
 
 ## Recent Incidents & Controversies
 
+### Italian GP (Round 13, Monza, September 4-6)
+
+- **Antonelli wins from 19th.** Mercedes took three fresh power-unit elements — fifth ICE,
+  fourth control electronics, fourth energy store, ten places each — and banked the
+  30-place hit at his home race. Wolff: "Our calculations say that that's the best track to
+  take it. Obviously, algorithms don't take their nationality into consideration... we're
+  here to fight for a championship and not get the most PR"; Monza's long straights suit
+  the Mercedes PU and offer plenty of places to pass. Started 19th on
+  hards, 12th by the red flag, mediums for the restart when most went hard, into the lead
+  inside 18 laps, home by 3.857s.
+- **Ferrari's home race lasted two laps.** Hamilton went inside Leclerc at the first
+  chicane on lap 1, contact, Hamilton through the gravel and down to 10th. Lap 2, Leclerc
+  — holding off Piastri — put his left-rear on the green-painted strip that contains a
+  drain cover on the exit of Parabolica, lost the rear, and hit the tyre barrier at 60G.
+  He's fine. Red flag, standing
+  restart. Stewards called the lap-1 clash a racing incident; the team-orders row it set
+  off is under "Ferrari's year two."
+- **The VSC that decided it.** Lap 28: Antonelli and Verstappen pitted, Russell stayed
+  out. Russell thought both Mercedes were staying out. Antonelli, on much fresher rubber,
+  came through late for the win; Russell held P2.
+- **Verstappen P3, ahead of both McLarens.** A recovery from sixth on the grid (promoted to
+  fifth) on a pure power-and-drag circuit — though the analysis afterwards was that Red
+  Bull's real deficit at Monza was energy deployment, not the combustion engine. Norris P4
+  and Piastri P5 after a scrappy but contact-free squabble between them at the end, settled
+  at Ascari on the last lap. Hamilton recovered to P6, then
+  Gasly, Lindblad, Colapinto and Tsunoda in the points.
+- **Audi moves to appeal the Tsunoda non-penalty.** After Leclerc's crash, the restart
+  needed an extra formation lap: Tsunoda drifted towards the P15 box before veering right
+  into his own P14 slot, ending up angled towards the pit wall, and race director Rui
+  Marques sent the field round again. The rules (Art. B5.9.4) say whoever causes an extra
+  formation lap starts from the pit lane, but the stewards found no breach — the extra lap
+  "resulted from the race director's assessment of the situation" rather than being
+  directly caused by the driver, Racing Bulls showed his contact patch was inside the grid
+  box, and Race Control never told the team he was the cause. Tsunoda kept P10 and the last
+  point — which would otherwise have gone to Bortoleto. Audi has lodged an intention to
+  appeal and has 96 hours to decide whether to actually file it; if it succeeds, Tsunoda
+  takes a 30-second penalty and drops to 15th.
+- **Hadjar still out.** The wrist — a hairline fracture from a boxing workout over the
+  break — didn't pass muster for Monza, so Lawson stayed in the Red Bull (P14) and Tsunoda
+  stayed at Racing Bulls. Red Bull confirmed on the Monday after the race that the same
+  arrangement holds for Madrid, a third straight weekend; Hadjar will be there supporting
+  the team but isn't cockpit-ready. Lawson is ninth in the standings, one place and 25
+  points behind the man he's deputising for — comfortably his best season in F1 ("I'm the
+  happiest I have been in F1"), in the seat he was dropped from after two races in 2025.
+
 ### Dutch GP (Round 12, Zandvoort, August 21-23)
 
-- **Hadjar out, Lawson up, Tsunoda back.** Isack Hadjar cracked a small bone in his left
-  wrist in a boxing session over the summer break, and discussions with Red Bull's medical
-  staff late in the week before the race ruled him out of Zandvoort. Liam Lawson was
-  promoted to partner Verstappen — the Red Bull seat he lost two races into 2025 — and Yuki
-  Tsunoda, reserve since Hadjar took his drive, returned to Racing Bulls alongside
-  Lindblad. Hadjar is targeting a Monza return and says it's "not swollen, which is very
-  good" with a bit more mobility every day; Wednesday of race week is reported to be the
-  final cut-off for a fitness-test call. It isn't a formality — Monza's high-speed
-  right-handers (Curva Grande, the Lesmos, Ascari, Parabolica) put sustained load through
-  the wheel on exactly the left side in question — and if he fails, the Zandvoort pairings
-  are likely to continue for another weekend.
-- **Sprint: Russell lights to flag.** Pole converted into a controlled 24-lap win, 1.360s
-  clear of Leclerc, with Norris P3 and Antonelli P4. Piastri, Verstappen, Hamilton and
-  Gasly completed the points. Russell's second Sprint win of the year.
-- **The race lasted one lap before the red flag.** Damp track — inters and full wets were
-  on show as the field headed to the grid, though everyone ultimately started on slicks.
-  Verstappen, running seventh, dipped a wheel over the white line at the final corner,
-  tried to catch the slide and speared into the barrier opposite — two impacts, car
-  destroyed, driver unhurt. "I'm OK," he said on the radio. His explanation: "It was still
-  quite wet in that corner and then as soon as I saw the dry patch coming, I was like, now
-  you can accelerate but clearly that didn't work." Thirty-minute stoppage; the restart
-  went ahead on slicks.
-- **Norris wins from Antonelli and Russell.** Antonelli led after the restart, Norris
-  chipped away and got by, then won by 11.5s. Hamilton P4, Leclerc P5, Piastri P6, then
-  Lawson P7 — the only Red Bull still running — Hulkenberg P8, Alonso P9, Gasly P10, with
-  Tsunoda P11 on his first start of the year. Five retirements — Verstappen, Bottas, Ocon,
-  Stroll and Bearman — with Albon classified 17th, six laps down. Sainz took 10s for
-  causing a collision; Lawson and Colapinto 10s each for yellow-flag infringements.
-- **Mercedes swap places, Russell fumes, then agrees.** The story of the afternoon — fresh
-  softs for Antonelli under a late VSC, a "let him past" call on lap 65, a very sarcastic
-  radio reply, a full retraction an hour later. Detail under Rivalries.
-
-### Hungarian GP (Round 11, Hungaroring, July 25-26)
-
-- **Two grid penalties rewrote the front rows.** Norris pipped Hamilton to pole by
-  0.012s, then Hamilton dropped three places for impeding Piastri at the end of Q3 and
-  Antonelli three for not slowing enough under the yellows from Verstappen's late Q3
-  spin. Net grid: Norris, Leclerc, Piastri, Verstappen, Hamilton, Russell, Antonelli.
-- **McLaren's first win of 2026 — and a civil war.** Piastri jumped Norris at Turn 2 and
-  led the first half before the pit-priority call handed the lead over; he raged on the
-  radio, then retired with a gearbox failure (detail under Norris vs Piastri). Verstappen
-  took a surprise P2 he called one of "survival," Antonelli recovered from P7 to P3, and
-  Russell's anti-stall start cost him 15 places before he salvaged P7.
-
-### Belgian GP (Round 10, Spa, July 19)
-
-- **Antonelli wins, Russell's lap-1 heartbreak.** Pole to flag bar one Eau Rouge moment,
-  1.9s clear of Leclerc, Verstappen P3 on the reverted wing, Hamilton P4 after a 5s
-  penalty. Russell lost battery deployment through Eau Rouge, tumbled back into the pack,
-  collided with Hamilton at Les Combes and retired — angrier about being there at all
-  than about the contact, and Wolff owned the root cause (see Mercedes above).
-  Colapinto's double pass on Gasly and Lawson at Les Combes was the move of the day.
+- **Hadjar out, Lawson up, Tsunoda back.** Hadjar cracked a small bone in his left wrist in
+  a boxing session over the break. Lawson was promoted to partner Verstappen — the Red Bull
+  seat he lost two races into 2025 — and Tsunoda, reserve all year, returned to Racing Bulls
+  alongside Lindblad.
+- **Sprint: Russell lights to flag**, 1.360s clear of Leclerc, Norris P3, Antonelli P4. His
+  second Sprint win of the year.
+- **The race lasted one lap before the red flag.** Damp track, everyone on slicks.
+  Verstappen, running seventh, dipped a wheel over the white line at the final corner and
+  speared into the barrier opposite — car destroyed, driver unhurt. "It was still quite wet
+  in that corner and then as soon as I saw the dry patch coming, I was like, now you can
+  accelerate but clearly that didn't work." Thirty-minute stoppage.
+- **Norris wins from Antonelli and Russell** by 11.5s, with Hamilton P4, Leclerc P5,
+  Piastri P6 and Lawson P7 as the last Red Bull running. Five retirements. The Mercedes
+  swap — fresh tyres for Antonelli under a late VSC, a "let him past" call with six laps to
+  go, a very sarcastic radio reply, a full retraction an hour later — is under Rivalries.
 
 ### Earlier in the season
 
+- **Hungarian GP** (Round 11, July 25-26): McLaren's first win of 2026 and an intra-team
+  civil war. Norris took pole by 0.012s from Hamilton; grid penalties for Hamilton
+  (impeding) and Antonelli (yellows) reshuffled the front. Piastri jumped Norris at Turn 2,
+  led the first half, lost it to a pit-priority call, raged on the radio and then retired
+  with a gearbox failure. Verstappen P2 in a race he called one of "survival"; Antonelli
+  P7 to P3; Russell's anti-stall start cost him 15 places on lap 1.
+- **Belgian GP** (Round 10, July 19): Antonelli pole to flag, 1.9s clear of Leclerc,
+  Verstappen P3 on the reverted wing. Russell lost battery deployment through Eau Rouge,
+  fell into the pack, collided with Hamilton at Les Combes and retired — Wolff owned the
+  root cause (see Mercedes above). Colapinto's double pass at Les Combes was the move of
+  the day.
 - **FIA ADUO ruling backfires on Red Bull** (still contested): The "Adjustment of
   Underperforming Operations" provision allows limited PU upgrades for struggling
   manufacturers. Honda, Ferrari and Audi were cleared — and the FIA's first ranking
@@ -369,8 +403,7 @@ than others.
   get attacked," before reclaiming the spot with an undercut. Pundits have been touting
   Lindblad as Red Bull's "next Verstappen" ever since.
 - **Spanish GP** (Round 7, June 12-14): Hamilton's maiden Ferrari win; Antonelli's PU
-  failure four laps from home after passing Russell for second; Leclerc's power-steering
-  DNF.
+  failure four laps from home while running second; Leclerc's power-steering DNF.
 - **Monaco GP** (Round 6, June 7): Antonelli lights to flag from pole, carnage behind —
   seven DNFs including Verstappen on lap 1. Hadjar took P3, his first podium in Red Bull
   colours. Russell turned a likely podium into P12 by himself, a 0.1 km/h pit-speed
