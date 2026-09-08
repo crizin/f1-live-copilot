@@ -106,24 +106,46 @@ jobs:
           fi
           echo "prompt: $(wc -l < "$RUNNER_TEMP/prompt.txt") lines"
 
-      - name: Codex fact-check
-        id: codex
-        continue-on-error: true
-        uses: openai/codex-action@86365089eb2b84e0a8fb0717b304f8bdcb13b20e # v1.12
+      - name: Codex fact-check (direct CLI, logged)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          npm install -g "@openai/codex@0.153.4" >/dev/null
+          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0 >/dev/null 2>&1 || true
+          export CODEX_HOME="$RUNNER_TEMP/codex-home"
+          printenv OPENAI_API_KEY | codex login --with-api-key
+          codex login status || true
+          set +e
+          date -u +"start %H:%M:%S"
+          timeout --kill-after=30 900 \
+            codex exec --skip-git-repo-check --cd "$GITHUB_WORKSPACE" \
+              -m gpt-5.6-sol \
+              --config model_reasoning_effort="high" \
+              --config web_search="live" \
+              --sandbox workspace-write \
+              --output-last-message /tmp/codex-review.md \
+              "$(cat "$RUNNER_TEMP/prompt.txt")" < /dev/null > /tmp/codex-exec.log 2>&1
+          echo "codex exit: $?  (124 = timed out)"
+          date -u +"end %H:%M:%S"
+
+      - name: What did it actually do
+        if: always()
+        run: |
+          echo "log: $(wc -lc < /tmp/codex-exec.log 2>/dev/null || echo missing)"
+          echo "=== shell commands it ran ==="
+          grep -oE "/bin/(ba)?sh -lc .{0,200}" /tmp/codex-exec.log | head -40
+          echo "=== last 40 lines ==="
+          tail -40 /tmp/codex-exec.log 2>/dev/null | cut -c1-300
+
+      - name: Upload full log
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
-          allow-bots: "true"
-          codex-version: "0.153.4"
-          model: gpt-5.6-sol
-          effort: high
-          sandbox: workspace-write
-          codex-home: ${{ runner.temp }}/codex-home
-          codex-args: '--config web_search="live"'
-          output-file: codex-review.md
-          prompt-file: ${{ runner.temp }}/prompt.txt
+          name: codex-direct-log
+          path: /tmp/codex-exec.log
+          if-no-files-found: warn
 
       - name: Report
         if: always()
         run: |
-          echo "outcome: ${{ steps.codex.outcome }}"
-          tail -6 codex-review.md 2>/dev/null || echo "(no output file)"
+          tail -6 /tmp/codex-review.md 2>/dev/null || echo "(no output file)"
