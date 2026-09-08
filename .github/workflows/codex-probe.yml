@@ -32,15 +32,11 @@ jobs:
       fail-fast: false
       matrix:
         include:
+          # One variant at a time: each run is a full 21-URL fact-check, and
+          # burning the 5-hour quota is what we are trying to observe.
           - label: baseline-no-ripgrep
             ripgrep: "false"
             fetch_hint: "false"
-          - label: with-ripgrep
-            ripgrep: "true"
-            fetch_hint: "false"
-          - label: fetch-hint-in-prompt
-            ripgrep: "false"
-            fetch_hint: "true"
     name: ${{ matrix.label }}
     steps:
       - uses: actions/checkout@v7
