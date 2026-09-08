@@ -11,6 +11,11 @@ updates:
       - "dependencies"
     assignees:
       - "crizin"
+    ignore:
+      # v1.12+ hangs after the run completes (openai/codex-action#150); the
+      # fix (#151) is unreleased. Drop this once a release carries it.
+      - dependency-name: "openai/codex-action"
+        versions: [">= 1.12"]
     groups:
       actions:
         applies-to: version-updates

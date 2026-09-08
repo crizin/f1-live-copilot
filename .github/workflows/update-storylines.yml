@@ -171,14 +171,20 @@ jobs:
             /tmp/storylines-sources.md
           if-no-files-found: warn
 
+      # v1.12 hands the runner's stdio to the whole Codex process tree, so a
+      # surviving descendant holds the step open long after the result is
+      # written — openai/codex-action#150. The fix is still unreleased
+      # (#151), and v1.11 is the last version that terminates. Keep the pin
+      # until a release carries that fix; dependabot is told to leave it.
       - name: Codex fact-check
         if: steps.changes.outputs.changed == 'true'
-        uses: openai/codex-action@86365089eb2b84e0a8fb0717b304f8bdcb13b20e # v1.12
+        uses: openai/codex-action@52fe01ec70a42f454c9d2ebd47598f9fd6893d56 # v1.11
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           allow-bots: "true"
-          # The action pins itself by SHA but installs the CLI from npm latest,
-          # so both the CLI and the model it defaults to have to be pinned here.
+          # The action pins itself by SHA but installs the CLI from npm latest
+          # (openai/codex-action#171), and an unpinned CLI silently changed the
+          # default model to gpt-6-astra. Pin both.
           codex-version: "0.153.4"
           model: gpt-5.6-sol
           effort: high
