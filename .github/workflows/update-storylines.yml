@@ -24,6 +24,28 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      # An exhausted API balance does not fail the fact-check — codex retries
+      # the disconnected stream every turn and burns an hour saying nothing
+      # (run 34125483096). One cheap call up front turns that into a clear
+      # error, before the draft step spends Claude tokens too.
+      - name: Preflight — is the OpenAI API usable
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          code=$(curl -sS -o /tmp/preflight.json -w '%{http_code}' \
+            https://api.openai.com/v1/responses \
+            -H "Authorization: Bearer $OPENAI_API_KEY" \
+            -H 'Content-Type: application/json' \
+            -d '{"model":"gpt-5.6-sol","input":"ok","max_output_tokens":16}')
+          if [ "$code" = "200" ]; then
+            echo "OpenAI API reachable and funded."
+            exit 0
+          fi
+          detail=$(python3 -c "import json;e=json.load(open('/tmp/preflight.json')).get('error',{});print(f\"{e.get('code')}: {e.get('message')}\")" 2>/dev/null) \
+            || detail=$(head -c 300 /tmp/preflight.json)
+          echo "::error::OpenAI API unusable (HTTP $code) — $detail"
+          exit 1
+
       # ── 1. Claude drafts the update ─────────────────────────────────────
       # continue-on-error: a turn-limit stop still leaves a usable partial
       # draft. The guard step below fails the job only if nothing came out.
