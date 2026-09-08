@@ -261,7 +261,7 @@ jobs:
 
             Do NOT fabricate sources or events. Do NOT touch any file other than
             data/storylines.md. Do NOT run git commit or git push.
-          claude_args: '--model opus --max-turns 50 --allowed-tools "Read,Edit,WebSearch,WebFetch,Write"'
+          claude_args: '--model opus --max-turns 70 --allowed-tools "Read,Edit,WebSearch,WebFetch,Write"'
 
       # ── 4. Open the PR with the reviewed, revised content ───────────────
       - name: Compose PR body
