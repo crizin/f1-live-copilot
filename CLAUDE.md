@@ -63,6 +63,9 @@ uv run dev/replay.py dev/data/suzuka-race/ --speed 50 --dump-md
 # Replay — production mode (same output as live daemon, with file dumps)
 uv run -m f1live.replay dev/data/suzuka-race/ --speed 20
 
+# Continue a stopped replay after the last event it printed (what a Monitor re-arm does)
+uv run -m f1live.replay dev/data/suzuka-race/ --speed 20 --resume
+
 # Download archive — production mode (saves to $TMPDIR/f1-replay/)
 uv run -m f1live.download --path "2026/2026-03-29_Japanese_Grand_Prix/2026-03-29_Race" --skip-telemetry
 
@@ -86,9 +89,10 @@ Python 3.10 and 3.13. It replays a full race through the real state/event
 pipeline and constructs the openai and httpx clients — a replay alone reads only
 local files, so it would pass a broken dependency bump untouched.
 
-Two checks drive the live pieces directly, because a full replay passes both
-failures silently: race control must keep surfacing once the state's 100-message
-buffer is full, and a reconnect must not re-transcribe the session's radio backlog.
+Three checks drive pieces a straight replay passes silently: race control must keep
+surfacing once the state's 100-message buffer is full, a reconnect must not
+re-transcribe the session's radio backlog, and a replay stopped mid-race the way a
+Monitor expiry stops it must `--resume` without losing or repeating events.
 
 The smoke step runs with `PYTHONSAFEPATH=1` (honoured from Python 3.11). `-m f1live.*`
 has to resolve through the editable install `uv sync` makes, never through the working

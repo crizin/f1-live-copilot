@@ -84,7 +84,8 @@ piece. A single failure is fine — just proceed with whichever loaded.
 
 1. **Start the daemon** using the Monitor tool:
    ```
-   Monitor(command="cd \"<plugin-root>\" && uv run -m f1live.main 2>/tmp/f1live.log")
+   Monitor(command="cd \"<plugin-root>\" && uv run -m f1live.main 2>/tmp/f1live.log",
+           timeout_ms=1800000)
    ```
    The daemon connects to F1's official live timing WebSocket and prints event lines to stdout.
    Each stdout line is a notification to you.
@@ -137,7 +138,8 @@ Once the user signals go:
 
 1. **Start replay** using the Monitor tool with `--speed 1` (real-time):
    ```
-   Monitor(command="cd \"<plugin-root>\" && uv run -m f1live.replay <output_dir> --speed 1 2>/tmp/f1live.log")
+   Monitor(command="cd \"<plugin-root>\" && uv run -m f1live.replay <output_dir> --speed 1 2>/tmp/f1live.log",
+           timeout_ms=1800000)
    ```
    The replay engine feeds archive data through the same event pipeline as live mode.
    It outputs identical event lines to stdout and dumps `f1-live.md`/`f1-live.json` snapshots.
@@ -162,6 +164,16 @@ Once the user signals go:
    Read($TMPDIR/f1-live.md)
    ```
    This has the full standings, gaps, tire info, recent race control messages.
+
+3. **Re-arm when the watch expires.** A Monitor watch lasts at most 30 minutes (leaving out
+   `timeout_ms` gives only 5), so a race outlives several. When the expiry notice arrives,
+   start the watch again right away, without waiting for the user:
+   - **Live**: the same command. The new daemon takes the connect-time snapshot as its baseline
+     (about 10 seconds), so nothing already reported comes back — events from those seconds
+     just arrive a little late.
+   - **Replay**: the same command with `--resume` added. It picks up after the last event it
+     reported and plays back the race time that ran while you were re-arming, so it stays level
+     with the user's broadcast. A new replay starts without `--resume`.
 
 ## How to React to Events
 

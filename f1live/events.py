@@ -305,7 +305,12 @@ class EventBatcher:
             self._window_start = time.monotonic()
         self._buffer.extend(events)
 
-    def flush(self) -> str | None:
+    @property
+    def pending(self) -> bool:
+        """True while detected events are held back by the window or cooldown."""
+        return bool(self._buffer)
+
+    def flush(self, force: bool = False) -> str | None:
         if not self._buffer:
             return None
 
@@ -314,7 +319,7 @@ class EventBatcher:
         window_expired = (now - self._window_start) >= self.window
         cooldown_ok = (now - self._last_emit) >= self.cooldown
 
-        if (has_p0 or window_expired) and cooldown_ok:
+        if force or ((has_p0 or window_expired) and cooldown_ok):
             self._buffer.sort(key=lambda e: e.priority)
             parts = []
             seen = set()

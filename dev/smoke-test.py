@@ -45,6 +45,16 @@ MIN_EVENTS = {
 REPLAY_SPEED = 3000
 REPLAY_TIMEOUT = 600
 
+# The resume check stops a replay the way a Monitor expiry does. It runs slower
+# than the full replay so the stop lands mid-race and the resumed run has race
+# time left to play in real (scaled) time after it catches up.
+RESUME_SPEED = 300
+RESUME_STOP_LAP = 10
+
+# Lines the replay prints about itself rather than about the race.
+REPLAY_NOTICES = ("[SESSION] F1 Live Copilot", "[SESSION] Replaying", "[SESSION] Resumed",
+                  "[SESSION] Replay complete", "[SESSION] No ")
+
 UNREACHABLE = "http://127.0.0.1:9/nothing.mp3"
 
 
@@ -188,6 +198,63 @@ def run_replay(archive: str, dump_json: str) -> str:
     return proc.stdout
 
 
+def events_in(stdout: str) -> list[str]:
+    events = []
+    for line in stdout.splitlines():
+        line = line.strip()
+        if line and not line.startswith(REPLAY_NOTICES):
+            events.extend(line.split(" | "))
+    return events
+
+
+def laps_in(events: list[str]) -> list[int]:
+    return [int(e.split()[1].split("/")[0]) for e in events if e.startswith("[LAP] ")]
+
+
+def check_replay_resume(archive: str, dump_json: str, full_stdout: str) -> str:
+    """Stop a replay mid-race and --resume it: together the two runs must report
+    every event an uninterrupted replay does, and no lap twice."""
+    env = {**os.environ, "F1LIVE_OUTPUT": dump_json}
+    cmd = [sys.executable, "-m", "f1live.replay", archive, "--speed", str(RESUME_SPEED)]
+
+    first = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
+                             text=True, env=env)
+    lines = []
+    for line in first.stdout:
+        lines.append(line)
+        if any(lap >= RESUME_STOP_LAP for lap in laps_in(events_in(line))):
+            break
+    first.terminate()
+    lines.append(first.communicate(timeout=60)[0])
+    stopped = "".join(lines)
+    if "[SESSION] Replay complete" in stopped:
+        reached = max(laps_in(events_in(stopped)), default=0)
+        if reached >= RESUME_STOP_LAP:
+            raise Failure(f"stopped at lap {reached}, the replay still printed 'Replay complete' — "
+                          f"a watch re-armed after it would take the race as over")
+        raise Failure(f"replay finished before lap {RESUME_STOP_LAP} could stop it")
+
+    second = subprocess.run(cmd + ["--resume"], capture_output=True, text=True,
+                            timeout=REPLAY_TIMEOUT, env=env)
+    if second.returncode != 0:
+        raise Failure(f"--resume exited {second.returncode}\n{second.stderr[-2000:]}")
+    if "[SESSION] Resumed at lap" not in second.stdout:
+        raise Failure("--resume started over instead of picking up")
+    if "[SESSION] Replay complete" not in second.stdout:
+        raise Failure(f"--resume never completed\n{second.stderr[-2000:]}")
+
+    before, after = events_in(stopped), events_in(second.stdout)
+    twice = sorted(set(laps_in(before)) & set(laps_in(after)))
+    if twice:
+        raise Failure(f"--resume reported lap(s) {twice} again")
+    lost = set(events_in(full_stdout)) - set(before) - set(after)
+    if lost:
+        raise Failure(f"{len(lost)} event(s) lost across the resume, e.g. {sorted(lost)[0]}")
+
+    return (f"--resume after a stop at lap {max(laps_in(before))} picks up at lap "
+            f"{min(laps_in(after))}, nothing lost or repeated")
+
+
 def check_events(stdout: str) -> str:
     counts = {}
     for token in stdout.split():
@@ -262,6 +329,7 @@ def main():
             stdout = run_replay(archive, dump_json)
             print(f"ok    {check_events(stdout)}")
             print(f"ok    {check_dumps(dump_json)}")
+            print(f"ok    {check_replay_resume(archive, os.path.join(d, 'resume.json'), stdout)}")
         except Exception as e:
             failed.append(f"replay: {e}")
             print(f"FAIL  replay: {e}", file=sys.stderr)

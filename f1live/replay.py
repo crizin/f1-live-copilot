@@ -7,9 +7,16 @@ with file dumps — fully compatible with Monitor-based skill consumption.
 stdout: event lines (one per batch) → picked up by Claude Code Monitor
 stderr: logging → goes to log file
 File dumps: f1-live.md + f1-live.json every 3 simulated seconds
+Position: f1-live.replay.json — how far the events have been printed, for --resume
+
+A Monitor watch expires after at most 30 minutes, so a full-length replay is
+re-armed several times. --resume picks up after the last event that was printed
+and keeps the original clock: the seconds spent re-arming are played back fast
+instead of skipped, so the replay stays level with a broadcast that kept running.
 
 Usage:
     uv run -m f1live.replay ~/f1-data/suzuka-race --speed 1
+    uv run -m f1live.replay ~/f1-data/suzuka-race --speed 1 --resume
     uv run -m f1live.replay /tmp/f1-replay/suzuka --speed 20
 """
 
@@ -28,6 +35,7 @@ from f1live.state import F1State
 
 OUTPUT_JSON = os.environ.get("F1LIVE_OUTPUT", os.path.join(tempfile.gettempdir(), "f1-live.json"))
 OUTPUT_MD = os.path.splitext(OUTPUT_JSON)[0] + ".md"
+POSITION_FILE = os.path.splitext(OUTPUT_JSON)[0] + ".replay.json"
 TMP_SUFFIX = f".tmp.{os.getpid()}"
 
 logging.basicConfig(
@@ -103,7 +111,34 @@ def dump_state(state: F1State, state_dict: dict):
         logger.exception("Error dumping state files")
 
 
-def replay(data_dir: str, speed: float = 1.0):
+def load_position(data_dir: str) -> dict | None:
+    try:
+        with open(POSITION_FILE, encoding="utf-8") as f:
+            position = json.load(f)
+    except (OSError, ValueError):
+        return None
+    if not isinstance(position, dict) or position.get("data_dir") != data_dir:
+        return None
+    if not all(isinstance(position.get(k), (int, float))
+               for k in ("speed", "anchor_sim", "anchor_wall", "printed_sim")):
+        return None
+    return position
+
+
+def save_position(data_dir: str, speed: float, anchor_sim: float, anchor_wall: float,
+                  printed_sim: float):
+    """Record that every event up to printed_sim has reached stdout."""
+    try:
+        tmp = POSITION_FILE + TMP_SUFFIX
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump({"data_dir": data_dir, "speed": speed, "anchor_sim": anchor_sim,
+                       "anchor_wall": anchor_wall, "printed_sim": printed_sim}, f)
+        os.replace(tmp, POSITION_FILE)
+    except Exception:
+        logger.exception("Error saving replay position")
+
+
+def replay(data_dir: str, speed: float = 1.0, resume: bool = False):
     global _running
 
     messages = load_all_messages(data_dir)
@@ -121,8 +156,27 @@ def replay(data_dir: str, speed: float = 1.0):
     detector = EventDetector()
     batcher = EventBatcher(window=5.0 / speed, cooldown=3.0 / speed)
 
-    start_real = time.monotonic()
+    # The replay clock: sim time start_sim plays at wall time start_wall.
     start_sim = messages[0][0]
+    start_wall = time.time()
+    printed_sim = start_sim - 1.0  # every event up to here is already on stdout
+    reanchor = False
+    if resume:
+        position = load_position(data_dir)
+        if position is None:
+            print("[SESSION] No earlier replay of this archive to resume — starting from the beginning",
+                  flush=True)
+        else:
+            printed_sim = position["printed_sim"]
+            if position["speed"] == speed:
+                start_sim, start_wall = position["anchor_sim"], position["anchor_wall"]
+            else:
+                # A new speed has no earlier clock to keep: start one where it resumes.
+                start_sim, reanchor = printed_sim, True
+    start_real = time.monotonic() - (time.time() - start_wall)
+    save_position(data_dir, speed, start_sim, start_wall, printed_sim)
+
+    fast_forwarding = printed_sim >= messages[0][0]
     last_detect_time = 0.0
     detect_interval = 3.0  # simulated seconds between detection cycles
 
@@ -130,19 +184,37 @@ def replay(data_dir: str, speed: float = 1.0):
         if not _running:
             break
 
-        # Wait until this message's time (scaled by speed)
-        elapsed_sim = ts - start_sim
-        target_real = start_real + elapsed_sim / speed
-        now = time.monotonic()
-        if target_real > now:
-            sleep_time = target_real - now
-            # Sleep in small chunks so we can respond to signals
-            while sleep_time > 0 and _running:
-                time.sleep(min(sleep_time, 0.5))
-                sleep_time = target_real - time.monotonic()
+        # Already reported before the resume: rebuild state and detector silently.
+        silent = ts <= printed_sim
 
-        if not _running:
-            break
+        if not silent:
+            if fast_forwarding:
+                fast_forwarding = False
+                if reanchor:
+                    start_wall, start_real = time.time(), time.monotonic()
+                state_dict = state.to_dict()
+                dump_state(state, state_dict)
+                session = state_dict.get("session", {})
+                notice = (f"[SESSION] Resumed at lap {session.get('lap', 0)}/"
+                          f"{session.get('total_laps') or '?'}")
+                behind = (time.time() - start_wall) * speed + start_sim - ts
+                if behind >= 1:
+                    notice += f" — catching up {behind:.0f}s of race time that ran while re-arming"
+                print(notice, flush=True)
+
+            # Wait until this message's time (scaled by speed)
+            elapsed_sim = ts - start_sim
+            target_real = start_real + elapsed_sim / speed
+            now = time.monotonic()
+            if target_real > now:
+                sleep_time = target_real - now
+                # Sleep in small chunks so we can respond to signals
+                while sleep_time > 0 and _running:
+                    time.sleep(min(sleep_time, 0.5))
+                    sleep_time = target_real - time.monotonic()
+
+            if not _running:
+                break
 
         # Feed to state
         state.process_message(topic, content, None)
@@ -152,23 +224,32 @@ def replay(data_dir: str, speed: float = 1.0):
             last_detect_time = ts
 
             state_dict = state.to_dict()
-            dump_state(state, state_dict)
-
             events = detector.detect(state_dict)
+            if silent:
+                continue
+
+            dump_state(state, state_dict)
             batcher.add(events)
 
             line = batcher.flush()
             if line:
                 print(line, flush=True)  # stdout → Monitor
+            if not batcher.pending:
+                save_position(data_dir, speed, start_sim, start_wall, ts)
 
-    # Final flush
-    if _running:
-        state_dict = state.to_dict()
-        dump_state(state, state_dict)
+    if not _running:
+        # Events still held by the batcher are not printed: a watch that has
+        # expired may not deliver them, and --resume detects them again.
+        logger.info("Replay stopped — re-run with --resume to continue")
+        return
 
-        remaining = batcher.flush()
-        if remaining:
-            print(remaining, flush=True)
+    state_dict = state.to_dict()
+    dump_state(state, state_dict)
+
+    remaining = batcher.flush(force=True)
+    if remaining:
+        print(remaining, flush=True)
+    save_position(data_dir, speed, start_sim, start_wall, messages[-1][0])
 
     print("[SESSION] Replay complete", flush=True)
     logger.info("Replay complete. %d messages processed.", len(messages))
@@ -182,6 +263,9 @@ def main():
     parser.add_argument("data_dir", help="Directory with .jsonStream files")
     parser.add_argument("--speed", type=float, default=1.0,
                         help="Playback speed multiplier (default: 1.0 = real-time)")
+    parser.add_argument("--resume", action="store_true",
+                        help="Continue an interrupted replay of this archive after the last event "
+                             "it printed (re-arming after a Monitor expiry)")
     parser.add_argument("--version", action="version", version=f"f1-live-copilot {__version__}")
     args = parser.parse_args()
 
@@ -192,7 +276,7 @@ def main():
     print(f"[SESSION] F1 Live Copilot v{__version__} (replay)", flush=True)
     print(f"[SESSION] Replaying from {args.data_dir} at {args.speed}x speed", flush=True)
 
-    replay(args.data_dir, speed=args.speed)
+    replay(os.path.abspath(args.data_dir), speed=args.speed, resume=args.resume)
 
 
 if __name__ == "__main__":
