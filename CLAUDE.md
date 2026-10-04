@@ -86,6 +86,10 @@ Python 3.10 and 3.13. It replays a full race through the real state/event
 pipeline and constructs the openai and httpx clients — a replay alone reads only
 local files, so it would pass a broken dependency bump untouched.
 
+Two checks drive the live pieces directly, because a full replay passes both
+failures silently: race control must keep surfacing once the state's 100-message
+buffer is full, and a reconnect must not re-transcribe the session's radio backlog.
+
 The smoke step runs with `PYTHONSAFEPATH=1` (honoured from Python 3.11). `-m f1live.*`
 has to resolve through the editable install `uv sync` makes, never through the working
 directory, because some users' shells set that variable.

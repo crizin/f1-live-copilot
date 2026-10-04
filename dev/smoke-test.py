@@ -86,6 +86,64 @@ def check_radio_stt_degrades():
     return "radio transcription degrades to None offline"
 
 
+def check_race_control_past_cap():
+    from f1live.events import EventDetector
+    from f1live.state import MAX_EVENTS, F1State
+
+    state = F1State()
+    detector = EventDetector()
+
+    def push(start, count):
+        messages = [{"Utc": f"2026-01-01T00:{i // 60:02d}:{i % 60:02d}", "Lap": 1,
+                     "Category": "Other", "Message": f"MESSAGE {i}"}
+                    for i in range(start, start + count)]
+        state.process_message("RaceControlMessages", {"Messages": messages}, None)
+
+    push(0, MAX_EVENTS)
+    detector.detect(state.to_dict())
+    push(MAX_EVENTS, 3)
+    surfaced = [e for e in detector.detect(state.to_dict()) if e.tag == "RC"]
+    if len(surfaced) != 3:
+        raise Failure(f"{len(surfaced)}/3 race-control messages surfaced past the {MAX_EVENTS} cap")
+    return f"race control keeps surfacing past the {MAX_EVENTS}-message cap"
+
+
+def check_radio_backlog_absorbed():
+    import asyncio
+
+    from f1live import main as daemon
+    from f1live import radio_stt
+    from f1live.events import EventDetector
+
+    transcribed = []
+
+    async def fake_transcribe(url):
+        transcribed.append(url)
+
+    def tick(urls):
+        snapshot = {"team_radio": [{"abbreviation": "XXX", "url": u} for u in urls]}
+        daemon.detector.detect(snapshot)
+        daemon._schedule_radio(snapshot)
+
+    async def reconnect():
+        tick([])               # first dump runs before the connect-time snapshot
+        tick(["a", "b"])       # snapshot brings the session's radio backlog
+        await asyncio.sleep(0.3)
+        tick(["a", "b", "c"])  # a clip published live
+        await asyncio.sleep(0)
+
+    detector, transcribe = daemon.detector, radio_stt.transcribe
+    daemon.detector, radio_stt.transcribe = EventDetector(warmup_seconds=0.2), fake_transcribe
+    try:
+        asyncio.run(reconnect())
+    finally:
+        daemon.detector, radio_stt.transcribe = detector, transcribe
+
+    if transcribed != ["c"]:
+        raise Failure(f"reconnect transcribed {transcribed}, expected only the live clip")
+    return "reconnect leaves the radio backlog untranscribed"
+
+
 def check_httpx():
     import httpx
 
@@ -178,7 +236,8 @@ def main():
                         help="Directory with .jsonStream files (default: a generated fixture)")
     args = parser.parse_args()
 
-    checks = [check_imports, check_openai, check_radio_stt_degrades, check_httpx]
+    checks = [check_imports, check_openai, check_radio_stt_degrades,
+              check_race_control_past_cap, check_radio_backlog_absorbed, check_httpx]
     failed = []
 
     for check in checks:

@@ -122,11 +122,18 @@ class EventDetector:
 
         return events
 
-    def _detect_race_control(self, prev: dict, curr: dict, events: list):
-        prev_rc_count = len(prev.get("race_control", []))
-        curr_rc = curr.get("race_control", [])
+    @staticmethod
+    def _rc_key(rc: dict) -> tuple:
+        return (rc.get("time"), rc.get("lap"), rc.get("category"), rc.get("message"))
 
-        for rc in curr_rc[prev_rc_count:]:
+    def _detect_race_control(self, prev: dict, curr: dict, events: list):
+        # race_control is a bounded deque: once full its length stops growing,
+        # so new messages are found by identity rather than by count.
+        seen = {self._rc_key(rc) for rc in prev.get("race_control", [])}
+
+        for rc in curr.get("race_control", []):
+            if self._rc_key(rc) in seen:
+                continue
             cat = rc.get("category", "")
             msg = rc.get("message", "")
             lap = rc.get("lap", "")
