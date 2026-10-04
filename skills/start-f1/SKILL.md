@@ -169,8 +169,10 @@ Once the user signals go:
    `timeout_ms` gives only 5), so a race outlives several. When the expiry notice arrives,
    start the watch again right away, without waiting for the user:
    - **Live**: the same command. The new daemon takes the connect-time snapshot as its baseline
-     (about 10 seconds), so nothing already reported comes back — events from those seconds
-     just arrive a little late.
+     for its first ~10 seconds (`F1LIVE_WARMUP`), so nothing already reported comes back — but
+     whatever happened between the expiry and the end of that warmup is absorbed too and never
+     arrives as an event. Right after re-arming, read the snapshot file once to catch up on
+     race control and the order.
    - **Replay**: the same command with `--resume` added. It picks up after the last event it
      reported and plays back the race time that ran while you were re-arming, so it stays level
      with the user's broadcast. A new replay starts without `--resume`.
