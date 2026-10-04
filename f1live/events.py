@@ -45,6 +45,11 @@ class EventDetector:
         self._warmup_started_at: float | None = None
         self._warmup_logged = False
 
+    @property
+    def warming_up(self) -> bool:
+        """True until the connect-time snapshot has been absorbed as baseline."""
+        return self._prev is None or self._warmup_started_at is not None
+
     def detect(self, state_dict: dict) -> list[Event]:
         events = []
         curr = state_dict

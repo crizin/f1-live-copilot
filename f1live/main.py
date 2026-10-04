@@ -42,7 +42,6 @@ _running = True
 
 # Team-radio STT (only active when OPENAI_API_KEY is set; see radio_stt).
 _seen_radio: set[str] = set()
-_radio_initialized = False
 
 
 async def on_message(topic: str, content, timestamp: str | None):
@@ -57,15 +56,15 @@ async def _transcribe_and_emit(abbr: str, url: str):
 
 def _schedule_radio(state_dict: dict):
     """Transcribe new team-radio clips in the background. No-op without a key."""
-    global _radio_initialized
     if not radio_stt.enabled():
         return
     clips = [(tr.get("abbreviation", "?"), tr.get("url"))
              for tr in state_dict.get("team_radio", []) if tr.get("url")]
-    if not _radio_initialized:
-        # Seed baseline so the connect-time backlog isn't transcribed in a burst.
+    if detector.warming_up:
+        # The first dump runs before the connect-time snapshot arrives, so the
+        # backlog has to be absorbed for the whole warmup window, not one tick —
+        # otherwise every reconnect re-transcribes the session's radio.
         _seen_radio.update(url for _, url in clips)
-        _radio_initialized = True
         return
     for abbr, url in clips:
         if url not in _seen_radio:
