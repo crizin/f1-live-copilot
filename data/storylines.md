@@ -307,9 +307,11 @@ adapted faster than others.
   the first safety car — round the outside into Turn 1, completed out of Turn 2 — and
   controlled it from there, surviving a late safety car. Antonelli second by 2.3s.
 - **A start that wouldn't start.** Torrential rain delayed it, then on the formation lap
-  several cars — Verstappen and Hamilton among them, plus other Ferrari-powered runners —
-  hit power/throttle glitches in the wet, and race control suspended the procedure. After
-  laps behind the safety car, it finally got going with a standing start.
+  several cars — Verstappen and Hamilton among them — lost power in the wet. The FIA called
+  it an "unprecedented" software glitch, not any one manufacturer's fault: with electrical
+  power capped for the wet, cars that slowed almost to a stop couldn't get it back. Race
+  control suspended the procedure, the FIA issued software fixes, and after laps behind the
+  safety car it finally got going with a standing start.
 - **Slicks vs inters.** The grid split on tyres for a wet track. Bottas's spin brought the
   first safety car and let the inter runners switch to slicks for free. Hamilton, on
   slicks, dropped to 18th, refused to pit for inters early, and drove back to P3. Piastri
