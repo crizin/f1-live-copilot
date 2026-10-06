@@ -145,14 +145,16 @@ jobs:
 
       # Fetching the sources under review needs egress, which codex-action
       # rejects as a `codex-args` override but honours from a trusted
-      # config.toml under `codex-home`.
+      # config.toml. It goes in the default home, not a `codex-home` input:
+      # drop-sudo hands that over through `sudo -E`, which Ubuntu 26.04's
+      # sudo-rs ignores, so Codex would start without it.
       - name: Prepare Codex inputs
         if: steps.changes.outputs.changed == 'true'
         run: |
           git diff -- data/storylines.md > /tmp/storylines.diff
           touch /tmp/storylines-sources.md
-          mkdir -p "$RUNNER_TEMP/codex-home"
-          cat > "$RUNNER_TEMP/codex-home/config.toml" <<'TOML'
+          mkdir -p ~/.codex
+          cat > ~/.codex/config.toml <<'TOML'
           [sandbox_workspace_write]
           network_access = true
           TOML
@@ -171,14 +173,28 @@ jobs:
             /tmp/storylines-sources.md
           if-no-files-found: warn
 
-      # v1.12 hands the runner's stdio to the whole Codex process tree, so a
-      # surviving descendant holds the step open long after the result is
-      # written — openai/codex-action#150. The fix is still unreleased
-      # (#151), and v1.11 is the last version that terminates. Keep the pin
-      # until a release carries that fix; dependabot is told to leave it.
+      # drop-sudo confirms its socket lockout with /usr/bin/test -w, and the
+      # uutils test on Ubuntu 26.04 ignores ACLs, so it fails closed there.
+      # Swap in GNU test wherever the installed one gets ACLs wrong.
+      - name: Make /usr/bin/test honour ACLs
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          probe=$(sudo mktemp -p /run)
+          sudo chmod 666 "$probe"
+          sudo setfacl -m "u:$(id -u):---" "$probe"
+          if /usr/bin/test -w "$probe"; then
+            sudo ln -sfn gnutest /usr/bin/test
+            /usr/bin/test ! -w "$probe"
+          fi
+          sudo rm -f "$probe"
+
+      # Needs v1.13+: before it, a Codex descendant outliving the run kept the
+      # runner's stdio open and the step never ended after the result was
+      # written (openai/codex-action#150). drop-sudo also locks this job's
+      # later steps out of sudo, Docker and root service sockets under /run.
       - name: Codex fact-check
         if: steps.changes.outputs.changed == 'true'
-        uses: openai/codex-action@52fe01ec70a42f454c9d2ebd47598f9fd6893d56 # v1.11
+        uses: openai/codex-action@bdf19a4a223ec2549a3e2274a0cf61556bc07675 # v1.13
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           allow-bots: "true"
@@ -189,7 +205,6 @@ jobs:
           model: gpt-5.6-sol
           effort: high
           sandbox: workspace-write
-          codex-home: ${{ runner.temp }}/codex-home
           codex-args: '--config web_search="live"'
           output-file: codex-review.md
           prompt: |
