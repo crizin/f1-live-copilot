@@ -4,19 +4,17 @@
 > Updated throughout the season as stories develop.
 > Championship points live in `standings.md`. This file carries the narrative, not the table.
 
-Last update: 2026-10-05, the day after the Bahrain Grand Prix in Malaysia (Round 16,
-Sepang, October 2-4 — Bahrain's cancelled race rehomed, F1's first visit to Malaysia since
-2017). Singapore, with a Sprint, closes the triple-header out next weekend; Austin follows.
+Last update: 2026-10-12, the day after the Singapore Grand Prix (Round 17, Marina Bay,
+October 9-11, Sprint weekend). Austin is next — and Antonelli can mathematically clinch the
+title there.
 
-**Where it stands:** Verstappen finally won one. First pole of 2026, first win of 2026, in a
-rain-wrecked race at Sepang — and the bigger news was behind him. Russell's Mercedes PU died
-behind the safety car with about five laps left, Antonelli came home second, and the gap
-that Baku had closed blew back out to 84 points with seven rounds to go. Russell all but
-conceded it: "exceptionally unlikely." Antonelli can't clinch in Singapore; Austin is the
-earliest it could happen. Hamilton went from the front row to near the back on a slick-tyre
-gamble and came back to third. McLaren had another nothing weekend — Piastri sixth, Norris
-ninth after sliding through the gravel under the safety car. Ocon's Haas exit is now
-official.
+**Where it stands:** Verstappen is on a roll. After finally winning at Sepang, he swept
+Singapore — pole for both races, won the Sprint, won the Grand Prix by 7.3s from Leclerc —
+his first ever Singapore win, at the tenth attempt. The title story is now basically a
+countdown: Antonelli was third, Russell started 19th on a PU penalty and scraped ninth, and
+the lead is out past 100 points. Antonelli can be champion in Austin — news to him, by the
+sound of it: "Can I? Really?" McLaren's weekend was a Sprint collision between Norris and
+Piastri and a quiet P4/P5 on Sunday. Ferrari split strategies and Hamilton's gamble flopped.
 
 ---
 
@@ -38,8 +36,9 @@ The 2026 power unit overhaul — electric power tripled, MGU-H gone, 100% sustai
   Allison said the first two failures "originate in the same broad part of the battery"; the
   fix is phasing new modules into the fleet over the season, not an overnight cure. Wolff on
   the cost: "we just can't compete for a championship if every second race a car is losing
-  fat points." The bill came due at Monza, where the failures had eaten Antonelli's
-  allocation and cost him 30 grid places; he won anyway.
+  fat points." The bill keeps coming due in grid penalties: 30 places for Antonelli at
+  Monza (he won anyway), and Russell from 19th in Singapore, where ninth was the best he
+  could salvage.
 - **McLaren**: The upgrade package at Hungary turned their season — first win of the year
   straight after it, then Norris won Zandvoort too off a fiddly damp-to-dry race he rated
   "probably one of my better wins." Since then, three weekends with nothing to show.
@@ -64,13 +63,15 @@ The 2026 power unit overhaul — electric power tripled, MGU-H gone, 100% sustai
   side only, has Red Bull as the benchmark, and therefore locks them out of upgrading the
   electrical side they actually need. Verstappen, drily, on being told again that he has the
   best engine: "apparently the fastest engine." The trajectory kept climbing — P3 at Monza,
-  P2 at Madrid and Baku — and at Sepang it finally paid: first pole of the year by three
-  tenths, then the win, his first since the 2025 finale in Abu Dhabi. "It's a really nice
-  one after the year we've had and the progression we have made."
+  P2 at Madrid and Baku — and then it finally paid. Sepang: first pole and first win of
+  the year. Singapore: the full sweep, both poles and both wins, his first ever at Marina
+  Bay. "It's taken a while, but I think this race was very good... The last two races have
+  been really positive for us." Red Bull arrive in Austin on back-to-back wins.
 - **Audi**: First season with its own PU, and reliability still bites — Hulkenberg's car
   caught fire on the reconnaissance lap to the Miami sprint grid. They're also the team
   currently picking a fight with the stewards over one point — see the Tsunoda appeal
-  under Monza.
+  under Monza. Singapore was another rough one: Bortoleto's car caught fire after an
+  apparent gearbox problem, though Hulkenberg scored P8.
 - **Cadillac**: The new 11th team, still backmarkers but operating better every weekend, and
   still hunting a first point. Monaco was the gut-punch: Perez crossed the line inside the
   top ten, then copped a 10-second post-race penalty for being out of position at the
@@ -119,11 +120,13 @@ the Barcelona PU failure four laps from the flag while running second, and a biz
 left-front wheel-shield failure at Silverstone that turned a near-certain win into 16th.
 
 Baku was the first one that was on him — he hit the inside wall at Turn 1 in Q1, started
-16th, recovered to fifth while Russell won, and the lead shrank. Sepang undid all of it:
-second behind Verstappen while Russell's PU expired, and the margin is back out to 84 with
-seven rounds left. He can't be crowned in Singapore; Austin is the earliest, and only if he
-wins everything in between. The one recurring flaw: track limits — a Turn 6 violation in Sepang Q2 burned a set of
-softs and left him without a spare for Q3.
+16th, recovered to fifth while Russell won, and the lead shrank. Sepang undid all of it
+(second while Russell's PU expired), and Singapore made it a formality: third, with Russell
+starting from the back. **He can clinch the title in Austin.** When told, he seemed
+genuinely surprised — "Can I? Really?... Let's try to do the best weekend as possible and
+finish the job." The one recurring flaw is track limits — a Turn 6 violation in Sepang Q2
+cost him a set of softs, and in Singapore he collected enough warnings for a
+black-and-white flag.
 
 Monza is the one people will remember. Now 20, he took a 30-place PU penalty at his home
 race, started 19th on hards, gambled on mediums at the lap-2 restart while most went hard,
@@ -181,11 +184,12 @@ called it positive, with "different opinions" — and Vasseur has publicly pushe
 arguing rules of engagement already exist in some form ("to say there are no rules of
 engagement does not reflect reality") and that "you cannot expect every possible scenario
 you might encounter on track to be written into the contracts." Hamilton says it hasn't come
-up again since. Since then: a brake failure ended his Madrid after seven laps, Baku was a
-quiet P4/P6 with Leclerc ahead, and at Sepang Hamilton finished third — front row in
-qualifying, then Ferrari started him on slicks on a wet track, he dropped to 18th, talked
-the team out of pitting for inters, and drove back to third. Leclerc, who did pit, was
-fourth.
+up again since. Since then Hamilton's strategy calls have been the theme. At Sepang he
+talked the team out of pitting for inters and drove from 18th back to third. In Singapore
+the same instinct bit him: Ferrari split strategies, Leclerc on softs and pitting under the
+VSC, Hamilton staying out — and as his tyres went, Antonelli and both McLarens
+came through, dropping him from a podium spot to sixth while Leclerc took second. "A
+painful lesson today, but I take full responsibility for the decisions I made."
 
 The backdrop: year two at Maranello delivered the moment the whole move was for, Hamilton's
 maiden Ferrari win at Barcelona, and Leclerc answered with a controlled Silverstone win.
@@ -212,7 +216,8 @@ adapted faster than others.
 
 ## Rivalries to Watch
 
-- **Antonelli vs Russell** (Mercedes): The one that decides the title — or did. Baku looked
+- **Antonelli vs Russell** (Mercedes): The one that decided the title — Antonelli can
+  mathematically make it official in Austin. Baku looked
   like a fight for a weekend, Russell winning from pole while Antonelli recovered from a Q1
   crash; a week later Russell's PU died at Sepang and he all but conceded: "You've almost
   got to laugh. I'm beyond disappointment. It's just so many times this season it's
@@ -230,9 +235,10 @@ adapted faster than others.
   over.
 - **Norris vs Piastri** (McLaren): Reigning champion vs the Australian who almost took the
   2025 title, and the "papaya rules" détente is fraying — though Piastri hasn't been on the
-  podium since Miami. Baku was rock bottom for both; Sepang was barely better — Piastri
-  sixth, Norris ninth after sliding through the Turn 1 gravel under the safety car.
-  Hungary was the blow-up: Piastri led the first half, a second-stop call to cover a
+  podium since Miami. Now they've made contact: on the final lap of the Singapore Sprint
+  they collided at Turn 5, Norris spinning but limping home eighth and Piastri out. Norris
+  insisted he "had the right" to go for it; Stella was disappointed. Sunday was
+  P4/P5 without incident. Hungary was the earlier blow-up: Piastri led the first half, a second-stop call to cover a
   Hamilton undercut dropped him into traffic behind Sainz ("Get out of the f****** way you
   idiot"), Norris overcut into the lead in clear air, and Piastri went full ice — "Don't
   f****** talk to me" — before a gearbox failure ended his day. At Monza they spent the
@@ -244,11 +250,8 @@ adapted faster than others.
   collided on lap 1 at Monza, Leclerc crashed out on lap 2, and Hamilton came out of it
   demanding Ferrari write down rules of engagement it doesn't have. See "Ferrari's year
   two" above.
-- **Norris vs Verstappen**: 2025 title rivals, now in very different tiers of machinery.
-  Can Verstappen do it with an inferior car like 2024? The answer this year is no. The
-  team-mates-in-2027 subplot is dead — Max re-signed with Red Bull to 2030 — so this
-  stays what it's been all season: occasional flashes when their races intersect,
-  nothing sustained.
+- **Norris vs Verstappen**: 2025 title rivals, now in different tiers — though Verstappen
+  has won the last two races. Occasional flashes, nothing sustained.
 - **Hamilton vs Verstappen**: dormant for years, awake again — and Sepang put them on the
   front row together, Verstappen on pole by 0.298s. Austria gave us "Clear
   penalty!" on the radio and Hamilton's "you don't expect to go around the outside of a
@@ -291,6 +294,8 @@ adapted faster than others.
   did worse, and then, "with the benefit of two days," Norris messaged Colapinto to
   apologise and the whole thing reversed polarity. Both of them came out of it looking
   better than the internet did.
+- **"Can I? Really?"** — Antonelli in Singapore, on being told he can wrap the title up in
+  Austin. A 20-year-old title leader who apparently hadn't done the maths.
 - **"You've almost got to laugh."** — Russell after his Sepang PU failure, the
   gallows-humour line on a title bid that went up in smoke behind a safety car.
 - **Hamilton's first Ferrari win** was the season's big feel-good moment — an emotional
@@ -300,32 +305,33 @@ adapted faster than others.
 
 ## Recent Incidents & Controversies
 
+### Singapore GP (Round 17, Marina Bay, October 9-11 — Sprint weekend)
+
+- **Verstappen, four for four.** Sprint pole (0.120s from Russell, after surviving a
+  yellow-flag investigation), Sprint win, GP pole, GP win — led from Turn 1 after holding
+  off Leclerc and won by 7.3s despite radio trouble mid-race. Leclerc P2, Antonelli P3.
+- **The Sprint's opening lap**: Russell got the jump on Verstappen, then hit a kerb and
+  crashed into the wall. Its last lap: Norris and Piastri collided at Turn 5 (see
+  Rivalries).
+- **Two VSCs, both mechanical.** First: Bortoleto's Audi pulled off with an apparent
+  gearbox problem and caught fire. Later: Stroll stopped at Turn 15 with a clutch problem.
+  Colapinto also retired with a driveline issue.
+- **Ferrari's split strategy** — Leclerc pitted under the VSC, Hamilton stayed out and
+  fell from third to sixth on the closing laps (see "Ferrari's year two").
+- **The rest of the points**: Norris P4, Piastri P5, Hamilton P6, Lawson P7, Hulkenberg P8,
+  Russell P9 from 19th, Hadjar P10.
+
 ### Bahrain GP in Malaysia (Round 16, Sepang, October 2-4)
 
-- **Verstappen's first win of 2026**, from his first pole (0.298s clear of Hamilton). The
-  Mercedes pair jumped him at the start; he got Antonelli back at the lap-13 restart after
-  the first safety car — round the outside into Turn 1, completed out of Turn 2 — and
-  controlled it from there, surviving a late safety car. Antonelli second by 2.3s.
-- **A start that wouldn't start.** Torrential rain delayed it, then on the formation lap
-  several cars — Verstappen and Hamilton among them — lost power in the wet. The FIA called
-  it an "unprecedented" software glitch, not any one manufacturer's fault: with electrical
-  power capped for the wet, cars that slowed almost to a stop couldn't get it back. Race
-  control suspended the procedure, the FIA issued software fixes, and after laps behind the
-  safety car it finally got going with a standing start.
-- **Slicks vs inters.** The grid split on tyres for a wet track. Bottas's spin brought the
-  first safety car and let the inter runners switch to slicks for free. Hamilton, on
-  slicks, dropped to 18th, refused to pit for inters early, and drove back to P3. Piastri
-  bailed to inters early.
-- **Russell's DNF.** Albon stopped on track late, bringing a VSC and then a safety car;
-  behind it, with about five laps left, Russell pulled over with a PU failure. Wolff: it
-  "wasn't caused by the Safety Car." See Rivalries for Russell's reaction.
-- **Norris in the gravel** — misjudged his braking into Turn 1 under the safety car and
-  slid through, dropping to ninth.
-- **Penalties:** Bortoleto 10 seconds for hitting Sainz, who spun to 18th. Colapinto
-  started from the back after his five-place Baku drop was stacked with 10 more for new PU
-  elements. Hadjar qualified third but started eighth on a grid penalty, finished fifth.
-- **The rest of the points**: Leclerc P4, Hadjar P5, Piastri P6, Lawson P7, Alonso P8 —
-  Aston Martin's third points finish of the year — Norris P9, Lindblad P10.
+- **Verstappen's first win of 2026**, from his first pole. He got Antonelli back at the
+  lap-13 restart round the outside into Turn 1 and controlled it from there; Antonelli
+  second, Hamilton third from 18th on a slicks gamble, Leclerc fourth.
+- **A start that wouldn't start.** Torrential rain, then several cars lost power on the
+  formation lap — an "unprecedented" software glitch with electrical power capped for the
+  wet. The FIA issued software fixes and it eventually got going behind the safety car.
+- **Russell's DNF** — PU failure behind the late safety car with about five laps left.
+- **Norris in the gravel** under the safety car, dropping to ninth. Bortoleto got 10
+  seconds for hitting Sainz.
 
 ### Azerbaijan GP (Round 15, Baku, September 24-26 — raced on the Saturday)
 
@@ -350,25 +356,16 @@ adapted faster than others.
 - **Aston Martin's weekend, in one number: 50.** Combined grid penalties for Alonso and
   Stroll after both blew through their engine component pools. Both then retired.
 
-### Italian GP (Round 13, Monza, September 4-6)
-
-- **Antonelli wins from 19th** — see "Antonelli's breakout" above. Wolff on taking the
-  30-place penalty at Monza of all places: "algorithms don't take their nationality into
-  consideration... we're here to fight for a championship and not get the most PR."
-- **Ferrari's home race lasted two laps.** Hamilton and Leclerc touched at the first
-  chicane; on lap 2 Leclerc hit the Parabolica barrier at 60G (he's fine), bringing a red
-  flag. The row it set off is under "Ferrari's year two."
-- **Audi's appeal over Tsunoda is still live.** Tsunoda's late change of direction into
-  his grid slot forced an extra formation lap at the restart; the rules send whoever causes
-  one to the pit lane, but the stewards found no breach, so he kept P10 and his first point
-  of the year. Audi appealed — if it lands, Tsunoda drops out of the points and Bortoleto
-  moves into them. No hearing date has been reported.
-- **Hadjar's three weekends out** (wrist fracture, Zandvoort to Madrid) put Lawson back in
-  the Red Bull, where he scored in two of three — "I'm the happiest I have been in F1."
-
 ### Earlier in the season
 
 The ones still worth knowing about:
+
+- **Italian GP** (Round 13, Monza): Antonelli from 19th to the win (see "Antonelli's
+  breakout"); Ferrari's home race over in two laps, Leclerc into the Parabolica barrier at
+  60G after the lap-1 clash with Hamilton. Audi's appeal over Tsunoda's P10 — his late
+  change of direction forced an extra formation lap, stewards found no breach — is still
+  pending, with no hearing date reported. Hadjar's three weekends out with a wrist
+  fracture put Lawson back in the Red Bull: "I'm the happiest I have been in F1."
 
 - **Spanish GP** (Round 14, Madrid): Norris on pole and leading until a lap-15 VSC fell just
   after he passed pit entry, handing Antonelli, Verstappen and Russell free stops; a slow
@@ -387,8 +384,6 @@ The ones still worth knowing about:
 - **Hungarian GP** (Round 11): McLaren's first win of 2026 and an intra-team civil war —
   Piastri led the first half, lost it to a pit-priority call, raged on the radio, then
   retired with a gearbox failure. Norris won; Verstappen P2 in a race of "survival."
-- **Belgian GP** (Round 10): Antonelli pole to flag. Russell lost battery deployment
-  through Eau Rouge, collided with Hamilton at Les Combes and retired.
 - **British GP** (Round 9): Leclerc's first Silverstone win. Antonelli's maiden sprint win
   on Saturday, then a wheel-shield failure wrecked his Sunday; Verstappen's second rear-wing
   failure in two weekends put him in the Stowe gravel with four laps left.
@@ -396,8 +391,6 @@ The ones still worth knowing about:
   brutal heat. Rookie Lindblad ignored orders to hold station behind Lawson ("we are not
   fighting") and passed him anyway — "I lift for brakes and then get attacked" — which is
   why pundits keep calling him Red Bull's next Verstappen.
-- **Spanish GP** (Round 7, Barcelona): Hamilton's maiden Ferrari win; Antonelli's PU failure
-  four laps from home while running second.
 - **Monaco GP** (Round 6): Antonelli lights to flag, seven DNFs behind him including
   Verstappen on lap 1. Hadjar took P3, his first podium in Red Bull colours.
 - **Canadian GP** (Round 5): Russell's PU let go on lap 30 while he led. He hurled his
