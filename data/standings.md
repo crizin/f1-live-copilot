@@ -33,6 +33,7 @@
 | 21 | STR | Aston Martin | 0 | P21 | P22 | P12 | P20 | P15 |
 | 22 | BOT | Cadillac | 0 | P18 | P16 | P22 | P19 | P20 |
 | 23 | PER | Cadillac | 0 | P20 | P14 | P19 | P17 | P19 |
+| 24 | HIR | Haas | 0 | — | — | — | — | — |
 
 > Showing recent 5 rounds. Full history: https://api.jolpi.ca/ergast/f1/2026/results/
 
