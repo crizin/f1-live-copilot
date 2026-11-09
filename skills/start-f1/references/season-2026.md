@@ -91,4 +91,4 @@ subsequent rounds. Miami became Round 4.
 |----------|-----|-----|-----|-----|-----|-----|-----|-----|-----|------|
 | Points | 25 | 18 | 15 | 12 | 10 | 8 | 6 | 4 | 2 | 1 |
 
-Fastest lap bonus: +1 point (only if finishing P10 or higher).
+No fastest lap bonus point.
