@@ -4,16 +4,16 @@
 > Updated throughout the season as stories develop.
 > Championship points live in `standings.md`. This file carries the narrative, not the table.
 
-Last update: 2026-11-02, the day after the Mexico City Grand Prix (raced November 1).
-São Paulo is next (November 8), then Las Vegas, Qatar and the Abu Dhabi finale.
+Last update: 2026-11-09, the day after the São Paulo Grand Prix (raced November 8).
+Las Vegas is next, then Qatar and the Abu Dhabi finale.
 
-**Where it stands:** **Kimi Antonelli is the 2026 World Champion.** Third in Mexico City
-was enough, with four rounds still to run — at 20 years and 68 days he's the youngest
-champion in F1 history, beating Vettel's record by more than three years, and Italy's first
-since Ascari in 1953. Verstappen won the race from fifth on the grid, Hamilton was second
-from his first Ferrari pole, and Ferrari threw away a 1-2 by colliding with each other at
-Turn 4. The drivers' title is done; Mercedes can wrap up the constructors' in Brazil. What's
-left is a scrap for second, and Verstappen is in it.
+**Where it stands:** **Both titles are settled, and both went to Mercedes.** Kimi Antonelli
+clinched the drivers' title in Mexico City with four rounds to run. At 20 years and 68 days
+he's the youngest champion in F1 history, and Italy's first since Ascari in 1953. A week
+later Russell P4 and Antonelli P5 at Interlagos sealed Mercedes' ninth constructors' title
+and their first since 2021. Norris won a wet-dry São Paulo from pole, and Verstappen came
+from 21st on the grid to second. Three races to go. Verstappen went into Brazil second in
+the drivers' standings, two points ahead of Hamilton, and outscored him there (P2 to P9).
 
 ---
 
@@ -25,7 +25,8 @@ The 2026 power unit overhaul — electric power tripled, MGU-H gone, 100% sustai
 — redrew the order. Where each team landed:
 
 - **Mercedes**: Got it right on pace — Russell's Baku pole was worth eight tenths over the
-  next car. Champions anyway, but reliability has bitten all year. Russell's PU let go while leading at
+  next car. Double champions anyway: the constructors' title came at Interlagos, their
+  ninth, which ties Williams for third all-time. But reliability has bitten all year. Russell's PU let go while leading at
   Montreal, Antonelli's died four laps from home at Barcelona while running second, at Spa an
   energy-deployment glitch cut Russell's power through Eau Rouge and pitched him into a
   race-ending lap-1 clash with Hamilton — and at Sepang Russell's PU failed behind the late
@@ -39,8 +40,9 @@ The 2026 power unit overhaul — electric power tripled, MGU-H gone, 100% sustai
   could salvage.
 - **McLaren**: The upgrade package at Hungary turned their season — first win of the year
   straight after it, then Norris won Zandvoort too off a fiddly damp-to-dry race he rated
-  "probably one of my better wins." Since then, three weekends with nothing to show.
-  Monza was the reality check: Verstappen held both of them off for P3 in a
+  "probably one of my better wins." At Interlagos Norris won from pole by 14.6s for his
+  third win of the year and second straight in Brazil, after Antonelli spun out of the
+  lead. Piastri was sixth. Monza was the reality check: Verstappen held both of them off for P3 in a
   straight-line-speed contest while they squabbled over P4. Madrid was crueller — pole,
   race controlled, then lost to VSC timing and a 7s front-right. Baku was worst of all:
   Norris wiped out in the Colapinto pile-up, Piastri locking himself out of podium
@@ -68,7 +70,9 @@ The 2026 power unit overhaul — electric power tripled, MGU-H gone, 100% sustai
   hard to drive — but he still dragged it to third, and then Mexico City brought another
   win, his sixth there: from fifth on the grid, through the Ferrari mess and a red-flag
   restart, holding Hamilton off by eight tenths. "They should actually call it the 'Maxico'
-  Grand Prix."
+  Grand Prix." In Brazil an extra power unit dropped him to 21st on the grid, and he went
+  through the field in the wet to finish second. Hadjar was told to let him by for P2 and
+  took third, so Red Bull had both cars on the podium.
 - **Aston Martin-Honda**: Mexico summed it up — both cars out with engine failures within
   seconds of each other, early in the race. Honda cited cooling; Alonso suggested Honda had
   underestimated Mexico's altitude.
@@ -171,11 +175,14 @@ the standards of that car, where nobody has lasted long next to Verstappen. Meki
 "an easy decision." He repaid it with a Baku podium on his return. Liam Lawson, who scored
 in the Red Bull while Hadjar sat out a wrist fracture, goes back to Racing Bulls.
 
-**Câmara replaces Ocon at Haas.** Ocon announced his own exit on September 30 ("This is
-absolutely not the end of my Formula 1 career"), and on October 15 Haas signed the
-21-year-old Brazilian Rafael Câmara — F2 championship leader, Ferrari junior, same pipeline
-as Bearman — for 2027. Komatsu: "such a young, amazing talent." Bearman isn't officially
-confirmed but is widely expected to stay.
+**Câmara replaces Ocon at Haas, and he started early.** Ocon announced his own exit on
+September 30 ("This is absolutely not the end of my Formula 1 career"), and on October 15
+Haas signed the 21-year-old Brazilian Rafael Câmara — F2 championship leader, Ferrari
+junior, same pipeline as Bearman — for 2027. Komatsu: "such a young, amazing talent."
+Bearman isn't officially confirmed but is widely expected to stay. After the Mexico blow-up
+(below), Haas confirmed Ocon won't race for them again in 2026 and brought Câmara's debut
+forward to his home race at Interlagos. He finished 20th, two laps down. Haas hasn't said
+who drives the last three rounds.
 
 **Ocon's exit got ugly early.** Haas pulled him out of the Mexico City weekend after Friday
 practice, with no reason given. On Friday he was unhappy about running mediums instead of
@@ -184,8 +191,8 @@ followed that evening. Press reports said it turned physical. Ocon admitted "a d
 viewpoints led to a discussion" but "categorically" rejected any suggestion of physical
 violence. Komatsu would only say: "I can't tell you much but I can tell you he's not ill."
 Reserve Ryo Hirakawa stepped in at 32, qualified 19th, and inherited tenth after penalties,
-scoring a point on his debut. Whether Ocon comes back for São Paulo is unresolved. He was already a self-declared "free
-agent" with no 2027 seat.
+scoring a point on his debut. Ocon never came back, and he's a self-declared "free agent"
+with no 2027 seat.
 
 **Alonso isn't retiring.** Aston Martin confirmed an unchanged Alonso-Stroll line-up for
 2027 on September 29. Alonso: "racing is my life, my passion, and I know I still have
@@ -249,41 +256,25 @@ adapted faster than others.
 
 ## Rivalries to Watch
 
-- **Antonelli vs Russell** (Mercedes): Over. Antonelli is champion, and Russell's season
-  ended the way it went: a deployment problem off the line in Mexico, a lap-one clash with
-  Hadjar that earned a 10-second penalty, sixth, and then a €5,000 fine for Mercedes when he
-  left the circuit without doing his post-race media. His statement blamed "something
-  outside of my control"; Wolff: "There have been too many occasions this season where we
-  have let George down." Austin had already been eighth
-  after another lap-one penalty, for gaining an advantage while battling Piastri ("I was on
-  the inside, he was overtaking on the outside. That's his risk"). Baku looked
-  like a fight for a weekend, Russell winning from pole while Antonelli recovered from a Q1
-  crash; a week later Russell's PU died at Sepang and he all but conceded: "You've almost
-  got to laugh. I'm beyond disappointment. It's just so many times this season it's
-  happened." On the title: "I don't need to say I think it's gone but, of course, it's
-  exceptionally unlikely." It was never really a rivalry between equals anyway — a number
-  one and a driver who keeps being asked to make way, politely. Zandvoort was explicit:
-  Russell won the Sprint, then was told with six laps to go
-  to let Antonelli by after the team pitted Kimi onto fresh tyres under a late VSC. His radio
-  was pure acid — "Is he fighting for the win? Or, is he planning to catch Norris?" (Norris
-  was 11 seconds up the road) — then he U-turned once he'd cooled off, calling it the right
-  call. Monza did it again by stealth: under the lap-28 VSC, Antonelli and Verstappen pitted
-  while Russell, who believed both Mercedes were staying out, stayed out and lost the place
-  late to fresher tyres. Brundle reckoned he "will feel bruised by how that played out."
-  Russell didn't blow up publicly either time.
+- **Antonelli vs Russell** (Mercedes): Over. Antonelli is champion, and it was never really
+  a rivalry between equals: a number one and a driver who kept being asked to make way,
+  politely. At Zandvoort Russell won the Sprint, then was told to let Antonelli by on Sunday.
+  His radio was pure acid, "Is he fighting for the win? Or, is he planning to catch
+  Norris?", before he cooled off and called it the right call. Monza did it again by
+  stealth, when the VSC strategy split went Antonelli's way. Russell's own bid died on
+  reliability. After his PU failed at Sepang: "You've almost got to laugh. I'm beyond
+  disappointment." Mexico brought a lap-one penalty and a €5,000 fine for Mercedes when he
+  skipped post-race media. Wolff: "There have been too many occasions this season where we
+  have let George down." His consolation was sealing the constructors' title with P4 at
+  Interlagos, despite a spin on pit exit.
 - **Norris vs Piastri** (McLaren): Reigning champion vs the Australian who almost took the
-  2025 title, and the "papaya rules" détente is fraying — though Piastri hasn't been on the
-  podium since Miami. Now they've made contact: on the final lap of the Singapore Sprint
-  they collided at Turn 5, Norris spinning but limping home eighth and Piastri out. Norris
-  insisted he "had the right" to go for it; Stella was disappointed. Sunday was
-  P4/P5 without incident. Hungary was the earlier blow-up: Piastri led the first half, a second-stop call to cover a
-  Hamilton undercut dropped him into traffic behind Sainz ("Get out of the f****** way you
-  idiot"), Norris overcut into the lead in clear air, and Piastri went full ice — "Don't
-  f****** talk to me" — before a gearbox failure ended his day. At Monza they spent the
-  closing laps swapping P4, Piastri putting Norris two wheels on the grass at Curva Grande
-  before Norris took it back at Ascari on the last lap. Brundle's word for how it looked was
-  "personal"; Stella called it "much more benign than what it might have looked like in the
-  heat of the moment" and McLaren reviewed the move anyway.
+  2025 title, and the "papaya rules" détente is fraying. Piastri hasn't been on the podium
+  since Miami, while Norris has three wins. They collided at Turn 5 on the last lap of the
+  Singapore Sprint, Norris spinning and Piastri out, and Norris insisted he "had the right."
+  At Monza they swapped P4 wheel-to-wheel, Piastri putting Norris on the grass at Curva
+  Grande, which Brundle called "personal." Hungary was the first blow-up: a strategy call
+  handed Norris the win and Piastri went full ice on the radio ("Don't f****** talk to me")
+  before his gearbox failed.
 - **Hamilton vs Leclerc** (Ferrari): No longer just a pecking-order question. They
   collided on lap 1 at Monza, where Leclerc crashed out, and again at Turn 4 in Mexico,
   where it cost Ferrari a 1-2. "Pushed out by my own teammate." See "Ferrari's year two"
@@ -303,8 +294,6 @@ adapted faster than others.
 
 ## Memes & Fan Culture
 
-- Russell remains a meme magnet — expressive radio reactions and PowerPoint-era greatest
-  hits, still circulating.
 - **The Antonelli–Bono prank war.** Mercedes have leaned all the way in with videos of Kimi
   sabotaging Peter Bonnington (Hamilton's old engineer, now Antonelli's) — the one where he
   gets Bono's access card deactivated across Brackley HQ, leaving Bono muttering "the little
@@ -315,10 +304,7 @@ adapted faster than others.
 - **"Don't f****** talk to me"** — Piastri's ice-cold radio to his own McLaren pit wall
   at Hungary, paired with the earlier "Get out of the f****** way you idiot" at Sainz.
 - **"Is he fighting for the win? Or, is he planning to catch Norris?"** — Russell's
-  withering radio at Zandvoort on being told to let his own title rival past. Deadpan,
-  devastating; the fact he then publicly agreed with the call afterwards only made it better.
-- **Zandvoort's orange goodbye.** Verstappen's Delft Blue helmet, a record 325,000 in the
-  dunes for his last home race — and then the wall, lap one, in front of every one of them.
+  withering radio at Zandvoort on being told to let his own title rival past (see Rivalries).
 - **"There are no rules"** — Hamilton on Ferrari's absent rules of engagement after the
   Monza clash, delivered with the weary precision of a man who has had this argument
   before. Immediately weaponised by both halves of the Ferrari fanbase against each other.
@@ -335,9 +321,8 @@ adapted faster than others.
   apologise and the whole thing reversed polarity. Both of them came out of it looking
   better than the internet did.
 - **"Can I? Really?"**: Antonelli in Singapore, on being told he could wrap the title up in
-  Austin. He couldn't, as it turned out, so it waited a week. When it came in Mexico he
-  reckoned he lost "probably two seconds" on the final lap because he was crying in the car. Youngest champion
-  ever, and the most 20-year-old way possible to finish it off.
+  Austin. He couldn't, so it waited a week, and when it came he lost "probably two seconds"
+  on the last lap crying in the car.
 - **"Pushed out by my own teammate"**: Hamilton's radio in Mexico, after the Turn 4 clash
   with Leclerc that cost Ferrari a 1-2. It's the sequel to "There are no rules," and it's
   being used the same way.
@@ -346,8 +331,6 @@ adapted faster than others.
 - **"I can tell you he's not ill"**: Komatsu's non-explanation for why Ocon vanished from
   the Haas garage between Friday and Saturday. The paddock has been filling in the gaps
   ever since.
-- **"You've almost got to laugh."** — Russell after his Sepang PU failure, the
-  gallows-humour line on a title bid that went up in smoke behind a safety car.
 - **Hamilton's first Ferrari win** was the season's big feel-good moment — an emotional
   maiden victory for the Scuderia and the first all-British podium since 1968.
 
@@ -355,29 +338,32 @@ adapted faster than others.
 
 ## Recent Incidents & Controversies
 
-### Mexico City GP (November 1) — Antonelli crowned
+### São Paulo GP (November 8) — Norris wins, Mercedes take the constructors'
 
-- **Verstappen won from fifth**, which he started from because of a one-place grid
-  penalty for an FP2 collision with Lawson. He got ahead of Hamilton during the Ferrari
-  squabble and of Leclerc while Leclerc served his penalty, then held off Hamilton after a
-  33-minute red flag with 25 laps left. Hamilton P2 from pole, Antonelli P3 and champion,
-  Leclerc P4, Norris P5, Russell P6.
-- **Ferrari's Turn 4 clash** on lap 1 gave Leclerc a five-second penalty and Verstappen the
-  opening (see "Ferrari's year two").
-- **Russell's start**: a deployment problem off the line, then contact with Hadjar that
-  spun the Red Bull and earned Russell a 10-second penalty.
-- **Bottas' big one**: front-left suspension failure at high speed into the Turn 1
-  barriers. He was OK, and Cadillac says it will fully investigate.
-- **Aston Martin double DNF**: both Honda engines failed early, within seconds of each other.
-- **The penalties reshuffled the bottom of the points.** Piastri got 10 seconds for
-  hitting Lindblad (Lindblad retired) and dropped out of the top ten. Both Alpines, briefly
-  P8 and P10 on the road, were penalised for yellow flags. That promoted Lawson to P7 from a
-  pit-lane start (he'd been excluded from qualifying for an MGU-K breach), with Bortoleto
-  P8, Hadjar P9 and Hirakawa P10 on debut (see "Ocon's exit").
+- **Norris won from pole by 14.6s.** Antonelli, alongside him on the front row, passed him
+  into Turn 1 and led until he reported "something felt wrong with the car" and spun at
+  Turn 1 around lap 20. Norris led from there and was never threatened.
+- **Weather made it a strategy race.** It started wet, the track was declared fully dry
+  by lap 23, and late rain sent the field back onto inters. Norris and Verstappen both
+  made their final stops on lap 63 of 71.
+- **Verstappen from 21st to P2** after a grid penalty for an extra power unit. Red Bull told
+  Hadjar to let him through around lap 38, and Hadjar held on for third.
+- **Mercedes' title came from P4 and P5**: Russell recovered to fourth despite a spin on
+  pit exit, and Antonelli to fifth after his spin.
+- The rest of the points: Piastri P6, Leclerc P7, Lawson P8, Hamilton P9 (a lap down) and
+  Hulkenberg P10. Câmara was 20th on debut. Stroll retired after 30 laps. Bottas
+  wasn't classified; results tables differ on whether he started (DNS in one, DNF in another).
 
 ### Earlier in the season
 
 The ones still worth knowing about:
+
+- **Mexico City GP**: Antonelli's P3 clinched the title. Verstappen won from fifth after
+  the Ferrari Turn 4 clash, then held off Hamilton by eight tenths after a 33-minute red
+  flag. Bottas had a high-speed front-left suspension failure into the Turn 1 barriers and
+  was OK. Both Aston Martins lost their Honda engines early, within seconds of each other.
+  Russell got a 10-second penalty for a lap-1 clash with Hadjar, and Hirakawa scored a point
+  on debut, subbing for Ocon.
 
 - **United States GP** (Austin): Antonelli's one-stop win from pole, by 13s. It still left
   the title open for a week. Leclerc P2; Verstappen P3 in a car he called "undriveable,"
