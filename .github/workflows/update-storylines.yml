@@ -49,7 +49,7 @@ jobs:
       # ── 1. Claude drafts the update ─────────────────────────────────────
       # continue-on-error: a turn-limit stop still leaves a usable partial
       # draft. The guard step below fails the job only if nothing came out.
-      - uses: anthropics/claude-code-action@61a9c274fa7110a66dfafc1bbbced03833eb25fe # v1.0.269
+      - uses: anthropics/claude-code-action@4d75e5f390ee76b2e09c1980ecc99ff3a2e088c8 # v1.0.275
         id: draft
         continue-on-error: true
         timeout-minutes: 25
@@ -248,7 +248,7 @@ jobs:
               purpose. Only check claims that are new or changed.
 
       # ── 3. Claude revises the draft per Codex's findings ────────────────
-      - uses: anthropics/claude-code-action@61a9c274fa7110a66dfafc1bbbced03833eb25fe # v1.0.269
+      - uses: anthropics/claude-code-action@4d75e5f390ee76b2e09c1980ecc99ff3a2e088c8 # v1.0.275
         id: revise
         if: steps.changes.outputs.changed == 'true'
         continue-on-error: true
@@ -331,7 +331,7 @@ jobs:
             echo "${DELIM}"
           } >> "$GITHUB_OUTPUT"
 
-      - uses: peter-evans/create-pull-request@15733dbdfeedb4f7fdb73d13c6f5ac83b710fab8 # v8.1.2
+      - uses: peter-evans/create-pull-request@3ffccacd46053766916f087ce41d627c0b8cf2d1 # v8.1.3
         id: cpr
         if: steps.changes.outputs.changed == 'true'
         with:
