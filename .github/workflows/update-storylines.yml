@@ -49,7 +49,7 @@ jobs:
       # ── 1. Claude drafts the update ─────────────────────────────────────
       # continue-on-error: a turn-limit stop still leaves a usable partial
       # draft. The guard step below fails the job only if nothing came out.
-      - uses: anthropics/claude-code-action@4d75e5f390ee76b2e09c1980ecc99ff3a2e088c8 # v1.0.275
+      - uses: anthropics/claude-code-action@c84e279f859e2591391e95bd309286eb111c345f # v1.0.284
         id: draft
         continue-on-error: true
         timeout-minutes: 25
@@ -194,7 +194,7 @@ jobs:
       # later steps out of sudo, Docker and root service sockets under /run.
       - name: Codex fact-check
         if: steps.changes.outputs.changed == 'true'
-        uses: openai/codex-action@bdf19a4a223ec2549a3e2274a0cf61556bc07675 # v1.13
+        uses: openai/codex-action@306c6a196a99dcc6582530c396a19d2672d5e9ec # v1.14
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           allow-bots: "true"
@@ -248,7 +248,7 @@ jobs:
               purpose. Only check claims that are new or changed.
 
       # ── 3. Claude revises the draft per Codex's findings ────────────────
-      - uses: anthropics/claude-code-action@4d75e5f390ee76b2e09c1980ecc99ff3a2e088c8 # v1.0.275
+      - uses: anthropics/claude-code-action@c84e279f859e2591391e95bd309286eb111c345f # v1.0.284
         id: revise
         if: steps.changes.outputs.changed == 'true'
         continue-on-error: true
